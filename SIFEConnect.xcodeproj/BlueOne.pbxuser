@@ -118,6 +118,10 @@
 			C9B15B391172FABC007BB1DB /* PBXTextBookmark */ = C9B15B391172FABC007BB1DB /* PBXTextBookmark */;
 			C9B15B3A1172FAF7007BB1DB /* PBXTextBookmark */ = C9B15B3A1172FAF7007BB1DB /* PBXTextBookmark */;
 			C9B15B3B1172FAF7007BB1DB /* PBXTextBookmark */ = C9B15B3B1172FAF7007BB1DB /* PBXTextBookmark */;
+			C9B15B421172FDB0007BB1DB /* PBXTextBookmark */ = C9B15B421172FDB0007BB1DB /* PBXTextBookmark */;
+			C9B15B431172FDB0007BB1DB /* PBXTextBookmark */ = C9B15B431172FDB0007BB1DB /* PBXTextBookmark */;
+			C9B15B481172FDE1007BB1DB /* PBXTextBookmark */ = C9B15B481172FDE1007BB1DB /* PBXTextBookmark */;
+			C9B15B491172FDE1007BB1DB /* PBXTextBookmark */ = C9B15B491172FDE1007BB1DB /* PBXTextBookmark */;
 			C9D2F8FC115BD37500805EF7 = C9D2F8FC115BD37500805EF7 /* PBXTextBookmark */;
 			C9D2F901115BD37500805EF7 = C9D2F901115BD37500805EF7 /* PBXTextBookmark */;
 			C9D2F905115BD37500805EF7 = C9D2F905115BD37500805EF7 /* PBXTextBookmark */;
@@ -233,7 +237,7 @@
 		comments = "'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)";
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		rLen = 0;
-		rLoc = 156;
+		rLoc = 160;
 		rType = 1;
 	};
 	C968A454117234AA001B50EF /* PBXTextBookmark */ = {
@@ -406,7 +410,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 77;
+		rLoc = 81;
 		rType = 1;
 	};
 	C9B15AFA1172F5A0007BB1DB /* PBXTextBookmark */ = {
@@ -414,7 +418,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 99";
 		rLen = 0;
-		rLoc = 2309;
+		rLoc = 2440;
 		rType = 0;
 		vrLen = 552;
 		vrLoc = 3004;
@@ -425,7 +429,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 77;
+		rLoc = 81;
 		rType = 1;
 	};
 	C9B15B081172F5B2007BB1DB /* PBXTextBookmark */ = {
@@ -433,7 +437,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 99";
 		rLen = 0;
-		rLoc = 2309;
+		rLoc = 2440;
 		rType = 0;
 		vrLen = 1358;
 		vrLoc = 2534;
@@ -453,7 +457,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 52";
 		rLen = 0;
-		rLoc = 1498;
+		rLoc = 1629;
 		rType = 0;
 		vrLen = 2090;
 		vrLoc = 856;
@@ -473,7 +477,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 46";
 		rLen = 0;
-		rLoc = 1177;
+		rLoc = 1220;
 		rType = 0;
 		vrLen = 2091;
 		vrLoc = 856;
@@ -493,7 +497,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 182";
 		rLen = 0;
-		rLoc = 4516;
+		rLoc = 4647;
 		rType = 0;
 		vrLen = 1789;
 		vrLoc = 4405;
@@ -513,7 +517,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 161";
 		rLen = 0;
-		rLoc = 3741;
+		rLoc = 3872;
 		rType = 0;
 		vrLen = 1646;
 		vrLoc = 4370;
@@ -533,7 +537,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 160";
 		rLen = 0;
-		rLoc = 3716;
+		rLoc = 3847;
 		rType = 0;
 		vrLen = 1648;
 		vrLoc = 4370;
@@ -553,7 +557,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 42";
 		rLen = 0;
-		rLoc = 1203;
+		rLoc = 1246;
 		rType = 0;
 		vrLen = 1619;
 		vrLoc = 524;
@@ -573,7 +577,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 42";
 		rLen = 0;
-		rLoc = 1203;
+		rLoc = 1246;
 		rType = 0;
 		vrLen = 1621;
 		vrLoc = 524;
@@ -586,6 +590,46 @@
 		rLoc = 218;
 		rType = 0;
 		vrLen = 1181;
+		vrLoc = 0;
+	};
+	C9B15B421172FDB0007BB1DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
+		name = "teamSelectionViewController.m: 42";
+		rLen = 0;
+		rLoc = 1238;
+		rType = 0;
+		vrLen = 1647;
+		vrLoc = 165;
+	};
+	C9B15B431172FDB0007BB1DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9D2F8E7115BD18800805EF7 /* addNewsViewController.m */;
+		name = "addNewsViewController.m: 12";
+		rLen = 0;
+		rLoc = 218;
+		rType = 0;
+		vrLen = 1110;
+		vrLoc = 0;
+	};
+	C9B15B481172FDE1007BB1DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
+		name = "teamSelectionViewController.m: 43";
+		rLen = 0;
+		rLoc = 1238;
+		rType = 0;
+		vrLen = 1683;
+		vrLoc = 165;
+	};
+	C9B15B491172FDE1007BB1DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9D2F8E7115BD18800805EF7 /* addNewsViewController.m */;
+		name = "addNewsViewController.m: 12";
+		rLen = 0;
+		rLoc = 218;
+		rType = 0;
+		vrLen = 1110;
 		vrLoc = 0;
 	};
 	C9D2F83F115BAA1C00805EF7 /* SIFEConnect */ = {
@@ -665,9 +709,9 @@
 	};
 	C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1072, 2938}}";
-			sepNavSelRange = "{1203, 0}";
-			sepNavVisRange = "{524, 1621}";
+			sepNavIntBoundsRect = "{{0, 0}, {1072, 2977}}";
+			sepNavSelRange = "{1238, 0}";
+			sepNavVisRange = "{165, 1683}";
 			sepNavWindowFrame = "{{690, 70}, {750, 808}}";
 		};
 	};
@@ -682,7 +726,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {405, 1573}}";
 			sepNavSelRange = "{218, 0}";
-			sepNavVisRange = "{0, 1181}";
+			sepNavVisRange = "{0, 1110}";
 			sepNavWindowFrame = "{{944, 70}, {464, 808}}";
 		};
 	};

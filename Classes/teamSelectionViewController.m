@@ -38,12 +38,16 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 			[alert show];
 			[alert release];
 		}
+		[continent addObject:@"ZuperContinent"];
 	
 		for (int i = 1; i <= [continent count]; i++) {
 			// section is the the array of country for the section i
 			section = [[NSMutableArray alloc] init];
 			query = [NSString stringWithFormat:@"select name from country where idC = %d", i];
 			sqlite3_exec(database,[query UTF8String], MyCallback, section, NULL);
+			if ([section count] == 0) {
+				[section addObject:@"No teams for the moment"];
+			}
 			[country addObject:section];
 		}
  

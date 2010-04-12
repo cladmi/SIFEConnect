@@ -82,17 +82,18 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 /*
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-*/
+ */
+
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
-*/
+ */
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -139,7 +140,7 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return 1;
 }
 
 
@@ -153,6 +154,8 @@ static int MyCallback(void *context, int count, char **values, char **colums)
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
+	
+	cell.textLabel.text = countryName;
     // Set up the cell...
 	
     return cell;

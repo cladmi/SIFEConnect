@@ -184,8 +184,10 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 	} else {
 		// Navigation logic may go here. Create and push another view controller.
 		schoolSelectionController *anotherViewController = [[schoolSelectionController alloc] initWithNibName:@"schoolSelection" bundle:nil];
-		[self.navigationController pushViewController:anotherViewController animated:YES];
 		anotherViewController.countryName = tableCell.textLabel.text; 
+		anotherViewController.title = tableCell.textLabel.text;
+		[self.navigationController pushViewController:anotherViewController animated:YES];
+	
 		[anotherViewController release];
 	}
 

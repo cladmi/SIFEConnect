@@ -1,2 +1,0 @@
-/Users/BlueOne/Documents/SIFEConnect/Classes/teamSelectionViewController.m:242: warning: property 'homeController' requires method '-homeController' to be defined - use @synthesize, @dynamic or provide a method implementation
-/Users/BlueOne/Documents/SIFEConnect/Classes/teamSelectionViewController.m:242: warning: property 'homeController' requires the method 'setHomeController:' to be defined - use @synthesize, @dynamic or provide a method implementation

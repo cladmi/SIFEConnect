@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>C9B15C4F11732003007BB1DB</string>
+						<string>C9B15C9511732EAE007BB1DB</string>
 						<key>history</key>
 						<array>
 							<string>C9B15BFA11731D5E007BB1DB</string>
@@ -256,7 +256,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>C9B15C5011732003007BB1DB</string>
+						<string>C9B15C9611732EAE007BB1DB</string>
 						<key>history</key>
 						<array>
 							<string>C968A455117234AA001B50EF</string>
@@ -354,7 +354,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
+									<integer>11</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -397,7 +397,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>homeViewController.m</string>
+								<string>teamSelectionViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -405,11 +405,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>homeViewController.m</string>
+										<string>teamSelectionViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C9B15C4E11732003007BB1DB</string>
+										<string>C9B15C9411732EAE007BB1DB</string>
 										<key>history</key>
 										<array>
 											<string>C9D2F8FC115BD37500805EF7</string>
@@ -417,8 +417,6 @@
 											<string>C9D2F905115BD37500805EF7</string>
 											<string>C9D2F9BD115C022900805EF7</string>
 											<string>C9D2FB36115C199F00805EF7</string>
-											<string>C96AA34C115C963100717601</string>
-											<string>C96AA34E115C963100717601</string>
 											<string>C96A09C2116B959C009C5825</string>
 											<string>C96A09C3116B959C009C5825</string>
 											<string>C96A0A1D116B987A009C5825</string>
@@ -433,15 +431,17 @@
 											<string>C9B15B9611730D9E007BB1DB</string>
 											<string>C9B15C1611731F62007BB1DB</string>
 											<string>C9B15C1B11731F62007BB1DB</string>
-											<string>C9B15C2B11731F99007BB1DB</string>
-											<string>C9B15C2C11731F99007BB1DB</string>
-											<string>C9B15C3E11731FE8007BB1DB</string>
-											<string>C9B15C3F11731FE8007BB1DB</string>
 											<string>C9B15C4011731FE8007BB1DB</string>
 											<string>C9B15C4211731FE8007BB1DB</string>
 											<string>C9B15C4311731FE8007BB1DB</string>
-											<string>C9B15C4D11732003007BB1DB</string>
-											<string>C9B15C4111731FE8007BB1DB</string>
+											<string>C9B15C6B11732E00007BB1DB</string>
+											<string>C9B15C6C11732E00007BB1DB</string>
+											<string>C9B15C6D11732E00007BB1DB</string>
+											<string>C9B15C8711732E83007BB1DB</string>
+											<string>C9B15C8911732E83007BB1DB</string>
+											<string>C9B15C9211732EAE007BB1DB</string>
+											<string>C9B15C9311732EAE007BB1DB</string>
+											<string>C9B15C8811732E83007BB1DB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -668,7 +668,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>teamSelectionViewController.m</string>
+								<string>schoolSelectionController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

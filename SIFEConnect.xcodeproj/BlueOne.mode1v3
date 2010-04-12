@@ -202,6 +202,46 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
+				<string>C9B15C2011731F62007BB1DB</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>teamSelectionViewController.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>C9B15C2111731F62007BB1DB</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>teamSelectionViewController.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>C9B15C4F11732003007BB1DB</string>
+						<key>history</key>
+						<array>
+							<string>C9B15BFA11731D5E007BB1DB</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {750, 711}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>690 126 750 752 0 0 1440 878 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
 				<string>C968A43D11723333001B50EF</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>addNewsViewController.m</string>
@@ -216,7 +256,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>C9B15B491172FDE1007BB1DB</string>
+						<string>C9B15C5011732003007BB1DB</string>
 						<key>history</key>
 						<array>
 							<string>C968A455117234AA001B50EF</string>
@@ -307,20 +347,20 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
-								<string>29B97317FDCFA39411CA2CEA</string>
+								<string>C9B15BCB11731952007BB1DB</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>17</integer>
-									<integer>15</integer>
+									<integer>3</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {285, 694}}</string>
+							<string>{{0, 3}, {285, 694}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -357,7 +397,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>teamSelectionViewController.m</string>
+								<string>homeViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -365,18 +405,16 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>teamSelectionViewController.m</string>
+										<string>homeViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C9B15B481172FDE1007BB1DB</string>
+										<string>C9B15C4E11732003007BB1DB</string>
 										<key>history</key>
 										<array>
 											<string>C9D2F8FC115BD37500805EF7</string>
 											<string>C9D2F901115BD37500805EF7</string>
 											<string>C9D2F905115BD37500805EF7</string>
-											<string>C9D2F911115BDA8700805EF7</string>
-											<string>C9D2F913115BDA8700805EF7</string>
 											<string>C9D2F9BD115C022900805EF7</string>
 											<string>C9D2FB36115C199F00805EF7</string>
 											<string>C96AA34C115C963100717601</string>
@@ -390,14 +428,20 @@
 											<string>C96A0A89116B9E02009C5825</string>
 											<string>C96A0A9F116BA029009C5825</string>
 											<string>C968A377117210FF001B50EF</string>
-											<string>C968A43411723333001B50EF</string>
-											<string>C968A43511723333001B50EF</string>
-											<string>C968A43611723333001B50EF</string>
-											<string>C968A43711723333001B50EF</string>
-											<string>C968A43811723333001B50EF</string>
-											<string>C968A43911723333001B50EF</string>
-											<string>C968A43A11723333001B50EF</string>
-											<string>C9B15B071172F5B2007BB1DB</string>
+											<string>C9B15B6F11730BE9007BB1DB</string>
+											<string>C9B15B9411730D9E007BB1DB</string>
+											<string>C9B15B9611730D9E007BB1DB</string>
+											<string>C9B15C1611731F62007BB1DB</string>
+											<string>C9B15C1B11731F62007BB1DB</string>
+											<string>C9B15C2B11731F99007BB1DB</string>
+											<string>C9B15C2C11731F99007BB1DB</string>
+											<string>C9B15C3E11731FE8007BB1DB</string>
+											<string>C9B15C3F11731FE8007BB1DB</string>
+											<string>C9B15C4011731FE8007BB1DB</string>
+											<string>C9B15C4211731FE8007BB1DB</string>
+											<string>C9B15C4311731FE8007BB1DB</string>
+											<string>C9B15C4D11732003007BB1DB</string>
+											<string>C9B15C4111731FE8007BB1DB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -598,6 +642,7 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>C9D2F852115BAA2000805EF7</string>
 		<string>C968A43D11723333001B50EF</string>
+		<string>C9B15C2011731F62007BB1DB</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/BlueOne/Documents/SIFEConnect/SIFEConnect.xcodeproj</string>
 	</array>

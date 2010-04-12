@@ -6,7 +6,9 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+#import "homeViewController.h"
 #import "teamSelectionViewController.h"
+#import "schoolSelectionController.h"
 #import "sqlite3.h"
 
 static int MyCallback(void *context, int count, char **values, char **colums)
@@ -18,7 +20,6 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 	}
 	return SQLITE_OK;
 }
-
 
 
 @implementation teamSelectionViewController
@@ -38,8 +39,12 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 			[alert show];
 			[alert release];
 		}
+		
+		/////////////////// For test 
 		[continent addObject:@"ZuperContinent"];
-	
+	    /////////////////////////////////
+		
+		
 		for (int i = 1; i <= [continent count]; i++) {
 			// section is the the array of country for the section i
 			section = [[NSMutableArray alloc] init];
@@ -60,7 +65,7 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 	sqlite3_close(database);
 }				
 
-
+/*
 - (id)initWithStyle:(UITableViewStyle)style {
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 	if (self = [super initWithStyle:style]) {
@@ -70,6 +75,7 @@ static int MyCallback(void *context, int count, char **values, char **colums)
     }
     return self;
 }
+ */
 
 
 
@@ -158,17 +164,31 @@ static int MyCallback(void *context, int count, char **values, char **colums)
     
 	
     // Set up the cell...
-	cell.text = [[country objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-	
+	cell.textLabel.text = [[country objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+	if ([cell.textLabel.text isEqualToString:@"No teams for the moment"]) {
+		cell.accessoryType = UITableViewCellAccessoryNone;
+	} else {
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	}	
     return cell;
 }
+	
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
-	// [self.navigationController pushViewController:anotherViewController];
-	// [anotherViewController release];
+  
+	UITableViewCell *tableCell = [self.tableView cellForRowAtIndexPath:indexPath];
+	if (tableCell.accessoryType == UITableViewCellAccessoryNone) {  
+		// It's a row with nothing after, we just deselect it
+		[tableCell setSelected:NO animated:YES];
+	} else {
+		// Navigation logic may go here. Create and push another view controller.
+		schoolSelectionController *anotherViewController = [[schoolSelectionController alloc] initWithNibName:@"schoolSelection" bundle:nil];
+		[self.navigationController pushViewController:anotherViewController animated:YES];
+		anotherViewController.countryName = tableCell.textLabel.text; 
+		[anotherViewController release];
+	}
+
 }
 
 

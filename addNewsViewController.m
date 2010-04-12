@@ -7,7 +7,7 @@
 //
 
 #import "addNewsViewController.h"
-#define MSG_LENGTH 140
+#define MSG_LENGTH 160
 
 
 

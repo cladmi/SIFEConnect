@@ -16,8 +16,8 @@
 }
 
 @property(nonatomic, retain) UITextField *teamLogin;
+@property(nonatomic, retain) UIViewController *homeController;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil homeview:(UIViewController *)homeControl;
 - (IBAction)connect:(id)sender;
 - (IBAction)textFieldDoneEditing:(id)sender;
 

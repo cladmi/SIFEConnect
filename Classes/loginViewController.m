@@ -14,6 +14,7 @@
 @implementation loginViewController
 
 @synthesize teamLogin;
+@synthesize homeController;
 
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -21,15 +22,6 @@
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
 		self.title = @"Login";
-    }
-    return self;
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil homeview:(UIViewController  *)homeControl {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-		self.title = @"Login";
-		homeController = homeControl;
     }
     return self;
 }
@@ -49,7 +41,7 @@
 
 - (IBAction)connect:(id)sender
 {
-	[homeController log:TRUE byteam:teamLogin.text];
+	[(homeViewController *) homeController log:TRUE byteam:teamLogin.text];
 	[self.navigationController popToRootViewControllerAnimated:YES];
 	
 }

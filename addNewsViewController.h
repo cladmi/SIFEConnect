@@ -14,6 +14,7 @@
 	IBOutlet UITextView *lastStatus;
 	IBOutlet UILabel *charleft;
 	IBOutlet UIButton *updateButton;
+
 	
 }
 

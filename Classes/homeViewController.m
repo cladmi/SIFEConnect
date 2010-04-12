@@ -37,13 +37,14 @@
 			isLogged = FALSE;
 			loginString = @"Welcome !";
 		
-			sleep(1);
+			//sleep(1);
 			[self viewWillAppear:TRUE];
 			[loginWait stopAnimating];
 
 		} else {
 			// we are not logged in
-			viewcontroller = [[loginViewController alloc] initWithNibName:@"loginView" bundle:nil homeview:self];
+			viewcontroller = [[loginViewController alloc] initWithNibName:@"loginView" bundle:nil];
+			[(loginViewController *) viewcontroller setHomeController:self];
 		}
 	} else if (theButton.tag == 1) {		
 		// we clicked button addNews

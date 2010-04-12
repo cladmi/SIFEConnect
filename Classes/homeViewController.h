@@ -15,6 +15,8 @@
 	IBOutlet UIButton *addNewsButton;
 	IBOutlet UIButton *chooseTeamButton;
 	
+	IBOutlet UITableViewController *homeTableController;
+	
 	IBOutlet UIActivityIndicatorView *loginWait;
 	
 	IBOutlet UILabel *teamName;

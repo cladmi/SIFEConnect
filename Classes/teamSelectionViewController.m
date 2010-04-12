@@ -7,23 +7,75 @@
 //
 
 #import "teamSelectionViewController.h"
+#import "sqlite3.h"
+
+static int MyCallback(void *context, int count, char **values, char **colums)
+{
+	NSMutableArray *result = (NSMutableArray *)context;
+	for (int i = 0; i < count; i++) {
+		const char *nameCString = values[i];
+		[result addObject:[NSString stringWithUTF8String:nameCString]];
+	}
+	return SQLITE_OK;
+}
+
 
 
 @implementation teamSelectionViewController
 
-/*
+
+- (void) loadNamesFromDatabase
+{
+	NSString *query;
+	NSMutableArray *section;
+	
+	NSString *file = [[NSBundle mainBundle] pathForResource:@"country" ofType:@"db"];
+	sqlite3 *database = NULL;
+
+	if (sqlite3_open([file UTF8String], &database) == SQLITE_OK) {
+		if (sqlite3_exec(database, "select name from continent", MyCallback, continent, NULL) != SQLITE_OK) {
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"SQLITEAlert" message:@"Error while executing query" delegate:self cancelButtonTitle:@"Cancel"  otherButtonTitles: nil];
+			[alert show];
+			[alert release];
+		}
+	
+		for (int i = 1; i <= [continent count]; i++) {
+			// section is the the array of country for the section i
+			section = [[NSMutableArray alloc] init];
+			query = [NSString stringWithFormat:@"select name from country where idC = %d", i];
+			sqlite3_exec(database,[query UTF8String], MyCallback, section, NULL);
+			[country addObject:section];
+		}
+ 
+	} else {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"SQLITEAlert" message:@"Error opening file" delegate:self cancelButtonTitle:@"OK"  otherButtonTitles: nil];
+		[alert show];
+		[alert release];
+	}
+
+	sqlite3_close(database);
+}				
+
+
 - (id)initWithStyle:(UITableViewStyle)style {
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-    if (self = [super initWithStyle:style]) {
+	if (self = [super initWithStyle:style]) {
+		country = [[NSMutableArray alloc] init];
+		continent = [[NSMutableArray alloc] init];
+		[self loadNamesFromDatabase];
     }
     return self;
 }
-*/
+
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+	country = [[NSMutableArray alloc] init];
+	continent = [[NSMutableArray alloc] init];
+	[self loadNamesFromDatabase];
 	
 	self.title = @"Team Selection";
 
@@ -77,13 +129,16 @@
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 5;
+    return [continent count];
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	return [continent objectAtIndex:section];
+}
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+	return [[country objectAtIndex:section] count];
 }
 
 
@@ -91,13 +146,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
-    
+	    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
+	
     // Set up the cell...
+	cell.text = [[country objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
 	
     return cell;
 }
@@ -152,6 +209,8 @@
 
 
 - (void)dealloc {
+	[country release];
+	[continent release];
     [super dealloc];
 }
 

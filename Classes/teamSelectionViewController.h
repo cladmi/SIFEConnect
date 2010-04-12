@@ -11,6 +11,8 @@
 
 @interface teamSelectionViewController : UITableViewController {
 
+	NSMutableArray *continent;
+	NSMutableArray *country;
 }
 
 @end

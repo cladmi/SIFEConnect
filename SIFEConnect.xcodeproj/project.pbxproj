@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		C968A34711720E66001B50EF /* country.db in Resources */ = {isa = PBXBuildFile; fileRef = C968A34611720E66001B50EF /* country.db */; };
+		C968A3F211722D7F001B50EF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C968A3F111722D7F001B50EF /* libsqlite3.dylib */; };
+		C9B15BC911731948007BB1DB /* schoolSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B15BC711731948007BB1DB /* schoolSelectionController.m */; };
+		C9B15BCA11731948007BB1DB /* schoolSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B15BC811731948007BB1DB /* schoolSelection.xib */; };
+		C9D2F85A115BAA6A00805EF7 /* sifeConnectLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D2F859115BAA6A00805EF7 /* sifeConnectLogo.png */; };
+		C9D2F862115BAED800805EF7 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D2F860115BAED800805EF7 /* homeViewController.m */; };
+		C9D2F863115BAED800805EF7 /* homeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D2F861115BAED800805EF7 /* homeView.xib */; };
+		C9D2F890115BB68C00805EF7 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D2F88F115BB68C00805EF7 /* loginViewController.m */; };
+		C9D2F894115BB6D800805EF7 /* loginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D2F893115BB6D800805EF7 /* loginView.xib */; };
+		C9D2F8D6115BCD6300805EF7 /* teamSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */; };
+		C9D2F8D7115BCD6300805EF7 /* teamSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D2F8D5115BCD6300805EF7 /* teamSelectionView.xib */; };
+		C9D2F8E8115BD18800805EF7 /* addNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D2F8E7115BD18800805EF7 /* addNewsViewController.m */; };
+		C9D2F8EC115BD19B00805EF7 /* addNewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D2F8EB115BD19B00805EF7 /* addNewsView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = versionbetaSIFEconnectAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = versionbetaSIFEconnectAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* SIFEConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIFEConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* SIFEConnect_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIFEConnect_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* SIFEConnect-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SIFEConnect-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C968A34611720E66001B50EF /* country.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = country.db; sourceTree = "<group>"; };
+		C968A3F111722D7F001B50EF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		C96AA327115C940D00717601 /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
+		C9B15BC611731948007BB1DB /* schoolSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = schoolSelectionController.h; sourceTree = "<group>"; };
+		C9B15BC711731948007BB1DB /* schoolSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = schoolSelectionController.m; sourceTree = "<group>"; };
+		C9B15BC811731948007BB1DB /* schoolSelection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = schoolSelection.xib; path = Classes/schoolSelection.xib; sourceTree = "<group>"; };
+		C9D2F859115BAA6A00805EF7 /* sifeConnectLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sifeConnectLogo.png; sourceTree = "<group>"; };
+		C9D2F860115BAED800805EF7 /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
+		C9D2F861115BAED800805EF7 /* homeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = homeView.xib; path = Classes/homeView.xib; sourceTree = "<group>"; };
+		C9D2F88E115BB68C00805EF7 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		C9D2F88F115BB68C00805EF7 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		C9D2F893115BB6D800805EF7 /* loginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = loginView.xib; path = Classes/loginView.xib; sourceTree = "<group>"; };
+		C9D2F8D3115BCD6300805EF7 /* teamSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teamSelectionViewController.h; sourceTree = "<group>"; };
+		C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teamSelectionViewController.m; sourceTree = "<group>"; };
+		C9D2F8D5115BCD6300805EF7 /* teamSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = teamSelectionView.xib; path = Classes/teamSelectionView.xib; sourceTree = "<group>"; };
+		C9D2F8E6115BD18800805EF7 /* addNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = addNewsViewController.h; path = ../addNewsViewController.h; sourceTree = "<group>"; };
+		C9D2F8E7115BD18800805EF7 /* addNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = addNewsViewController.m; path = ../addNewsViewController.m; sourceTree = "<group>"; };
+		C9D2F8EB115BD19B00805EF7 /* addNewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addNewsView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				C968A3F211722D7F001B50EF /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C96AA327115C940D00717601 /* homeViewController.h */,
+				C9D2F860115BAED800805EF7 /* homeViewController.m */,
+				C9D2F88E115BB68C00805EF7 /* loginViewController.h */,
+				C9D2F88F115BB68C00805EF7 /* loginViewController.m */,
+				C9D2F8E6115BD18800805EF7 /* addNewsViewController.h */,
+				C9D2F8E7115BD18800805EF7 /* addNewsViewController.m */,
+				1D3623240D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.h */,
+				1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */,
+				C9D2F8D3115BCD6300805EF7 /* teamSelectionViewController.h */,
+				C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */,
+				C9B15BC611731948007BB1DB /* schoolSelectionController.h */,
+				C9B15BC711731948007BB1DB /* schoolSelectionController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* SIFEConnect.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				C9B15BCB11731952007BB1DB /* Ressources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* SIFEConnect_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				C968A3F111722D7F001B50EF /* libsqlite3.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9B15BCB11731952007BB1DB /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				C9B15BC811731948007BB1DB /* schoolSelection.xib */,
+				C968A34611720E66001B50EF /* country.db */,
+				C9D2F8D5115BCD6300805EF7 /* teamSelectionView.xib */,
+				C9D2F893115BB6D800805EF7 /* loginView.xib */,
+				C9D2F861115BAED800805EF7 /* homeView.xib */,
+				C9D2F859115BAA6A00805EF7 /* sifeConnectLogo.png */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* SIFEConnect-Info.plist */,
+				C9D2F8EB115BD19B00805EF7 /* addNewsView.xib */,
+			);
+			name = Ressources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* SIFEConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SIFEConnect" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SIFEConnect;
+			productName = versionbetaSIFEconnect;
+			productReference = 1D6058910D05DD3D006BFB54 /* SIFEConnect.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SIFEConnect" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* SIFEConnect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				C9D2F85A115BAA6A00805EF7 /* sifeConnectLogo.png in Resources */,
+				C9D2F863115BAED800805EF7 /* homeView.xib in Resources */,
+				C9D2F894115BB6D800805EF7 /* loginView.xib in Resources */,
+				C9D2F8D7115BCD6300805EF7 /* teamSelectionView.xib in Resources */,
+				C9D2F8EC115BD19B00805EF7 /* addNewsView.xib in Resources */,
+				C968A34711720E66001B50EF /* country.db in Resources */,
+				C9B15BCA11731948007BB1DB /* schoolSelection.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m in Sources */,
+				C9D2F862115BAED800805EF7 /* homeViewController.m in Sources */,
+				C9D2F890115BB68C00805EF7 /* loginViewController.m in Sources */,
+				C9D2F8D6115BCD6300805EF7 /* teamSelectionViewController.m in Sources */,
+				C9D2F8E8115BD18800805EF7 /* addNewsViewController.m in Sources */,
+				C9B15BC911731948007BB1DB /* schoolSelectionController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SIFEConnect_Prefix.pch;
+				INFOPLIST_FILE = "SIFEConnect-Info.plist";
+				PRODUCT_NAME = SIFEConnect;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SIFEConnect_Prefix.pch;
+				INFOPLIST_FILE = "SIFEConnect-Info.plist";
+				PRODUCT_NAME = SIFEConnect;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SIFEConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SIFEConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

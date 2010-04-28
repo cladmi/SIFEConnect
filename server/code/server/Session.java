@@ -8,47 +8,60 @@ import java.sql.*;
 
 public class Session {
 
-    private static HashSet<String> existingSession;
-    private String sessionId;
     private int idTeam;
-    private long timestamp;
-    public static String byteToBase64(byte[] data){
-	BASE64Encoder endecoder = new BASE64Encoder();
-	return endecoder.encode(data);
+    private String sessionId;
+    private Calendar timestamp;
+	private int nombreConnectes;
+
+    public Session(int id, String session) {
+		idTeam = id;
+		sessionId = session;
+		timestamp = Calendar.getInstance();
+		nombreConnectes = 1;
     }
 
-    public Session (int id) throws NoSuchAlgorithmException {
-	byte[] bSalt;
-	if (existingSession == null) {
-	    existingSession = new HashSet<String>();
+	public boolean isValid(int id, String session, int expiryTime) {
+		return ((id == idTeam) && 
+				sessionId.equalsIgnoreCase(session) &&
+				timestamp.after(Calendar.getInstance().add(Calendar.MINUTE, -expiryTime)));
 	}
 
-	do {
-	    SecureRandom random = SecureRandom.getInstance("SHA1PRNG");
-	    bSalt = new byte[32];
-	    random.nextBytes(bSalt);
-	    sessionId = byteToBase64(bSalt);
-	} while (existingSession.contains(sessionId));
+	
+	public void update() {
+		timestamp = Calendar.getInstance();
+	}
+				
+	public void update(String session) {
+		sessionId = session;
+		timestamp = Calendar.getInstance();
+	}
 
-	existingSession.add(sessionId);
-	idTeam = id;
-	java.util.Date today = new java.util.Date();
-	timestamp = (new java.sql.Timestamp(today.getTime())).getTime();
 
-    }
 
-    String sessionId() {
-	    return sessionId;
-    }
+	public void retain() {
+		nombreConnectes += 1;
+		update();
+	}
 
-    int idTeam() {
+	public boolean release() {
+		nombreConnectes -= 1;
+		return (nombreConnectes == 0);
+	}
+
+	public int retainCount() {
+		return nombreConnectes;
+	}
+
+
+    public int idTeam() {
 	    return idTeam;
     }
 
-    long timestamp() {
-	    return timestamp;
+    public String sessionId() {
+	    return sessionId;
     }
 
-
-
+	public boolean isExpired (int expiryTime) {
+		return timestamp.before(Calendar.getInstance().add(Calendar.MINUTE, -expiryTime));
+	}
 }

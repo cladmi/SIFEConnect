@@ -2,8 +2,6 @@ import java.util.*;
 import java.sql.*;
 import java.security.*;
 import org.json.simple.*;
-import org.psafix.memopwd.*;
-
 
 public class DatabaseAccess {
 
@@ -17,26 +15,47 @@ public class DatabaseAccess {
 
 
 	/* return 0 if the User was not found */
-	int Auth(String login, String passwd) throws SQLException, ClassNotFoundException {
+	int Authentificate(String login, String passwd) throws SQLException, ClassNotFoundException {
 		String hash;
 		String storedSalt, storedHash;
-		int storedId = 0; // I use the 0 value for not found users
+		int storedId; // I use the 0 value for not found users
 
 		Class.forName("org.sqlite.JDBC");
-		Class.forName("org.psafix.memopwd.Owasp");
-
-		Owasp owasp = new Owasp();
 		/* sqlite reading */
-		connection = DriverManager.getConnection("jdbc:sqlite3:team.db");  
-		Connection con = DriverManager.getConnection("jdbc:sqlite3:passwd.db");  
+		connection = DriverManager.getConnection("jdbc:sqlite3:passwd.db");  
 		try {
-			pstmt = connection.prepareStatement("SELECT id FROM team WHERE login = " + login.toLowerCase());
+			PreparedStatement pstmt = connection.prepareStatement("SELECT id, salt, hashedPasswd FROM account WHERE login = ?");
+			pstmt.setString(1, login);
 			rset = pstmt.executeQuery();
-			if (rset.next())
+
+			if (rset.next()) {
+				/* user found */
+				storedSalt = rset.getString("salt");
+				storedHash = rset.getString("hashedPasswd");
 				storedId = rset.getInt("id");
 
-			//if (org.psafix.memopwd.authentificate(con, login.toLowerCase(), passwd))
-			if (owasp.authenticate(con, login.toLowerCase(), passwd))
+			} else {
+				/* user not found, I just put some values
+				 * so it takes the same time */
+				storedSalt = "00000000";
+				storedHash = "000000000000";
+				storedId = 0;
+			}
+
+			System.out.println("StoredSalt = " + storedSalt);
+			System.out.println("StoredHash = " + storedHash);
+			System.out.println("StoredId   = " + storedId);
+
+			pstmt.close();
+			rset.close();
+			connection.close();  
+			MessageDigest digest = MessageDigest.getInstance("SHA-256");
+			digest.reset();
+			digest.update(storedSalt.getBytes("UTF-8"));
+			digest.update(passwd.getBytes("UTF-8"));
+			hash = new String(digest.digest());
+
+			if (hash.equals("storedHash"))
 				return storedId;
 
 
@@ -47,7 +66,6 @@ public class DatabaseAccess {
 				pstmt.close();
 				rset.close();
 				connection.close();  
-				con.close();
 			} catch (SQLException ex) {
 				ex.printStackTrace();
 			}
@@ -56,7 +74,7 @@ public class DatabaseAccess {
 	}
 
 
-	Object selectList(int continentId) throws SQLException, ClassNotFoundException {
+	Object selectList(int idContinent, int idCountry) throws SQLException, ClassNotFoundException {
 		Class.forName("org.sqlite.JDBC");
 
 		/* {[]} */

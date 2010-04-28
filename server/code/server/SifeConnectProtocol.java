@@ -63,10 +63,11 @@ public class SifeConnectProtocol {
 
 	/* Actions */
 	private static final int LOGIN = 0;
-	private static final int LIST_COUNTRY = 1;
-	private static final int NEWS = 2;
-	private static final int POST = 3;
-	private static final int DEL = 4;
+	private static final int LIST_COUNTRIES = 1;
+	private static final int LIST_TEAMS = 2;
+	private static final int NEWS = 3;
+	private static final int POST = 4;
+	private static final int DEL = 5;
 
 	private int state = WAITING;
 	private SessionMap savedSession;
@@ -81,10 +82,11 @@ public class SifeConnectProtocol {
 		Map json; 
 		if (state == WAITING) {
 			System.out.println("State Waiting");
-			theOutput = "Connected";
+			theOutput = "Coucou";
 			state = QUERY;
 		} else if (state == DISCONNECT) {
 			theOutput = "Bye.";
+			 /////// on va déconnecter tout 
 			state = WAITING;
 		} else if (state == QUERY) {
 			/* JSON PARSING */
@@ -112,39 +114,39 @@ public class SifeConnectProtocol {
 					// login
 					// passwd 
 					int id;
-					String strOut;
+					String login;
+					String passwd;
 
 					/* json reading */
-					String login = ((String) json.get("login")).toLowerCase();
-					String passwd = (String) json.get("passwd");
+					try {
+						login = json.getString("login").toLowerCase();
+						passwd = json.getString("passwd");
+					} catch (JSONException e) {
+						login = "";
+						passwd = "";
+					}
 
 					// id == 0 => echec d'authentification ou erreur interne
 					id = db.Authentificate(login, passwd); 	
 
-					strOut = "{'id' : " + id + "}";
+					theOutput = "{'id' : " + id + "}";
 
 					break;
 				case LIST_COUNTRY :
-					/*
-					login = ((String) json.get("login")).toLowerCase();
-					passwd = (String) json.get("passwd");
-					*/
 
-					String sessionId = (String) json.get("sessionId");
-					
-					JSONObject country;
+					int id;
+					String sessionId;
+					try {
+						id = json.getInt("id");
+						sessionId = json.getString("sessionId");
+					} catch (JSONException e) {
+						id = 0;
+						sessionId = "";
+					}
+						
 
-					country = (JSONObject) db.countryList();
+					theOutput = db.listCountries();
 
-					System.out.println("List country");
-					System.out.println(JSONValue.toJSONString(country));
-
-
-
-
-					/* 
-					 * THE OUTPUT 
-					 */
 
 					break;
 				case NEWS :

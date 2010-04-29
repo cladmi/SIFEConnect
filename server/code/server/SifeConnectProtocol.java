@@ -62,17 +62,17 @@ public class SifeConnectProtocol {
 	private static final int DISCONNECT = 2;
 
 	/* Actions */
-	private static final int LOGIN = 0;
-	private static final int LIST_COUNTRIES = 1;
-	private static final int LIST_TEAMS = 2;
-	private static final int NEWS = 3;
-	private static final int POST = 4;
-	private static final int DEL = 5;
+	private static final int LOGIN = 1;
+	private static final int LIST_COUNTRIES = 2;
+	private static final int LIST_TEAMS = 3;
+	private static final int NEWS = 4;
+	private static final int POST = 5;
+	private static final int DEL = 6;
 
 	private int state = WAITING;
-	private SessionMap savedSession;
 
 	private DatabaseAccess db = new DatabaseAccess();
+
 
 
 	public String processInput(String theInput) throws Exception {
@@ -90,7 +90,7 @@ public class SifeConnectProtocol {
 			theOutput = "Coucou";
 			state = QUERY;
 		} else if (state == DISCONNECT) {
-			theOutput = "Bye.";
+			theOutput = "END";
 			/////// on va déconnecter tout 
 			state = WAITING;
 		} else if (state == QUERY) {
@@ -98,10 +98,12 @@ public class SifeConnectProtocol {
 			JSONParser parser = new JSONParser();
 			try {
 				json = (Map) parser.parse(theInput, containerFactory);
+				System.out.println("Recieved Object"); //DEBUG
+				System.out.println(json.toString()); // DEBUG
 			} catch(ParseException pe) {
 				System.out.println(pe);
 				// TODO
-				return "Bye.";
+				return "END";
 			}
 			/* END OF JSON PARSING */
 
@@ -114,6 +116,7 @@ public class SifeConnectProtocol {
 			Connection connection = null;  
 			switch (((Number) json.get("action")).intValue()) {
 				case LOGIN :
+					System.out.println("STATE LOGIN"); //DEBUG
 					// TODO
 					// sauvegarder un session ID
 					// login
@@ -131,20 +134,23 @@ public class SifeConnectProtocol {
 
 					boolean connAccepted = db.Auth(login, passwd);
 					// if connAccepted 
-					// add to the object "id" -> id, "sessionId", "name" -> name, 
+					// add to the object "id" -> id, "sessionId" -> sid, "name" -> name, 
 					// if return value = false, nothing has been added
 					// the user hasn't been found
+					System.out.println("coucou tu veux voir ma kdèp");
 					connAccepted = db.getInfos(login.toLowerCase(), object, connAccepted);
 
-
-					
-
-
-
-					theOutput = "{'id' : " + id + "}";
+					if (connAccepted) {
+						System.out.println("Utilisateur Authentifie"); //DEBUG
+						theOutput = object.toString();
+					} else {
+						System.out.println("Erreur Authentification");//DEBUG
+						theOutput = "{\"ERROR\" : \"CONNECTION REFUSED\"}";
+					}
 
 					break;
 				case LIST_COUNTRIES :
+					System.out.println("STATE LIST_COUNTRIES"); //DEBUG
 					// id
 					// sessionId
 
@@ -155,11 +161,11 @@ public class SifeConnectProtocol {
 						id = 0;
 						sessionId = "";
 					}
-
-
-					theOutput = db.listCountries();
-
-
+					if (db.isValid(id, sessionId)) {
+						theOutput = db.listCountries();
+					} else {
+						theOutput = "{\"ERROR\" : \"SESSION ERROR\"}";
+					}
 					break;
 				case LIST_TEAMS :
 					// id

@@ -46,10 +46,7 @@ public class SCMultiServerThread extends Thread {
 		try {
 				
 			BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
 			PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-
-
 
 
 			SifeConnectProtocol scp = new SifeConnectProtocol();
@@ -60,6 +57,8 @@ public class SCMultiServerThread extends Thread {
 
 			while ((inputLine = (String) in.readLine()) != null) {
 				outputLine = scp.processInput(inputLine);
+				System.out.println("Output line"); //DEBUG
+				System.out.println(outputLine);
 				out.println(outputLine);
 				if (((String) outputLine).equals("END"))
 					break;

@@ -144,7 +144,7 @@
    }
  
  
-   public void creerTable(Connection con) throws SQLException{
+   public void createTable(Connection con) throws SQLException{
        Statement st = null;
        try {
            st = con.createStatement();

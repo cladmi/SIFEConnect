@@ -10,21 +10,19 @@ public class DatabaseAccess {
 	private Connection connection;   
 	private PreparedStatement pstmt;
 	private ResultSet rset;
+	private SessionMap Sessions = new SessionMap();
 
 
 	boolean Auth(String login, String passwd) {
 		boolean passwordCorrect = false;
 		Owasp owasp = new Owasp();
-		PreparedStatement ps = null;
-		ResultSet rs = null;
-
 		try {
 			Class.forName("org.sqlite.JDBC");
-			connection = DriverManager.getConnection("jdbc:sqlite3:passwd.db");  
+			connection = DriverManager.getConnection("jdbc:sqlite:accounts.db");  
 			passwordCorrect = owasp.authenticate(connection, login.toLowerCase(), passwd);
 			connection.close();
 			// password checked
-			
+
 			return passwordCorrect;
 
 		} catch (Exception e) {  
@@ -34,17 +32,51 @@ public class DatabaseAccess {
 	}
 
 	public boolean getInfos(String login, JSONObject object, boolean connAccepted) {
+		boolean returnValue = false;
+		int id;
+		String name;
+		String session;
 
-
-		return false;
+		try {
+			connection = DriverManager.getConnection("jdbc:sqlite:teams.db");
+			pstmt = connection.prepareStatement("SELECT idTeam, nameTeam FROM team WHERE login = ?;");
+			pstmt.setString(1, login.toLowerCase());
+			rset = pstmt.executeQuery();
+			if (rset.next()) {
+				System.out.println("on a trouve le login"); //DEBUG
+				id = rset.getInt("idTeam");
+				name = rset.getString("nameTeam");
+				if (! rset.next()) {
+					System.out.println("on a bien un seul login"); // DEBUG
+					// if there is only one row for login
+					session = Sessions.connect(id);
+					object.put("id", new Integer(id));
+					object.put("name", name);
+					object.put("sessionId", session);
+					returnValue = true;
+				}
+			}
+			rset.close();
+			pstmt.close();
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();  
+		}
+		return returnValue;
 	}
+
+	boolean isValid(int id, String session) {
+		return (Sessions.isValid(id, session));
+	}
+			
+
 
 
 	String listCountries() throws SQLException, ClassNotFoundException {
 		Class.forName("org.sqlite.JDBC");
 
 		JSONObject obj = null;
-		
+
 		// attach database
 		PreparedStatement pst = null;
 		// continents query
@@ -63,53 +95,54 @@ public class DatabaseAccess {
 		try {
 			connection = DriverManager.getConnection("jdbc:sqlite:countries.db");  
 			pst = connection.prepareStatement("ATTACH DATABASE 'teams.db' AS T");
+			pst.execute();
+			pst.close();
+
 			pstmt = connection.prepareStatement("SELECT idContinent, nameContinent FROM continent ORDER BY nameContinent ASC");
 			srs = pstmt.executeQuery();
 
-			pstmtCountry = connection.prepareStatement("SELECT idCountry, nameCountry FROM country WHERE idContinent = ? AND idCountry IN (SELECT idCountry FROM T.teams) ORDER BY nameCountry ASC");
+			pstmtCountry = connection.prepareStatement("SELECT idCountry, nameCountry FROM country WHERE idContinent = ? AND idCountry IN (SELECT idCountry FROM team) ORDER BY nameCountry ASC");
 
-			pst.execute();
-			pst.close();
 
 			/* {"header" : "World", "sections" : []} */
 			obj = new JSONObject();
 			obj.put("header", "World");
 
 			/* [{continent}, {...}] */
-			LinkedList continentTable = new LinkedList();
+			JSONArray continentTable = new JSONArray();
 			while (srs.next()) {
 
-				idContinent = srs.getInt("id");
-				continent = srs.getString("name");
+				idContinent = srs.getInt("idContinent");
+				continent = srs.getString("nameContinent");
 
 				/* countries query */
 				pstmtCountry.setInt(1, idContinent);
 				srsCountry = pstmtCountry.executeQuery();
 
-				LinkedList countryTable = new LinkedList();
+				JSONArray countryTable = new JSONArray();
 				while (srsCountry.next()) {
 					/* 
 					 * add a country 
 					 */
-					idCountry = srsCountry.getInt("id");
-					country = srsCountry.getString("name");
+					idCountry = srsCountry.getInt("idCountry");
+					country = srsCountry.getString("nameCountry");
 
 					/* {"id" : int, "name" : String} <= Country*/
-					LinkedHashMap countryCell = new LinkedHashMap();
-					countryCell.put("id", idCountry);
+					JSONObject countryCell = new JSONObject();
+					countryCell.put("id", new Integer(idCountry));
 					countryCell.put("name", country);
 					countryTable.add(countryCell);
 				}
 				if (countryTable.isEmpty()) {
 					/* if there are no teams in this continent for the moment we put some text */
-					LinkedHashMap countryCell = new LinkedHashMap();
-					countryCell.put("id", 0);
+					JSONObject countryCell = new JSONObject();
+					countryCell.put("id", new Integer(0));
 					countryCell.put("name", "No teams for the moment");
 					countryTable.add(countryCell);
 				}
 
 				/* {"id" : int, "name" : String, country : [...]} */
-				LinkedHashMap continentCell = new LinkedHashMap();
+				JSONObject continentCell = new JSONObject();
 				continentCell.put("id", idContinent);
 				continentCell.put("name", continent);
 				continentCell.put("row", countryTable);
@@ -126,7 +159,7 @@ public class DatabaseAccess {
 			srs.close();
 			pstmt.close();
 			connection.close();  
-			
+
 			return obj.toString();
 		} catch (Exception e) {  
 			e.printStackTrace();  

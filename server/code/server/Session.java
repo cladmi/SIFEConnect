@@ -21,9 +21,11 @@ public class Session {
     }
 
 	public boolean isValid(int id, String session, int expiryTime) {
+		Calendar creationLimit = Calendar.getInstance();
+		creationLimit.add(Calendar.MINUTE, -expiryTime);
 		return ((id == idTeam) && 
 				sessionId.equalsIgnoreCase(session) &&
-				timestamp.after(Calendar.getInstance().add(Calendar.MINUTE, -expiryTime)));
+				timestamp.after(creationLimit));
 	}
 
 	
@@ -62,6 +64,8 @@ public class Session {
     }
 
 	public boolean isExpired (int expiryTime) {
-		return timestamp.before(Calendar.getInstance().add(Calendar.MINUTE, -expiryTime));
+		Calendar creationLimit = Calendar.getInstance();
+		creationLimit.add(Calendar.MINUTE, -expiryTime);
+		return timestamp.before(creationLimit);
 	}
 }

@@ -79,14 +79,19 @@ public class SifeConnectProtocol {
 		Class.forName("org.sqlite.JDBC");
 
 		String theOutput = null;
-		Map json; 
+		Map json = null; 
+		int id = 0;
+		String login = null;
+		String passwd = null;
+		String sessionId = null;
+
 		if (state == WAITING) {
 			System.out.println("State Waiting");
 			theOutput = "Coucou";
 			state = QUERY;
 		} else if (state == DISCONNECT) {
 			theOutput = "Bye.";
-			 /////// on va déconnecter tout 
+			/////// on va déconnecter tout 
 			state = WAITING;
 		} else if (state == QUERY) {
 			/* JSON PARSING */
@@ -107,46 +112,51 @@ public class SifeConnectProtocol {
 			// System.out.println(JSONValue.toJSONString(json));
 
 			Connection connection = null;  
-			switch (((Integer) json.get("action")).intValue()) {
+			switch (((Number) json.get("action")).intValue()) {
 				case LOGIN :
 					// TODO
 					// sauvegarder un session ID
 					// login
 					// passwd 
-					int id;
-					String login;
-					String passwd;
 
 					/* json reading */
-					try {
-						login = json.getString("login").toLowerCase();
-						passwd = json.getString("passwd");
-					} catch (JSONException e) {
+					login = ((String) json.get("login")).toLowerCase();
+					passwd = (String) json.get("passwd");
+					if (login == null || passwd == null) {
 						login = "";
 						passwd = "";
 					}
 
+
 					// id == 0 => echec d'authentification ou erreur interne
-					id = db.Authentificate(login, passwd); 	
+					if (db.Auth(login, passwd)) {
+						; 	
+					}
 
 					theOutput = "{'id' : " + id + "}";
 
 					break;
-				case LIST_COUNTRY :
+				case LIST_COUNTRIES :
+					// id
+					// sessionId
 
-					int id;
-					String sessionId;
-					try {
-						id = json.getInt("id");
-						sessionId = json.getString("sessionId");
-					} catch (JSONException e) {
+					// erreur s'il n'y a pas d'intValue…
+					id = ((Number) json.get("id")).intValue();
+					sessionId = (String) json.get("sessionId");
+					if (sessionId == null) {
 						id = 0;
 						sessionId = "";
 					}
-						
+
 
 					theOutput = db.listCountries();
 
+
+					break;
+				case LIST_TEAMS :
+					// id
+					// sessionId
+					// country
 
 					break;
 				case NEWS :

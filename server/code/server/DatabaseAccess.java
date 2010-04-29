@@ -145,7 +145,7 @@ public class DatabaseAccess {
 				JSONObject continentCell = new JSONObject();
 				continentCell.put("id", idContinent);
 				continentCell.put("name", continent);
-				continentCell.put("row", countryTable);
+				continentCell.put("rows", countryTable);
 
 				/* add and clear */
 				continentTable.add(continentCell);

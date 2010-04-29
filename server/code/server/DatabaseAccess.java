@@ -33,6 +33,12 @@ public class DatabaseAccess {
 		return false;
 	}
 
+	public boolean getInfos(String login, JSONObject object, boolean connAccepted) {
+
+
+		return false;
+	}
+
 
 	String listCountries() throws SQLException, ClassNotFoundException {
 		Class.forName("org.sqlite.JDBC");

@@ -119,6 +119,7 @@ public class SifeConnectProtocol {
 					// login
 					// passwd 
 
+					JSONObject object = new JSONObject();
 					/* json reading */
 					login = ((String) json.get("login")).toLowerCase();
 					passwd = (String) json.get("passwd");
@@ -128,10 +129,17 @@ public class SifeConnectProtocol {
 					}
 
 
-					// id == 0 => echec d'authentification ou erreur interne
-					if (db.Auth(login, passwd)) {
-						; 	
-					}
+					boolean connAccepted = db.Auth(login, passwd);
+					// if connAccepted 
+					// add to the object "id" -> id, "sessionId", "name" -> name, 
+					// if return value = false, nothing has been added
+					// the user hasn't been found
+					connAccepted = db.getInfos(login.toLowerCase(), object, connAccepted);
+
+
+					
+
+
 
 					theOutput = "{'id' : " + id + "}";
 

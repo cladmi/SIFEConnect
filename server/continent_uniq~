@@ -1,5 +1,0 @@
-insert into continent values ('Africa');
-insert into continent values ('America');
-insert into continent values ('Asia');
-insert into continent values ('Europe');
-insert into continent values ('Oceania');

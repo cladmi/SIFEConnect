@@ -21,20 +21,18 @@
 @synthesize chooseTeamButton;
 
 @synthesize loginWait;
-
-@synthesize isLogged;
 @synthesize teamName;
 @synthesize loginString;
 
 - (IBAction)homeButtonPressed:(id)sender
 {
 	UIButton *theButton = (UIButton *)sender;
-	UIViewController *viewcontroller;
+	UIViewController *viewcontroller = nil;
 	if (theButton.tag == 0) {
 		//we clicked button login
-		if (isLogged) {
+		if ([Global sharedInstance].isLogged) {
 			// we are logged in
-			isLogged = FALSE;
+			[Global sharedInstance].isLogged = FALSE;
 			loginString = @"Welcome !";
 		
 			//sleep(1);
@@ -70,7 +68,7 @@
 
 
 - (void)log:(BOOL)connected byteam:(NSString *)name{
-	isLogged = connected;
+	[Global sharedInstance].isLogged = connected;
 	if (name) {
 		loginString = [NSString stringWithFormat:@"Welcome %@ !", name];
 	} else {
@@ -85,7 +83,7 @@
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
 		self.title = @"homeView";
-		isLogged = FALSE;
+		[Global sharedInstance].isLogged = FALSE;
 		loginString = @"Welcome !";
     }
     return self;
@@ -100,7 +98,7 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
-	if (isLogged) {
+	if ([Global sharedInstance].isLogged) {
 		teamName.text = loginString;
 		[loginButton setTitle:@"Logout" forState:0];  
 		addNewsButton.enabled = TRUE;
@@ -144,6 +142,12 @@
 	[loginWait release];
 	[teamName release];
 	[loginString release];
+	
+	
+	[homeTableController release];
+	
+	[loginWait release];
+	
 
     [super dealloc];
 }

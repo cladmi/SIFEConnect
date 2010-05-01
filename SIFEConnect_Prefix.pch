@@ -5,4 +5,8 @@
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
+	#import "Global.h"
+	#import "JSON.h"
+
+
 #endif

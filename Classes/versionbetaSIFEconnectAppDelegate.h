@@ -15,10 +15,15 @@
 	
 		
 	UINavigationController *sifeNavigationController;
+	NSString *query;
 }
 
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) NSString *query;
+
+
+- (void)contactServer:(id)caller;
 
 
 

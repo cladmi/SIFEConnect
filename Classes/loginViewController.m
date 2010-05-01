@@ -8,12 +8,16 @@
 
 #import "loginViewController.h"
 #import "homeViewController.h"
+#import "versionbetaSIFEconnectAppDelegate.h"
+#import "Global.h"
+#import "JSON.h"
 
 
 
 @implementation loginViewController
 
 @synthesize teamLogin;
+@synthesize teamPassword;
 @synthesize homeController;
 
 
@@ -39,12 +43,64 @@
 }
 */
 
-- (IBAction)connect:(id)sender
+
+
+- (IBAction)startConnection:(id)sender
 {
-	[(homeViewController *) homeController log:TRUE byteam:teamLogin.text];
-	[self.navigationController popToRootViewControllerAnimated:YES];
+
+	
+	if ([teamLogin.text isEqualToString:@""] || [teamPassword.text isEqualToString:@""]) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Empty fields" message:@"Please enter your login and password" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+	} else {
+		NSString *query;
+		NSMutableDictionary *queryDictionary;
+		queryDictionary = [[NSMutableDictionary alloc] init];
+		
+		[queryDictionary setValue:@"login" forKey:@"action"];
+		[queryDictionary setValue:[teamLogin.text lowercaseString] forKey:@"login"];
+		[queryDictionary setValue:teamPassword.text forKey:@"passwd"];
+		
+		query = [queryDictionary JSONRepresentation];
+		
+		((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = @"login";
+		[loginIndicator startAnimating];
+		[NSThread detachNewThreadSelector:@selector(contactServer:) 
+								 toTarget:(versionbetaSIFEconnectAppDelegate *)[[UIApplication 	sharedApplication] delegate] 
+							   withObject:self];
+		 [queryDictionary release]; 
+	}	
+}
+
+- (void)queryResult:(NSString *)result 
+{
+	
+	//NSString *jsonString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+    NSDictionary *results = [result JSONValue];
+	
+	NSString *status = [results objectForKey:@"STATUS"];
+	if (status != nil && [status isEqualToString:@"CONNECTION_ACCEPTED"]) {
+		
+		[[Global sharedInstance] setMyId:[[results objectForKey:@"id"] intValue]];
+		[[Global sharedInstance] setSessionId:[results objectForKey:@"sessionId"]];
+		[[Global sharedInstance] setTeamName:[results objectForKey:@"name"]];
+
+		
+		[loginIndicator stopAnimating];
+		[(homeViewController *) homeController log:TRUE byteam:[[Global sharedInstance] teamName]];
+		[self.navigationController popToRootViewControllerAnimated:YES];
+		
+	} else {
+		[loginIndicator stopAnimating];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"The login or password you entered is incorrect." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+	}	
 	
 }
+
+
 
 - (IBAction)textFieldDoneEditing:(id)sender
 {   
@@ -76,6 +132,9 @@
 
 - (void)dealloc {
     [super dealloc];
+	[teamLogin release];
+	[teamPassword release];
+	[loginIndicator release];
 }
 
 

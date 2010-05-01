@@ -62,6 +62,7 @@ public class DatabaseAccess {
 		} catch (SQLException e) {
 			e.printStackTrace();  
 		}
+		object.put("STATUS","CONNECTION_ACCEPTED");
 		return returnValue;
 	}
 

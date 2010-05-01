@@ -21,7 +21,7 @@
 	
 	IBOutlet UILabel *teamName;
 	IBOutlet NSString *loginString;
-	IBOutlet BOOL isLogged;
+	
 	
 }
 
@@ -29,7 +29,6 @@
 @property(nonatomic, retain) UIButton *addNewsButton;
 @property(nonatomic, retain) UIButton *chooseTeamButton;
 @property(nonatomic, retain) UIActivityIndicatorView *loginWait;
-@property(nonatomic) BOOL isLogged;
 @property(nonatomic, retain) UILabel *teamName;
 @property(nonatomic, retain) NSString *loginString;
 

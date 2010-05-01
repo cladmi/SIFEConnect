@@ -13,6 +13,7 @@
 
 	NSMutableArray *continent;
 	NSMutableArray *country;
+	NSDictionary *tableDictionary;
 }
 
 

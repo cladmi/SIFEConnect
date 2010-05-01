@@ -63,7 +63,21 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 	}
 
 	sqlite3_close(database);
-}				
+}			
+
+
+- (void) downloadCountryList {
+	
+	
+	
+}
+
+
+
+- (void)queryResult:(NSString *)result 
+{
+	
+}
 
 /*
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -86,6 +100,7 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 	country = [[NSMutableArray alloc] init];
 	continent = [[NSMutableArray alloc] init];
 	[self loadNamesFromDatabase];
+	[self downloadCountryList];
 	
 	self.title = @"Team Selection";
 

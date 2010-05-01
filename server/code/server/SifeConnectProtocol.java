@@ -68,6 +68,7 @@ public class SifeConnectProtocol {
 	private static final int NEWS = 4;
 	private static final int POST = 5;
 	private static final int DEL = 6;
+	private static final int DECO = 7;
 
 	private int state = WAITING;
 
@@ -84,6 +85,12 @@ public class SifeConnectProtocol {
 		String login = null;
 		String passwd = null;
 		String sessionId = null;
+		Number idNumber;
+		int idCountry;
+		int idContinent;
+		int idTeam;
+		int idList;
+		int page;
 
 		if (state == WAITING) {
 			System.out.println("State Waiting");
@@ -117,8 +124,6 @@ public class SifeConnectProtocol {
 			switch (((Number) json.get("action")).intValue()) {
 				case LOGIN :
 					System.out.println("STATE LOGIN"); //DEBUG
-					// TODO
-					// sauvegarder un session ID
 					// login
 					// passwd 
 
@@ -133,11 +138,11 @@ public class SifeConnectProtocol {
 
 
 					boolean connAccepted = db.Auth(login, passwd);
+
 					// if connAccepted 
 					// add to the object "id" -> id, "sessionId" -> sid, "name" -> name, 
-					// if return value = false, nothing has been added
-					// the user hasn't been found
-					System.out.println("coucou tu veux voir ma kdèp");
+					// if return value == false, nothing has been added
+					// user hasn't been found
 					connAccepted = db.getInfos(login.toLowerCase(), object, connAccepted);
 
 					if (connAccepted) {
@@ -145,7 +150,7 @@ public class SifeConnectProtocol {
 						theOutput = object.toString();
 					} else {
 						System.out.println("Erreur Authentification");//DEBUG
-						theOutput = "{\"ERROR\" : \"CONNECTION REFUSED\"}";
+						theOutput = "{\"STATUS\":\"CONNECTION_REFUSED\"}";
 					}
 
 					break;
@@ -155,16 +160,20 @@ public class SifeConnectProtocol {
 					// sessionId
 
 					// erreur s'il n'y a pas d'intValue…
-					id = ((Number) json.get("id")).intValue();
+					idNumber = (Number) json.get("id");
 					sessionId = (String) json.get("sessionId");
-					if (sessionId == null) {
+
+					if ((idNumber != null) && (sessionId != null)) {
+						id = idNumber.intValue();
+					} else {
 						id = 0;
 						sessionId = "";
 					}
+
 					if (db.isValid(id, sessionId)) {
 						theOutput = db.listCountries();
 					} else {
-						theOutput = "{\"ERROR\" : \"SESSION ERROR\"}";
+						theOutput = "{\"STATUS\":\"UNKNOWN_SESSION\"}";
 					}
 					break;
 				case LIST_TEAMS :
@@ -172,23 +181,149 @@ public class SifeConnectProtocol {
 					// sessionId
 					// country
 
+					idNumber = (Number) json.get("id");
+					sessionId = (String) json.get("sessionId");
+					Number countryNumber = (Number) json.get("country");
+
+					if ((idNumber != null) && (sessionId != null)) {
+						id = idNumber.intValue();
+					} else {
+						id = 0;
+						sessionId = "";
+					}
+
+					if (countryNumber != null) {
+						idCountry = countryNumber.intValue();
+					} else {
+						idCountry = -1;
+					}
+
+					if (db.isValid(id, sessionId)) {
+						theOutput = db.listTeams(idCountry);
+
+					// renvoyer le id pays aussi, c'est important pour  la généralisation éventuelle
+					} else {
+						theOutput = "{\"STATUS\":\"SESSION_ERROR\"}";
+					}
 					break;
 				case NEWS :
+					System.out.println("STATE LIST_NEWS"); //DEBUG
+					// id
 					// sessionId
-					// continent
-					// pays
+					//// continent
+					//// pays
+					// team
 					// page
+					int listType = 0;
 
+
+
+					idNumber = (Number) json.get("id");
+					sessionId = (String) json.get("sessionId");
+					Number continentNumber = (Number) json.get("continent");
+					countryNumber = (Number) json.get("country");
+					Number teamNumber = (Number) json.get("team");
+					Number pageNumber = (Number) json.get("page");
+
+					if ((idNumber != null) && (sessionId != null)) {
+						id = idNumber.intValue();
+					} else {
+						id = 0;
+						sessionId = "";
+					}
+
+					if (teamNumber != null) {
+						idList = teamNumber.intValue();
+						listType = Global.NEWS_TEAM;
+					} else if (countryNumber != null) {
+						idList = countryNumber.intValue();
+						listType = Global.NEWS_COUNTRY;
+					} else if (continentNumber != null) {
+						idList = continentNumber.intValue();
+						listType = Global.NEWS_CONTINENT;
+					} else {
+						idList = 0;
+						listType = Global.NEWS_WORLD;
+					}
+
+					if (pageNumber != null) {
+						page = pageNumber.intValue();
+					} else {
+						page = 1;
+					}
+
+					if (db.isValid(id, sessionId)) {
+						theOutput = db.listNews(id, idList, listType, page);
+					} else {
+						theOutput = "{\"STATUS\":\"UNKNOWN_SESSION\"}";
+					}
 					break;
 				case POST :
+					System.out.println("STATE POST_MESSAGE"); //DEBUG
+					// id
 					// sessionId
-					// msg
+					// textMsg
+					String textMsg = null;
 
+					// erreur s'il n'y a pas d'intValue…
+					idNumber = (Number) json.get("id");
+					sessionId = (String) json.get("sessionId");
+					textMsg = (String) json.get("text");
+					if ((idNumber != null) && (sessionId != null) && (textMsg != null)) {
+						id = idNumber.intValue();
+					} else {
+						id = 0;
+						sessionId = "";
+						textMsg = "";
+					}
+					if (db.isValid(id, sessionId)) {
+						theOutput = db.postMessage(id, textMsg);
+					} else {
+						theOutput = "{\"STATUS\":\"UNKNOWN_SESSION\"}";
+					}
 					break;
 				case DEL :
-					// sessionId
+					System.out.println("STATE DEL_MESSAGE"); //DEBUG
 					// id
+					// sessionId
+					// idMsg
 
+					// erreur s'il n'y a pas d'intValue…
+					idNumber = (Number) json.get("id");
+					sessionId = (String) json.get("sessionId");
+					if ((idNumber != null) && (sessionId != null)) {
+						id = idNumber.intValue();
+					} else {
+						id = 0;
+						sessionId = "";
+					}
+					if (db.isValid(id, sessionId)) {
+						;
+						//theOutput = db.del(msg);
+					} else {
+						theOutput = "{\"STATUS\":\"UNKNOWN_SESSION\"}";
+					}
+					break;
+				case DECO :
+					System.out.println("STATE LIST_COUNTRIES"); //DEBUG
+					// id
+					// sessionId
+
+					// erreur s'il n'y a pas d'intValue…
+					idNumber = (Number) json.get("id");
+					sessionId = (String) json.get("sessionId");
+					if ((idNumber != null) && (sessionId != null)) {
+						id = idNumber.intValue();
+					} else {
+						id = 0;
+						sessionId = "";
+					}
+					if (db.isValid(id, sessionId)) {
+						db.disconnect(id, sessionId);
+						theOutput = "{\"STATUS\":\"DISCONNECTED\"}";
+					} else {
+						theOutput = "{\"STATUS\":\"UNKNOWN_SESSION\"}";
+					}
 					break;
 				default :
 
@@ -202,5 +337,6 @@ public class SifeConnectProtocol {
 		}
 		return theOutput;
 	}
+
 }
 

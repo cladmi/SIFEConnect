@@ -65,14 +65,12 @@ public class DatabaseAccess {
 		return returnValue;
 	}
 
-	boolean isValid(int id, String session) {
+	public boolean isValid(int id, String session) {
 		return (Sessions.isValid(id, session));
 	}
-			
 
 
-
-	String listCountries() throws SQLException, ClassNotFoundException {
+	public String listCountries() throws SQLException, ClassNotFoundException {
 		Class.forName("org.sqlite.JDBC");
 
 		JSONObject obj = null;
@@ -141,7 +139,7 @@ public class DatabaseAccess {
 					countryTable.add(countryCell);
 				}
 
-				/* {"id" : int, "name" : String, country : [...]} */
+				/* {"id" : idContinent, "name" : continentName, country : [...]} */
 				JSONObject continentCell = new JSONObject();
 				continentCell.put("id", idContinent);
 				continentCell.put("name", continent);
@@ -166,6 +164,233 @@ public class DatabaseAccess {
 		}
 		return null;
 	}
+
+	public String listTeams(int idCountry) throws SQLException, ClassNotFoundException {
+		Class.forName("org.sqlite.JDBC");
+
+		JSONObject obj = null;
+
+		// attach database
+		PreparedStatement pst = null;
+		// teams query
+		PreparedStatement pstmt = null;
+		ResultSet srs = null;
+		// countries query
+		PreparedStatement psTeam = null;
+		ResultSet rsTeam = null;
+
+		String country;
+		int idTeam;
+		String nameTeam;
+
+		try {
+			if (idCountry == -1) 
+				throw new Exception("idCountry == -1");
+
+			connection = DriverManager.getConnection("jdbc:sqlite:countries.db");  
+			pst = connection.prepareStatement("ATTACH DATABASE 'teams.db' AS T");
+			pst.execute();
+			pst.close();
+
+			pstmt = connection.prepareStatement("SELECT nameCountry FROM country WHERE idCountry = " + idCountry);
+			srs = pstmt.executeQuery();
+
+			psTeam = connection.prepareStatement("SELECT idTeam, nameTeam FROM team WHERE idCountry = " + idCountry + " ORDER BY nameTeam ASC");
+
+			/* {"header" : countryName, "idCountry" : idCountry,  "sections" : []} */
+			obj = new JSONObject();
+			if (srs.next()) {
+				obj.put("header", srs.getString("nameCountry"));
+				obj.put("idCountry", new Integer(idCountry));
+			} else {
+				throw new Exception("idCountry not found");
+			}
+			srs.close();
+			pstmt.close();
+
+			rsTeam = psTeam.executeQuery();
+			/* [{teams}, {...}] */
+			JSONArray teamTable = new JSONArray();
+			while (rsTeam.next()) {
+
+				idTeam = rsTeam.getInt("idTeam");
+				nameTeam = rsTeam.getString("nameTeam");
+
+				/* {"id" : int, "name" : String} <= Country*/
+				JSONObject teamCell = new JSONObject();
+				teamCell.put("id", new Integer(idTeam));
+				teamCell.put("name", nameTeam);
+				teamTable.add(teamCell);
+			}
+
+			/* add and clear */
+			/* fin traitement continent */
+			obj.put("section", teamTable);
+			/* close the connection */
+			rsTeam.close();
+			psTeam.close();
+			connection.close();  
+
+			return obj.toString();
+		} catch (Exception e) {  
+			e.printStackTrace();  
+		}
+		return "{\"STATUS\":\"DATA_ERROR\"}";
+	}
+
+
+	public String listNews(int id, int idList, int listType, int page) throws SQLException, ClassNotFoundException {
+		Class.forName("org.sqlite.JDBC");
+
+		JSONObject obj = null;
+
+		// attach database
+		PreparedStatement pst = null;
+		// countries query
+		PreparedStatement psNews = null;
+		ResultSet rsNews = null;
+
+		String country;
+		int idTeam;
+		String nameTeam;
+		String grepNews = null;
+		String headerColums = null;
+		long dateMsg;
+		String textMsg = null;
+		int idMsg = 0;
+
+		try {
+			if (idList == -1) {
+				throw new Exception("idList incorrect");
+			}
+
+			switch (listType) {
+				case (Global.NEWS_TEAM) :
+					grepNews = " AND M.idTeam = " + idList + " ";
+					headerColums = "T.teamName";
+					break;
+				case (Global.NEWS_COUNTRY) :
+					grepNews = " AND C.idCountry = " + idList + " ";
+					headerColums = "C.countryName";
+					break;
+				case (Global.NEWS_CONTINENT) :
+					grepNews = " AND W.idContinent = " + idList + " ";
+					headerColums = "W.continentName";
+					break;
+				case (Global.NEWS_WORLD) :
+					grepNews = "";
+					break;
+				//default :
+				//	throw new Exception("listType incorrect");
+				//break;
+			}
+
+			connection = DriverManager.getConnection("jdbc:sqlite:msgs.db");  
+			pst = connection.prepareStatement("ATTACH DATABASE 'teams.db' AS T");
+			pst.execute();
+			pst.close();
+			pst = connection.prepareStatement("ATTACH DATABASE 'countries.db' AS C");
+			pst.execute();
+			pst.close();
+
+			/* {"header" : typeListNews, "Previous" : int/null, "Next" : int/null", "sections":[]} */
+			obj = new JSONObject();
+
+
+			psNews = connection.prepareStatement("SELECT COUNT(*), M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND T.idContinent = W.idContinent " + grepNews + " ORDER BY date DESC LIMIT " + (Global.NEWS_PER_PAGE + 1) + " OFFSET " + (Global.NEWS_PER_PAGE*page));
+			// on en récupère un de plus, pour permettre de savoir s'il y en a d'autres
+
+			rsNews = psNews.executeQuery();
+
+			if (listType == 4) {
+				obj.put("header", "World News");
+			} else {
+				obj.put("header", rsNews.getString(headerColums) + " News");
+			}
+
+			if (page == 1) {
+				obj.put("previous", null);
+			} else {
+				obj.put("previous", new Integer(page -1));
+			}
+			
+			if (rsNews.getInt(1) <= 10) {
+				obj.put("next", null);
+			} else {
+				obj.put("next", new Integer(page + 1));
+			}
+
+			/* [{msgs}, {...}] */
+			JSONArray msgTable = new JSONArray();
+			for (int i = 0; (i < Global.NEWS_PER_PAGE) && (rsNews.next()); i++) {
+
+				idTeam = rsNews.getInt("M.idTeam");
+				nameTeam = rsNews.getString("T.nameTeam");
+				dateMsg = rsNews.getDate("M.date").getTime();
+				textMsg = rsNews.getString("M.msg");
+				idMsg = rsNews.getInt("M.idMsg");
+
+				/* {"id" : int, "name" : string, "date" : long, "rows" : [{"text" : String}]}*/
+				JSONObject msgCell = new JSONObject();
+				msgCell.put("id", new Integer(idTeam));
+				msgCell.put("name", nameTeam);
+				msgCell.put("date", new Long(dateMsg));
+
+				JSONArray rowsTable = new JSONArray();
+
+				JSONObject textCell = new JSONObject();
+				textCell.put("text", textMsg);
+				textCell.put("id", new Integer(idMsg));
+
+				rowsTable.add(textCell);
+
+				msgCell.put("rows", rowsTable); 
+				msgTable.add(msgCell);
+			}
+
+			/* close the connection */
+			rsNews.close();
+			psNews.close();
+			connection.close();  
+
+			return obj.toString();
+		} catch (Exception e) {  
+			e.printStackTrace();  
+		}
+		return "{\"STATUS\":\"DATA_ERROR\"}";
+	}
+
+	public String postMessage(int teamId, String msg) throws ClassNotFoundException {
+		Class.forName("org.sqlite.JDBC");
+
+		int idTeam;
+		String nameTeam;
+
+		// message query
+
+		try {
+			connection = DriverManager.getConnection("jdbc:sqlite:msgs.db");  
+
+			pstmt = connection.prepareStatement("INSERT INTO msg (idTeam, msg, date, like, dislike) values (" + teamId + ", " + msg + ", ?, 0, 0)");
+			pstmt.setDate(1, new java.sql.Date(Calendar.getInstance().getTimeInMillis()));
+			pstmt.executeUpdate();
+			pstmt.close();
+
+			return "{\"STATUS\":\"MESSAGE_DELETED\"}";
+		} catch (Exception e) {  
+			e.printStackTrace();  
+		}
+		return "{\"STATUS\":\"DATA_ERROR\"}";
+	}
+
+	public void disconnect(int id, String session) {
+		disconnect(id, session);
+	}
+
+
+
+
+
 }
 
 

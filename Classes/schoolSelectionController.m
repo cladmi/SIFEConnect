@@ -19,7 +19,7 @@
 
 
 
-- (void) downloadCountryList {
+- (void) downloadTeamList {
 	
 	NSString *query;
 	NSMutableDictionary *queryDictionary;
@@ -32,7 +32,7 @@
 	
 	query = [queryDictionary JSONRepresentation];
 	
-	((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = @"listCountries";
+	((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = @"listTeams";
 	
 	[NSThread detachNewThreadSelector:@selector(contactServer:) 
 							 toTarget:(versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate] 
@@ -45,6 +45,10 @@
 
 - (void)queryResult:(NSString *)result 
 {
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"caller == nill" message:@"Problem while passing the sender" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+	[alert show];
+	[alert release];
+	
 	teamDictionary = [result JSONValue];
 	[teamDictionary retain];
 	
@@ -61,13 +65,14 @@
 }
 */
 
-/*
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[self downloadTeamList];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
- */
+
 
 
 /*
@@ -118,6 +123,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	if (teamDictionary != nil) {
 		return [[teamDictionary objectForKey:@"section"] count];
+
 	} else {
 		return 0;
 	}

@@ -198,7 +198,7 @@ public class DatabaseAccess {
 
 			psTeam = connection.prepareStatement("SELECT idTeam, nameTeam FROM team WHERE idCountry = " + idCountry + " ORDER BY nameTeam ASC");
 
-			/* {"header" : countryName, "idCountry" : idCountry,  "sections" : []} */
+			/* {"header" : countryName, "idCountry" : idCountry,  "rows" : []} */
 			obj = new JSONObject();
 			if (srs.next()) {
 				obj.put("header", srs.getString("nameCountry"));
@@ -226,7 +226,7 @@ public class DatabaseAccess {
 
 			/* add and clear */
 			/* fin traitement continent */
-			obj.put("section", teamTable);
+			obj.put("rows", teamTable);
 			/* close the connection */
 			rsTeam.close();
 			psTeam.close();

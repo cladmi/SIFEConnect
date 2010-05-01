@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>C96F308A118CD40600FF473A</string>
+						<string>C96F30B8118CD7CD00FF473A</string>
 						<key>history</key>
 						<array>
 							<string>C96F2A20118C767D00FF473A</string>
@@ -314,7 +314,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
+									<integer>13</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -357,7 +357,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>versionbetaSIFEconnectAppDelegate.m</string>
+								<string>schoolSelectionController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -369,7 +369,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C96F3089118CD40600FF473A</string>
+										<string>C96F30B6118CD7CD00FF473A</string>
 										<key>history</key>
 										<array>
 											<string>C9D2F905115BD37500805EF7</string>
@@ -414,12 +414,30 @@
 											<string>C96F3072118CD32200FF473A</string>
 											<string>C96F3073118CD32200FF473A</string>
 											<string>C96F3086118CD40600FF473A</string>
-											<string>C96F3087118CD40600FF473A</string>
-											<string>C96F3088118CD40600FF473A</string>
+											<string>C96F308F118CD6B700FF473A</string>
+											<string>C96F3090118CD6B700FF473A</string>
+										</array>
+									</dict>
+									<key>Split1</key>
+									<dict>
+										<key>PBXProjectModuleGUID</key>
+										<string>C96F3092118CD6B700FF473A</string>
+										<key>PBXProjectModuleLabel</key>
+										<string>schoolSelectionController.m</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>C96F30B7118CD7CD00FF473A</string>
+										<key>history</key>
+										<array>
+											<string>C96F309C118CD70E00FF473A</string>
+											<string>C96F309D118CD70E00FF473A</string>
+											<string>C96F30AF118CD75C00FF473A</string>
+											<string>C96F30B0118CD75C00FF473A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
-									<string>1</string>
+									<string>2</string>
 								</dict>
 								<key>StatusBarVisibility</key>
 								<true/>
@@ -615,10 +633,10 @@
 	<array>
 		<string>1C0AD2AF069F1E9B00FABCE6</string>
 		<string>C96F2A62118C794200FF473A</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>C9D2F852115BAA2000805EF7</string>
 		<string>C96F2962118C674200FF473A</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/BlueOne/Documents/SIFEConnect/SIFEConnect.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -1003,7 +1021,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

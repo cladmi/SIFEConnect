@@ -4,8 +4,8 @@
 {"action":2,"id":1,"sessionId":"4DF4044A42D9832E9400DE164F448A4621CA4634D05DF3A3"}
 	{"section":[{"id":1,"name":"Africa","rows":[{"id":0,"name":"No teams for the moment"}]}, {"id":2,"name":"America","rows":[{"id":0,"name":"No teams for the moment"}]}, {"id":3,"name":"Asia","rows"{"id":0,"name":"No teams for the moment"}]}, {"id":4,"name":"Europe","rows"[{"id":33,"name":"France"}]}, {"id":5,"name":"Oceania","rows"[{"id":0,"name":"No teams for the moment"}]}], "header":"World"}
 
-{"action" : 3, "id":1,"sessionId":"5C7FDD0715875E055F2E301877B5BE6F02569BA650617144", "country" : 33}
-
+{"action" : 3, "id":1,"sessionId":"32E000502575367EEFCDDBAB6E4B59F9FBBA04B879DDE26C", "country" : 33}
+	{"idCountry":33,"section":[{"id":1,"name":"TheDeveloper"}],"header":"France"}
 
 
 

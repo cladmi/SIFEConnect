@@ -27,7 +27,7 @@
 - (IBAction)homeButtonPressed:(id)sender
 {
 	UIButton *theButton = (UIButton *)sender;
-	UIViewController *viewcontroller;
+	UIViewController *viewcontroller = nil;
 	if (theButton.tag == 0) {
 		//we clicked button login
 		if ([Global sharedInstance].isLogged) {

@@ -47,20 +47,30 @@
 
 - (IBAction)startConnection:(id)sender
 {
+
 	
 	if ([teamLogin.text isEqualToString:@""] || [teamPassword.text isEqualToString:@""]) {
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Empty fields" message:@"Please enter your login and password" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 		[alert show];
 		[alert release];
 	} else {
+		NSString *query;
+		NSMutableDictionary *queryDictionary;
+		queryDictionary = [[NSMutableDictionary alloc] init];
+		
+		[queryDictionary setValue:@"login" forKey:@"action"];
+		[queryDictionary setValue:[teamLogin.text lowercaseString] forKey:@"login"];
+		[queryDictionary setValue:teamPassword.text forKey:@"passwd"];
+		
+		query = [queryDictionary JSONRepresentation];
+		
 		((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = @"login";
 		[loginIndicator startAnimating];
 		[NSThread detachNewThreadSelector:@selector(contactServer:) 
 								 toTarget:(versionbetaSIFEconnectAppDelegate *)[[UIApplication 	sharedApplication] delegate] 
 							   withObject:self];
-	}
-	
-	
+		 [queryDictionary release]; 
+	}	
 }
 
 - (void)queryResult:(NSString *)result 

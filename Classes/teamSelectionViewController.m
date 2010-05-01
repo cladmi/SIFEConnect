@@ -8,6 +8,7 @@
 
 #import "homeViewController.h"
 #import "teamSelectionViewController.h"
+#import "versionbetaSIFEconnectAppDelegate.h"
 #import "schoolSelectionController.h"
 #import "sqlite3.h"
 
@@ -68,7 +69,21 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 
 - (void) downloadCountryList {
 	
+	NSString *query;
+	NSMutableDictionary *queryDictionary;
+	queryDictionary = [[NSMutableDictionary alloc] init];
+	[queryDictionary setValue:@"listCountries" forKey:@"action"];
+	[queryDictionary setValue:[NSNumber numberWithInt:[Global sharedInstance].myId] forKey:@"id"];
+	[queryDictionary setValue:[Global sharedInstance].sessionId forKey:@"sessionId"];
 	
+	query = [queryDictionary JSONRepresentation];
+	
+	((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = @"listCountries";
+	
+	[NSThread detachNewThreadSelector:@selector(contactServer:) 
+							 toTarget:(versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate] 
+						   withObject:self];
+	[queryDictionary release];
 	
 }
 
@@ -76,7 +91,10 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 
 - (void)queryResult:(NSString *)result 
 {
+	tableDictionary = [result JSONValue];
+	[tableDictionary retain];
 	
+	[self.tableView reloadData];
 }
 
 /*
@@ -114,21 +132,7 @@ static int MyCallback(void *context, int count, char **values, char **colums)
     [super viewWillAppear:animated];
 }
 */
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-	[super viewDidDisappear:animated];
-}
-*/
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -154,16 +158,32 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [continent count];
+	if (tableDictionary != nil) {
+		return [((NSArray *) [tableDictionary objectForKey:@"section"]) count];
+	} else {
+		return 0;
+	}
+	//return [continent count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	return [continent objectAtIndex:section];
+	if (tableDictionary != nil) {
+		return [((NSDictionary *) [((NSArray *) [tableDictionary objectForKey:@"section"]) objectAtIndex:section]) objectForKey:@"name"];
+	} else {
+		return @"Loading data";
+	}
+	//return [continent objectAtIndex:section];
 }
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [[country objectAtIndex:section] count];
+	
+	if (tableDictionary != nil) {
+		return [[((NSDictionary *) [((NSArray *) [tableDictionary objectForKey:@"section"]) objectAtIndex:section]) objectForKey:@"rows"] count];
+	} else {
+		return 0;
+	}
+	//return [[country objectAtIndex:section] count];
 }
 
 
@@ -179,11 +199,15 @@ static int MyCallback(void *context, int count, char **values, char **colums)
     
 	
     // Set up the cell...
-	cell.textLabel.text = [[country objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+	cell.textLabel.text = [[[((NSDictionary *) [((NSArray *) [tableDictionary objectForKey:@"section"]) objectAtIndex:indexPath.section]) objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"name"];
+	//cell.textLabel.text = [[country objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
 	if ([cell.textLabel.text isEqualToString:@"No teams for the moment"]) {
+//	if ([[[((NSDictionary *) [((NSArray *) [tableDictionary objectForKey:@"section"]) objectAtIndex:indexPath.section]) objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"id"] == 0) {
 		cell.accessoryType = UITableViewCellAccessoryNone;
+		cell.textLabel.enabled = NO;
 	} else {
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		cell.textLabel.enabled = YES;
 	}	
     return cell;
 }

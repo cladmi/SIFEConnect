@@ -45,10 +45,6 @@
 
 - (void)queryResult:(NSString *)result 
 {
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"caller == nill" message:@"Problem while passing the sender" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
-	[alert show];
-	[alert release];
-	
 	teamDictionary = [result JSONValue];
 	[teamDictionary retain];
 	
@@ -122,7 +118,8 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	if (teamDictionary != nil) {
-		return [[teamDictionary objectForKey:@"section"] count];
+		return 1; 
+		//return [[teamDictionary objectForKey:@"section"] count];
 
 	} else {
 		return 0;
@@ -134,7 +131,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	
 	if (teamDictionary != nil) {
-		return 0;
+		return [[teamDictionary objectForKey:@"rows"] count];
 	} else {
 		return 0;
 	}
@@ -153,7 +150,7 @@
     }
     
 	
-	cell.textLabel.text = countryName;
+	cell.textLabel.text = [[[teamDictionary objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"name"];;
     // Set up the cell...
 	
     return cell;
@@ -161,6 +158,8 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	UITableViewCell *tableCell = [self.tableView cellForRowAtIndexPath:indexPath];
+	[tableCell setSelected:NO animated:YES];
     // Navigation logic may go here. Create and push another view controller.
 	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
 	// [self.navigationController pushViewController:anotherViewController];

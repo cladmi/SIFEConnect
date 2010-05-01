@@ -197,48 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>C96F2962118C674200FF473A</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>MyTableViewController.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>C96F2963118C674200FF473A</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>MyTableViewController.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>C96F30B8118CD7CD00FF473A</string>
-						<key>history</key>
-						<array>
-							<string>C96F2A20118C767D00FF473A</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {750, 711}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>15 121 750 752 0 0 1440 878 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -270,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -314,7 +275,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>13</integer>
+									<integer>15</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -350,14 +311,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>schoolSelectionController.m</string>
+								<string>Global.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -365,11 +324,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>versionbetaSIFEconnectAppDelegate.m</string>
+										<string>Global.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C96F30B6118CD7CD00FF473A</string>
+										<string>C92F9FF1118CDDAC00B76CDA</string>
 										<key>history</key>
 										<array>
 											<string>C9D2F905115BD37500805EF7</string>
@@ -394,13 +353,11 @@
 											<string>C96F2A53118C78DC00FF473A</string>
 											<string>C96F2A54118C78DC00FF473A</string>
 											<string>C96F2A55118C78DC00FF473A</string>
-											<string>C96F2BBF118C889300FF473A</string>
 											<string>C96F2BC0118C889300FF473A</string>
 											<string>C96F2BD5118C89DE00FF473A</string>
 											<string>C96F2BFC118C8CCF00FF473A</string>
 											<string>C96F2CC7118C952B00FF473A</string>
 											<string>C96F2D27118C97E000FF473A</string>
-											<string>C96F2D29118C97E000FF473A</string>
 											<string>C96F2E1E118C9F1100FF473A</string>
 											<string>C96F2E1F118C9F1100FF473A</string>
 											<string>C96F2E6A118CA1E000FF473A</string>
@@ -415,29 +372,13 @@
 											<string>C96F3073118CD32200FF473A</string>
 											<string>C96F3086118CD40600FF473A</string>
 											<string>C96F308F118CD6B700FF473A</string>
-											<string>C96F3090118CD6B700FF473A</string>
-										</array>
-									</dict>
-									<key>Split1</key>
-									<dict>
-										<key>PBXProjectModuleGUID</key>
-										<string>C96F3092118CD6B700FF473A</string>
-										<key>PBXProjectModuleLabel</key>
-										<string>schoolSelectionController.m</string>
-										<key>_historyCapacity</key>
-										<integer>0</integer>
-										<key>bookmark</key>
-										<string>C96F30B7118CD7CD00FF473A</string>
-										<key>history</key>
-										<array>
-											<string>C96F309C118CD70E00FF473A</string>
-											<string>C96F309D118CD70E00FF473A</string>
-											<string>C96F30AF118CD75C00FF473A</string>
-											<string>C96F30B0118CD75C00FF473A</string>
+											<string>C92F9FEF118CDDAC00B76CDA</string>
+											<string>C92F9FF0118CDDAC00B76CDA</string>
+											<string>C96F2D29118C97E000FF473A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
-									<string>2</string>
+									<string>1</string>
 								</dict>
 								<key>StatusBarVisibility</key>
 								<true/>
@@ -491,9 +432,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>C96F2854118C28D800FF473A</string>
+				<string>C92F9FF2118CDDAC00B76CDA</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>C96F2855118C28D800FF473A</string>
+				<string>C92F9FF3118CDDAC00B76CDA</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -631,12 +572,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C0AD2AF069F1E9B00FABCE6</string>
-		<string>C96F2A62118C794200FF473A</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>C9D2F852115BAA2000805EF7</string>
-		<string>C96F2962118C674200FF473A</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/BlueOne/Documents/SIFEConnect/SIFEConnect.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -661,7 +597,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>teamSelectionViewController.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -678,8 +614,6 @@
 							<string>197pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -719,7 +653,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>C9D2F852115BAA2000805EF7</string>
-				<string>C96F2858118C28D800FF473A</string>
+				<string>C92F9FF4118CDDAC00B76CDA</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

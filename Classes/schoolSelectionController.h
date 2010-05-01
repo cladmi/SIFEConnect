@@ -12,9 +12,13 @@
 @interface schoolSelectionController : UITableViewController {
 	
 	NSString *countryName;
+	int idCountry;
+	NSDictionary *teamDictionary;
 
 }
 
 @property(nonatomic, retain) NSString *countryName;
+@property(nonatomic) int idCountry;
+@property(nonatomic, retain) NSDictionary *teamDictionary;
 
 @end

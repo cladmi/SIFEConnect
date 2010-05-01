@@ -8,66 +8,48 @@
 
 #import "schoolSelectionController.h"
 #import "sqlite3.h"
-
-static int MyCallback(void *context, int count, char **values, char **colums)
-{
-	NSMutableArray *result = (NSMutableArray *)context;
-	for (int i = 0; i < count; i++) {
-		const char *nameCString = values[i];
-		[result addObject:[NSString stringWithUTF8String:nameCString]];
-	}
-	return SQLITE_OK;
-}
+#import "versionbetaSIFEconnectAppDelegate.h"
 
 
 @implementation schoolSelectionController
 
 @synthesize countryName;
+@synthesize idCountry;
+@synthesize teamDictionary;
 
 
-/*
 
-- (void) loadNamesFromDatabase
-{
+- (void) downloadCountryList {
+	
 	NSString *query;
-	NSMutableArray *section;
+	NSMutableDictionary *queryDictionary;
+	queryDictionary = [[NSMutableDictionary alloc] init];
+	[queryDictionary setValue:@"listTeams" forKey:@"action"];
+	[queryDictionary setValue:[NSNumber numberWithInt:[Global sharedInstance].myId] forKey:@"id"];
+	[queryDictionary setValue:[Global sharedInstance].sessionId forKey:@"sessionId"];
+	[queryDictionary setValue:[NSNumber numberWithInt:idCountry] forKey:@"country"];
 	
-	NSString *file = [[NSBundle mainBundle] pathForResource:@"country" ofType:@"db"];
-	sqlite3 *database = NULL;
 	
-	if (sqlite3_open([file UTF8String], &database) == SQLITE_OK) {
-		if (sqlite3_exec(database, "select name from continent", MyCallback, continent, NULL) != SQLITE_OK) {
-			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"SQLITEAlert" message:@"Error while executing query" delegate:self cancelButtonTitle:@"Cancel"  otherButtonTitles: nil];
-			[alert show];
-			[alert release];
-		}
-		
-		/////////////////// For test only
-		[continent addObject:@"ZuperContinent"];
-	    /////////////////////////////////
-		
-		
-		for (int i = 1; i <= [continent count]; i++) {
-			// section is the the array of country for the section i
-			section = [[NSMutableArray alloc] init];
-			query = [NSString stringWithFormat:@"select name from country where idC = %d", i];
-			sqlite3_exec(database,[query UTF8String], MyCallback, section, NULL);
-			if ([section count] == 0) {
-				[section addObject:@"No teams for the moment"];
-			}
-			[country addObject:section];
-		}
-		
-	} else {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"SQLITEAlert" message:@"Error opening file" delegate:self cancelButtonTitle:@"OK"  otherButtonTitles: nil];
-		[alert show];
-		[alert release];
-	}
+	query = [queryDictionary JSONRepresentation];
 	
-	sqlite3_close(database);
-}				
+	((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = @"listCountries";
+	
+	[NSThread detachNewThreadSelector:@selector(contactServer:) 
+							 toTarget:(versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate] 
+						   withObject:self];
+	[queryDictionary release];
+	
+}
 
-*/
+
+
+- (void)queryResult:(NSString *)result 
+{
+	teamDictionary = [result JSONValue];
+	[teamDictionary retain];
+	
+	[self.tableView reloadData];
+}
 
 
 /*
@@ -134,13 +116,23 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+	if (teamDictionary != nil) {
+		return [[teamDictionary objectForKey:@"section"] count];
+	} else {
+		return 0;
+	}
 }
 
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+	
+	if (teamDictionary != nil) {
+		return 0;
+	} else {
+		return 0;
+	}
+ 
 }
 
 
@@ -211,6 +203,8 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 
 
 - (void)dealloc {
+	[countryName release];
+	[teamDictionary release];
     [super dealloc];
 }
 

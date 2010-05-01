@@ -12,7 +12,7 @@
 #import "schoolSelectionController.h"
 #import "sqlite3.h"
 
-static int MyCallback(void *context, int count, char **values, char **colums)
+/*static int MyCallback(void *context, int count, char **values, char **colums)
 {
 	NSMutableArray *result = (NSMutableArray *)context;
 	for (int i = 0; i < count; i++) {
@@ -22,9 +22,9 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 	return SQLITE_OK;
 }
 
-
+*/
 @implementation teamSelectionViewController
-
+/*
 
 - (void) loadNamesFromDatabase
 {
@@ -64,7 +64,7 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 	}
 
 	sqlite3_close(database);
-}			
+}		*/	
 
 
 - (void) downloadCountryList {
@@ -115,9 +115,6 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	country = [[NSMutableArray alloc] init];
-	continent = [[NSMutableArray alloc] init];
-	[self loadNamesFromDatabase];
 	[self downloadCountryList];
 	
 	self.title = @"Team Selection";
@@ -128,10 +125,26 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 
 
 /*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-*/
+ - (void)viewWillAppear:(BOOL)animated {
+ [super viewWillAppear:animated];
+ }
+ */
+
+/*
+ - (void)viewDidAppear:(BOOL)animated {
+ [super viewDidAppear:animated];
+ }
+ */
+/*
+ - (void)viewWillDisappear:(BOOL)animated {
+ [super viewWillDisappear:animated];
+ }
+ */
+/*
+ - (void)viewDidDisappear:(BOOL)animated {
+ [super viewDidDisappear:animated];
+ }
+ */
 
 
 /*
@@ -159,7 +172,7 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	if (tableDictionary != nil) {
-		return [((NSArray *) [tableDictionary objectForKey:@"section"]) count];
+		return [[tableDictionary objectForKey:@"section"] count];
 	} else {
 		return 0;
 	}
@@ -168,7 +181,7 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 	if (tableDictionary != nil) {
-		return [((NSDictionary *) [((NSArray *) [tableDictionary objectForKey:@"section"]) objectAtIndex:section]) objectForKey:@"name"];
+		return [[[tableDictionary objectForKey:@"section"] objectAtIndex:section] objectForKey:@"name"];
 	} else {
 		return @"Loading data";
 	}
@@ -179,7 +192,7 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	
 	if (tableDictionary != nil) {
-		return [[((NSDictionary *) [((NSArray *) [tableDictionary objectForKey:@"section"]) objectAtIndex:section]) objectForKey:@"rows"] count];
+		return [[[[tableDictionary objectForKey:@"section"] objectAtIndex:section] objectForKey:@"rows"] count];
 	} else {
 		return 0;
 	}
@@ -195,14 +208,15 @@ static int MyCallback(void *context, int count, char **values, char **colums)
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
-    
+	}
 	
     // Set up the cell...
-	cell.textLabel.text = [[[((NSDictionary *) [((NSArray *) [tableDictionary objectForKey:@"section"]) objectAtIndex:indexPath.section]) objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"name"];
+	NSDictionary *countryCell = [[[[tableDictionary objectForKey:@"section"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row];
+	cell.textLabel.text = [countryCell objectForKey:@"name"];
 	//cell.textLabel.text = [[country objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-	if ([cell.textLabel.text isEqualToString:@"No teams for the moment"]) {
-//	if ([[[((NSDictionary *) [((NSArray *) [tableDictionary objectForKey:@"section"]) objectAtIndex:indexPath.section]) objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"id"] == 0) {
+//	if ([cell.textLabel.text isEqualToString:@"No teams for the moment"]) {
+	if ([[countryCell objectForKey:@"id"] intValue] == 0) {
+		
 		cell.accessoryType = UITableViewCellAccessoryNone;
 		cell.textLabel.enabled = NO;
 	} else {
@@ -224,6 +238,8 @@ static int MyCallback(void *context, int count, char **values, char **colums)
 		// Navigation logic may go here. Create and push another view controller.
 		schoolSelectionController *anotherViewController = [[schoolSelectionController alloc] initWithNibName:@"schoolSelection" bundle:nil];
 		anotherViewController.countryName = tableCell.textLabel.text; 
+		anotherViewController.idCountry = [[[[[[tableDictionary objectForKey:@"section"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"id"] intValue];
+
 		anotherViewController.title = tableCell.textLabel.text;
 		[self.navigationController pushViewController:anotherViewController animated:YES];
 	

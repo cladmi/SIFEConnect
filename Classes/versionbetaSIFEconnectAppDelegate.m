@@ -51,7 +51,8 @@
 	} else if ([query isEqualToString:@"listCountries"]) {
 		
 	    result = @"{\"section\":[{\"id\":1,\"name\":\"Africa\",\"rows\":[{\"id\":0,\"name\":\"No teams for the moment\"}]}, {\"id\":2,\"name\":\"America\",\"rows\":[{\"id\":0,\"name\":\"No teams for the moment\"}]}, {\"id\":3,\"name\":\"Asia\",\"rows\":[{\"id\":0,\"name\":\"No teams for the moment\"}]}, {\"id\":4,\"name\":\"Europe\",\"rows\":[{\"id\":33,\"name\":\"France\"}]}, {\"id\":5,\"name\":\"Oceania\",\"rows\":[{\"id\":0,\"name\":\"No teams for the moment\"}]}], \"header\":\"World\"}";	
-		}
+	} else if ([query isEqualToString:@"listCountries"]) {
+		
 	
 	sleep(1);
 

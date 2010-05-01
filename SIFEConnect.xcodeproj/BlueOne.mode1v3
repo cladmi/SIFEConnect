@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>C96F3015118CCBC300FF473A</string>
+						<string>C96F308A118CD40600FF473A</string>
 						<key>history</key>
 						<array>
 							<string>C96F2A20118C767D00FF473A</string>
@@ -314,7 +314,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>11</integer>
+									<integer>9</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -357,7 +357,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>teamSelectionViewController.m</string>
+								<string>versionbetaSIFEconnectAppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -365,11 +365,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>teamSelectionViewController.m</string>
+										<string>versionbetaSIFEconnectAppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C96F3014118CCBC300FF473A</string>
+										<string>C96F3089118CD40600FF473A</string>
 										<key>history</key>
 										<array>
 											<string>C9D2F905115BD37500805EF7</string>
@@ -404,18 +404,18 @@
 											<string>C96F2E1E118C9F1100FF473A</string>
 											<string>C96F2E1F118C9F1100FF473A</string>
 											<string>C96F2E6A118CA1E000FF473A</string>
-											<string>C96F2E6C118CA1E000FF473A</string>
 											<string>C96F2E9B118CB72800FF473A</string>
 											<string>C96F2EB8118CBED300FF473A</string>
 											<string>C96F2F11118CC16300FF473A</string>
 											<string>C96F2F12118CC16300FF473A</string>
-											<string>C96F2F13118CC16300FF473A</string>
-											<string>C96F2FC0118CC77700FF473A</string>
 											<string>C96F2FC1118CC77700FF473A</string>
-											<string>C96F3000118CCB8A00FF473A</string>
-											<string>C96F3001118CCB8A00FF473A</string>
-											<string>C96F3002118CCB8A00FF473A</string>
-											<string>C96F3003118CCB8A00FF473A</string>
+											<string>C96F3070118CD32200FF473A</string>
+											<string>C96F3071118CD32200FF473A</string>
+											<string>C96F3072118CD32200FF473A</string>
+											<string>C96F3073118CD32200FF473A</string>
+											<string>C96F3086118CD40600FF473A</string>
+											<string>C96F3087118CD40600FF473A</string>
+											<string>C96F3088118CD40600FF473A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -613,11 +613,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1C0AD2AF069F1E9B00FABCE6</string>
 		<string>C96F2A62118C794200FF473A</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>C9D2F852115BAA2000805EF7</string>
 		<string>C96F2962118C674200FF473A</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/BlueOne/Documents/SIFEConnect/SIFEConnect.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -1002,7 +1003,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
@@ -1360,16 +1361,18 @@
 			<string>50 850 472 307 0 0 1440 877</string>
 		</dict>
 		<dict>
+			<key>FirstTimeWindowDisplayed</key>
+			<false/>
 			<key>Identifier</key>
 			<string>windowTool.classBrowser</string>
+			<key>IsVertical</key>
+			<true/>
 			<key>Layout</key>
 			<array>
 				<dict>
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<integer>1</integer>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>OptionsSetName</key>
@@ -1377,12 +1380,12 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CA6456E063B45B4001379D8</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Class Browser - NSObject</string>
+								<string>Class Browser - NSProxy</string>
 							</dict>
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>ClassesFrame</key>
-								<string>{{0, 0}, {374, 96}}</string>
+								<string>{{0, 0}, {378, 96}}</string>
 								<key>ClassesTreeTableConfiguration</key>
 								<array>
 									<string>PBXClassNameColumnIdentifier</string>
@@ -1391,9 +1394,9 @@
 									<real>22</real>
 								</array>
 								<key>Frame</key>
-								<string>{{0, 0}, {630, 331}}</string>
+								<string>{{0, 0}, {630, 332}}</string>
 								<key>MembersFrame</key>
-								<string>{{0, 105}, {374, 395}}</string>
+								<string>{{0, 101}, {378, 231}}</string>
 								<key>MembersTreeTableConfiguration</key>
 								<array>
 									<string>PBXMemberTypeIconColumnIdentifier</string>
@@ -1401,14 +1404,12 @@
 									<string>PBXMemberNameColumnIdentifier</string>
 									<real>216</real>
 									<string>PBXMemberTypeColumnIdentifier</string>
-									<real>97</real>
+									<real>101</real>
 									<string>PBXMemberBookColumnIdentifier</string>
 									<real>22</real>
 								</array>
-								<key>PBXModuleWindowStatusBarHidden2</key>
-								<integer>1</integer>
 								<key>RubberWindowFrame</key>
-								<string>385 179 630 352 0 0 1440 878 </string>
+								<string>21 503 630 352 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXClassBrowserModule</string>
@@ -1427,21 +1428,21 @@
 				<string>PBXClassBrowserModule</string>
 			</array>
 			<key>StatusbarIsVisible</key>
-			<integer>0</integer>
+			<false/>
 			<key>TableOfContents</key>
 			<array>
 				<string>1C0AD2AF069F1E9B00FABCE6</string>
-				<string>1C0AD2B0069F1E9B00FABCE6</string>
+				<string>C96F3066118CD1C200FF473A</string>
 				<string>1CA6456E063B45B4001379D8</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.classbrowser</string>
 			<key>WindowString</key>
-			<string>385 179 630 352 0 0 1440 878 </string>
+			<string>21 503 630 352 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>1C0AD2AF069F1E9B00FABCE6</string>
 			<key>WindowToolIsVisible</key>
-			<integer>0</integer>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

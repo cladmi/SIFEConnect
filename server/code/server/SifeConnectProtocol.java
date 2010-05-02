@@ -131,7 +131,7 @@ public class SifeConnectProtocol {
 					/* json reading */
 					login = ((String) json.get("login")).toLowerCase();
 					passwd = (String) json.get("passwd");
-					if ((login != null) && (passwd != null)) {
+					if ((login == null) || (passwd == null)) {
 						login = "";
 						passwd = "";
 					}

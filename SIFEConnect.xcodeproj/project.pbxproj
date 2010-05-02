@@ -15,7 +15,6 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		C968A34711720E66001B50EF /* country.db in Resources */ = {isa = PBXBuildFile; fileRef = C968A34611720E66001B50EF /* country.db */; };
 		C968A3F211722D7F001B50EF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C968A3F111722D7F001B50EF /* libsqlite3.dylib */; };
-		C96E63AC118D57070069FDDB /* AsyncSocket Documentation.html in Resources */ = {isa = PBXBuildFile; fileRef = C96E63AB118D57070069FDDB /* AsyncSocket Documentation.html */; };
 		C96E63C3118D585A0069FDDB /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E63C2118D585A0069FDDB /* AsyncSocket.m */; };
 		C96E63CB118D58890069FDDB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96E63CA118D58890069FDDB /* CFNetwork.framework */; };
 		C96E663F118DA1C20069FDDB /* homeViewNew.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96E663E118DA1C20069FDDB /* homeViewNew.xib */; };
@@ -55,7 +54,6 @@
 		C968A34611720E66001B50EF /* country.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = country.db; sourceTree = "<group>"; };
 		C968A3F111722D7F001B50EF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		C96AA327115C940D00717601 /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
-		C96E63AB118D57070069FDDB /* AsyncSocket Documentation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "AsyncSocket Documentation.html"; sourceTree = "<group>"; };
 		C96E63C1118D585A0069FDDB /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
 		C96E63C2118D585A0069FDDB /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
 		C96E63CA118D58890069FDDB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -202,7 +200,6 @@
 			children = (
 				C96E6677118DAC200069FDDB /* msgViewController.xib */,
 				C96E663E118DA1C20069FDDB /* homeViewNew.xib */,
-				C96E63AB118D57070069FDDB /* AsyncSocket Documentation.html */,
 				C96F2A22118C769700FF473A /* JSON */,
 				C9B15BC811731948007BB1DB /* schoolSelection.xib */,
 				C968A34611720E66001B50EF /* country.db */,
@@ -267,7 +264,6 @@
 				C9D2F8EC115BD19B00805EF7 /* addNewsView.xib in Resources */,
 				C968A34711720E66001B50EF /* country.db in Resources */,
 				C9B15BCA11731948007BB1DB /* schoolSelection.xib in Resources */,
-				C96E63AC118D57070069FDDB /* AsyncSocket Documentation.html in Resources */,
 				C96E663F118DA1C20069FDDB /* homeViewNew.xib in Resources */,
 				C96E6679118DAC200069FDDB /* msgViewController.xib in Resources */,
 			);

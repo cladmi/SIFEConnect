@@ -112,9 +112,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-	[self downloadCountryList];
-	
 	self.title = @"Team Selection";
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -122,11 +119,14 @@
 }
 
 
-/*
+
  - (void)viewWillAppear:(BOOL)animated {
- [super viewWillAppear:animated];
+	 [super viewWillAppear:animated];
+	 if ([Global sharedInstance].isLogged) {
+		 	[self downloadCountryList];
+	 }
  }
- */
+
 
 /*
  - (void)viewDidAppear:(BOOL)animated {
@@ -172,7 +172,7 @@
 	if (tableDictionary != nil) {
 		return [[tableDictionary objectForKey:@"section"] count];
 	} else {
-		return 0;
+		return 1;
 	}
 	//return [continent count];
 }
@@ -181,7 +181,7 @@
 	if (tableDictionary != nil) {
 		return [[[tableDictionary objectForKey:@"section"] objectAtIndex:section] objectForKey:@"name"];
 	} else {
-		return @"Loading data";
+		return @"Downloading data";
 	}
 	//return [continent objectAtIndex:section];
 }

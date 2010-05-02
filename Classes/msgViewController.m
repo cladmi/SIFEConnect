@@ -15,6 +15,8 @@
 
 @synthesize newsDictionary;
 @synthesize idTeam;
+@synthesize idCountry;
+@synthesize idContinent;
 @synthesize teamName;
 
 - (void) downloadTeamList {
@@ -25,7 +27,10 @@
 	[queryDictionary setValue:[NSNumber numberWithInt:NEWS] forKey:@"action"];
 	[queryDictionary setValue:[NSNumber numberWithInt:[Global sharedInstance].myId] forKey:@"id"];
 	[queryDictionary setValue:[Global sharedInstance].sessionId forKey:@"sessionId"];
-	[queryDictionary setValue:[NSNumber numberWithInt:idTeam] forKey:@"country"];
+	[queryDictionary setValue:[NSNumber numberWithInt:idTeam] forKey:@"team"];
+	[queryDictionary setValue:[NSNumber numberWithInt:idCountry] forKey:@"country"];
+	[queryDictionary setValue:[NSNumber numberWithInt:idContinent] forKey:@"continent"];
+	
 	
 	
 	query = [queryDictionary JSONRepresentation];
@@ -41,36 +46,44 @@
 
 - (void)queryResult:(NSString *)result 
 {
+	
 	newsDictionary = [result JSONValue];
 	[newsDictionary retain];
 	
 	[self.tableView reloadData];
 }
 
-/*
+
 - (id)initWithStyle:(UITableViewStyle)style {
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
     if (self = [super initWithStyle:style]) {
     }
+	idTeam = 0;
+	idCountry = 0;
+	idContinent = 0;
     return self;
-}
-*/
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-	[self downloadTeamList];
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 
 /*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+	
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 */
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+	if ([Global sharedInstance].isLogged) {
+		[self downloadTeamList];
+	}
+}
+
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -134,7 +147,7 @@
 	if (newsDictionary != nil) {
 		return [[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"name"];
 	} else {
-		return @"Loading data";
+		return @"Downloading data";
 	}
 	//return [continent objectAtIndex:section];
 }
@@ -144,7 +157,7 @@
 	if (newsDictionary != nil) {
 		return [[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"name"];
 	} else {
-		return @"Loading data";
+		return @"";
 	}
 	//return [continent objectAtIndex:section];
 }

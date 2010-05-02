@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "msgViewController.h"
 
 
 @interface homeViewController : UIViewController {
@@ -15,7 +16,8 @@
 	IBOutlet UIButton *addNewsButton;
 	IBOutlet UIButton *chooseTeamButton;
 	
-	IBOutlet UITableViewController *homeTableController;
+	IBOutlet msgViewController *homeTableController;
+	IBOutlet UITableView *homeTableView;
 	
 	IBOutlet UIActivityIndicatorView *loginWait;
 	
@@ -31,6 +33,7 @@
 @property(nonatomic, retain) UIActivityIndicatorView *loginWait;
 @property(nonatomic, retain) UILabel *teamName;
 @property(nonatomic, retain) NSString *loginString;
+@property(nonatomic, retain) UITableView *homeTableView;
 
 
 - (IBAction)homeButtonPressed:(id)sender;

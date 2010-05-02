@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>C96E6787118DCFC40069FDDB</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>homeViewController.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>C96E6788118DCFC40069FDDB</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>homeViewController.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>C96E67B1118DD4040069FDDB</string>
+						<key>history</key>
+						<array>
+							<string>C96E673A118DC9D90069FDDB</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {750, 461}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>38 350 750 502 0 0 1440 878 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -229,8 +270,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -275,7 +314,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>11</integer>
+									<integer>19</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -311,12 +350,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>versionbetaSIFEconnectAppDelegate.m</string>
+								<string>msgViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,11 +365,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>versionbetaSIFEconnectAppDelegate.m</string>
+										<string>msgViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C96E671D118DC8610069FDDB</string>
+										<string>C96E67B0118DD4040069FDDB</string>
 										<key>history</key>
 										<array>
 											<string>C9D2F905115BD37500805EF7</string>
@@ -360,28 +401,28 @@
 											<string>C96E650D118D6FF50069FDDB</string>
 											<string>C96E6531118D727A0069FDDB</string>
 											<string>C96E6534118D727A0069FDDB</string>
-											<string>C96E6553118D74620069FDDB</string>
 											<string>C96E65B3118D7C3B0069FDDB</string>
-											<string>C96E65D1118D7E8D0069FDDB</string>
 											<string>C96E661B118D8D300069FDDB</string>
-											<string>C96E6648118DA2840069FDDB</string>
-											<string>C96E665F118DA8230069FDDB</string>
-											<string>C96E666F118DA9530069FDDB</string>
 											<string>C96E669B118DB0B00069FDDB</string>
 											<string>C96E669C118DB0B00069FDDB</string>
 											<string>C96E669D118DB0B00069FDDB</string>
-											<string>C96E669E118DB0B00069FDDB</string>
-											<string>C96E66E0118DC5190069FDDB</string>
 											<string>C96E66F0118DC6960069FDDB</string>
 											<string>C96E66F1118DC6960069FDDB</string>
 											<string>C96E66F2118DC6960069FDDB</string>
-											<string>C96E66F5118DC6960069FDDB</string>
 											<string>C96E66F6118DC6960069FDDB</string>
 											<string>C96E66FC118DC8340069FDDB</string>
-											<string>C96E66FD118DC8340069FDDB</string>
-											<string>C96E671B118DC8610069FDDB</string>
-											<string>C96E671C118DC8610069FDDB</string>
-											<string>C96E66A1118DB0B00069FDDB</string>
+											<string>C96E677B118DCFC40069FDDB</string>
+											<string>C96E677E118DCFC40069FDDB</string>
+											<string>C96E6783118DCFC40069FDDB</string>
+											<string>C96E6784118DCFC40069FDDB</string>
+											<string>C96E6798118DD15D0069FDDB</string>
+											<string>C96E6799118DD15D0069FDDB</string>
+											<string>C96E679A118DD15D0069FDDB</string>
+											<string>C96E679B118DD15D0069FDDB</string>
+											<string>C96E679C118DD15D0069FDDB</string>
+											<string>C96E679D118DD15D0069FDDB</string>
+											<string>C96E67AA118DD3A10069FDDB</string>
+											<string>C96E67AB118DD3A10069FDDB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -439,9 +480,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>C96E671E118DC8610069FDDB</string>
+				<string>C96E6735118DC9450069FDDB</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>C96E671F118DC8610069FDDB</string>
+				<string>C96E6736118DC9450069FDDB</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -579,7 +620,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>C9D2F852115BAA2000805EF7</string>
+		<string>C96E6787118DCFC40069FDDB</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/BlueOne/Documents/SIFEConnect/SIFEConnect.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -604,7 +648,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>versionbetaSIFEconnectAppDelegate.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -621,6 +665,8 @@
 							<string>197pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -660,7 +706,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>C9D2F852115BAA2000805EF7</string>
-				<string>C96E6720118DC8610069FDDB</string>
+				<string>C96E6737118DC9450069FDDB</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -782,13 +828,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>C96E670F118DC8450069FDDB</string>
+				<string>C96E6769118DCF7E0069FDDB</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>C96E6710118DC8450069FDDB</string>
-				<string>C96E6711118DC8450069FDDB</string>
-				<string>C96E6712118DC8450069FDDB</string>
-				<string>C96E6713118DC8450069FDDB</string>
-				<string>C96E6714118DC8450069FDDB</string>
+				<string>C96E676A118DCF7E0069FDDB</string>
+				<string>C96E676B118DCF7E0069FDDB</string>
+				<string>C96E676C118DCF7E0069FDDB</string>
+				<string>C96E676D118DCF7E0069FDDB</string>
+				<string>C96E676E118DCF7E0069FDDB</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -944,7 +990,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>C96E641D118D65500069FDDB</string>
+				<string>C96E676F118DCF7E0069FDDB</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

@@ -1,3 +1,2 @@
 #! /bin/sh
-./compile.sh
-./execute.sh
+./compile.sh && ./execute.sh

@@ -60,21 +60,24 @@
 }
 */
 
-
+/*
 - (void)viewDidLoad {
     [super viewDidLoad];
-	[self downloadTeamList];
+	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+}*/
 
 
 
-/*
+
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+	[super viewWillAppear:animated];
+	if ([Global sharedInstance].isLogged) {
+		[self downloadTeamList];
+	}
 }
- */
+ 
 
 /*
 - (void)viewDidAppear:(BOOL)animated {
@@ -121,7 +124,7 @@
 		//return [[teamDictionary objectForKey:@"section"] count];
 
 	} else {
-		return 0;
+		return 1;
 	}
 }
 
@@ -135,6 +138,15 @@
 		return 0;
 	}
  
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	if (teamDictionary != nil) {
+		return [teamDictionary objectForKey:@"header"];
+	} else {
+		return @"Downloading data";
+	}
+	//return [continent objectAtIndex:section];
 }
 
 

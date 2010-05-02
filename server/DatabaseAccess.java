@@ -300,7 +300,7 @@ public class DatabaseAccess {
 
 
 			
-			psNews = connection.prepareStatement("SELECT COUNT(*), M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent ORDER BY date DESC LIMIT ? OFFSET ?");
+			psNews = connection.prepareStatement("SELECT COUNT(*), M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent " + grepNews + " ORDER BY date DESC LIMIT ? OFFSET ?");
 
 			psNews.setInt(1, (Global.NEWS_PER_PAGE + 1));
 			psNews.setInt(2, (Global.NEWS_PER_PAGE * (page - 1)));

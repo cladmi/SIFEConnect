@@ -14,6 +14,8 @@
 	
 	NSDictionary *newsDictionary;
 	int idTeam;
+	int idCountry;
+	int idContinent;
 	NSString *teamName;
 }
 
@@ -21,4 +23,7 @@
 @property(nonatomic, retain) NSDictionary *newsDictionary;
 @property(nonatomic, retain) NSString *teamName;
 @property(nonatomic) int idTeam;
+@property(nonatomic) int idCountry;
+@property(nonatomic) int idContinent;
+
 @end

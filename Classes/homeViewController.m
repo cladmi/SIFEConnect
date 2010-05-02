@@ -14,6 +14,7 @@
 #import "addNewsViewController.h"
 
 
+
 @implementation homeViewController
 
 @synthesize loginButton;
@@ -23,6 +24,9 @@
 @synthesize loginWait;
 @synthesize teamName;
 @synthesize loginString;
+
+@synthesize homeTableView;
+
 
 - (IBAction)homeButtonPressed:(id)sender
 {
@@ -82,19 +86,20 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
-		self.title = @"homeView";
+		self.title = @"SIFEConnect";
 		[Global sharedInstance].isLogged = FALSE;
 		loginString = @"<none>";
     }
     return self;
 }
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad]; 
+	homeTableView.backgroundColor = [UIColor whiteColor ];
 }
-*/
+
 
 
 - (void)viewWillAppear:(BOOL)animated {

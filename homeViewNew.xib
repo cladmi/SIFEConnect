@@ -12,6 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="1"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -44,7 +45,6 @@
 						<int key="NSvFlags">310</int>
 						<string key="NSFrame">{{200, 78}, {90, 28}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -74,7 +74,6 @@
 						<int key="NSvFlags">310</int>
 						<string key="NSFrame">{{20, 357}, {124, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUITag">1</int>
@@ -104,7 +103,6 @@
 						<int key="NSvFlags">310</int>
 						<string key="NSFrame">{{18, 22}, {103, 80}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentMode">4</int>
@@ -119,7 +117,6 @@
 						<int key="NSvFlags">310</int>
 						<string key="NSFrame">{{176, 357}, {124, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUITag">2</int>
@@ -141,7 +138,6 @@
 						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{172, 82}, {20, 20}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -152,7 +148,6 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{0, 119}, {320, 228}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC42MjI0NDg5ODA4IDAgMC4wMTM1MDY2NTE4NiAwAA</bytes>
@@ -174,7 +169,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{7, 391}, {230, 25}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -197,7 +191,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{127, 20}, {163, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -218,7 +211,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{121, 49}, {169, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -237,7 +229,6 @@
 				</object>
 				<string key="NSFrameSize">{320, 416}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -325,6 +316,14 @@
 						<reference key="destination" ref="1002865460"/>
 					</object>
 					<int key="connectionID">59</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">homeTableView</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="959218277"/>
+					</object>
+					<int key="connectionID">60</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -465,7 +464,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">59</int>
+			<int key="maxID">60</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -512,6 +511,7 @@
 							<string>addNewsButton</string>
 							<string>chooseTeamButton</string>
 							<string>homeTableController</string>
+							<string>homeTableView</string>
 							<string>loginButton</string>
 							<string>loginString</string>
 							<string>loginWait</string>
@@ -522,6 +522,7 @@
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UITableViewController</string>
+							<string>UITableView</string>
 							<string>UIButton</string>
 							<string>NSString</string>
 							<string>UIActivityIndicatorView</string>
@@ -615,7 +616,7 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="443267654">
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="716868525">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">Foundation.framework/Headers/NSURL.h</string>
 					</object>
@@ -650,7 +651,7 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="126660094">
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="196399382">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">UIKit.framework/Headers/UIResponder.h</string>
 					</object>
@@ -672,7 +673,7 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSString</string>
-					<reference key="sourceIdentifier" ref="443267654"/>
+					<reference key="sourceIdentifier" ref="716868525"/>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSString</string>
@@ -724,7 +725,7 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">UIResponder</string>
 					<string key="superclassName">NSObject</string>
-					<reference key="sourceIdentifier" ref="126660094"/>
+					<reference key="sourceIdentifier" ref="196399382"/>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">UIScrollView</string>

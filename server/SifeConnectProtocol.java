@@ -234,13 +234,13 @@ public class SifeConnectProtocol {
 						sessionId = "";
 					}
 
-					if (teamNumber != null) {
+					if (teamNumber != null && teamNumber.intValue() > 0) {
 						idList = teamNumber.intValue();
 						listType = Global.NEWS_TEAM;
-					} else if (countryNumber != null) {
+					} else if (countryNumber != null && countryNumber.intValue() > 0) {
 						idList = countryNumber.intValue();
 						listType = Global.NEWS_COUNTRY;
-					} else if (continentNumber != null) {
+					} else if (continentNumber != null && continentNumber.intValue() > 0) {
 						idList = continentNumber.intValue();
 						listType = Global.NEWS_CONTINENT;
 					} else {

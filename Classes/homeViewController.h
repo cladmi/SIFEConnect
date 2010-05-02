@@ -10,19 +10,24 @@
 #import "msgViewController.h"
 
 
-@interface homeViewController : UIViewController {
+@interface homeViewController : UIViewController  <UITableViewDataSource, UITableViewDelegate> {
 	
 	IBOutlet UIButton *loginButton;
 	IBOutlet UIButton *addNewsButton;
 	IBOutlet UIButton *chooseTeamButton;
-	
-	IBOutlet msgViewController *homeTableController;
-	IBOutlet UITableView *homeTableView;
-	
+
 	IBOutlet UIActivityIndicatorView *loginWait;
-	
 	IBOutlet UILabel *teamName;
 	IBOutlet NSString *loginString;
+	
+	
+	/* tableView variables */
+	int idTeam;
+	int idCountry;
+	int idContinent;
+	NSDictionary *newsDictionary;
+	IBOutlet UITableView *homeTableView;
+	
 	
 	
 }
@@ -33,14 +38,15 @@
 @property(nonatomic, retain) UIActivityIndicatorView *loginWait;
 @property(nonatomic, retain) UILabel *teamName;
 @property(nonatomic, retain) NSString *loginString;
-@property(nonatomic, retain) UITableView *homeTableView;
-@property(nonatomic, retain) msgViewController *homeTableController;
+
+@property(nonatomic, retain) NSDictionary *newsDictionary;
 
 
 - (IBAction)homeButtonPressed:(id)sender;
 
 - (void)logout;
 
+- (void) downloadTeamList;
 
 - (void)log:(BOOL)connected byteam:(NSString *)name; 
 

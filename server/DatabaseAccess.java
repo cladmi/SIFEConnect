@@ -310,7 +310,7 @@ public class DatabaseAccess {
 			rsNews = psNews.executeQuery();
 
 			if (rsNews.next()) {
-				if (listType == 4) {
+				if (listType == Global.NEWS_WORLD) {
 					obj.put("header", "World News");
 				} else {
 				//	ResultSetMetaData rsmd = rsNews.getMetaData();

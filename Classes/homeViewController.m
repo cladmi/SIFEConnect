@@ -25,8 +25,9 @@
 @synthesize teamName;
 @synthesize loginString;
 
-@synthesize homeTableView;
-@synthesize homeTableController;
+@synthesize newsDictionary;
+
+
 
 - (IBAction)homeButtonPressed:(id)sender
 {
@@ -42,6 +43,10 @@
 			//sleep(1);
 			[self viewWillAppear:TRUE];
 			[loginWait stopAnimating];
+			
+			[newsDictionary release];
+			newsDictionary = nil;
+			[homeTableView reloadData];
 
 		} else {
 			// we are not logged in
@@ -90,7 +95,11 @@
 		[Global sharedInstance].isLogged = FALSE;
 		loginString = @"<none>";
     }
-	//homeTableController = [[msgViewController alloc] initWithNibName:@"msgViewController"];
+
+	idTeam = 0;
+	idCountry = 0;
+	idContinent = 0;
+	
     return self;
 }
 
@@ -98,12 +107,16 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad]; 
-	homeTableView.backgroundColor = [UIColor whiteColor ];
+	homeTableView.backgroundColor = [UIColor whiteColor];
 }
 
 
 
 - (void)viewWillAppear:(BOOL)animated {
+	if ([Global sharedInstance].isLogged) {
+		[self downloadTeamList];
+	}
+	
 	if ([Global sharedInstance].isLogged) {
 		teamName.text = loginString;
 		[loginButton setTitle:@"Logout" forState:0];  
@@ -148,15 +161,147 @@
 	[loginWait release];
 	[teamName release];
 	[loginString release];
-	
-	
-	[homeTableController release];
-	
+	[homeTableView release];
 	[loginWait release];
 	
 
     [super dealloc];
 }
+
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * * IMPLÉMENTATION DES PROTOCOLES UITABLEVIEWDATASOURCE ET UITABLVIEWDELEGATE * * *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ */
+
+- (void) downloadTeamList {
+	
+	NSString *query;
+	NSMutableDictionary *queryDictionary;
+	queryDictionary = [[NSMutableDictionary alloc] init];
+	[queryDictionary setValue:[NSNumber numberWithInt:NEWS] forKey:@"action"];
+	[queryDictionary setValue:[NSNumber numberWithInt:[Global sharedInstance].myId] forKey:@"id"];
+	[queryDictionary setValue:[Global sharedInstance].sessionId forKey:@"sessionId"];
+	[queryDictionary setValue:[NSNumber numberWithInt:idTeam] forKey:@"team"];
+	[queryDictionary setValue:[NSNumber numberWithInt:idCountry] forKey:@"country"];
+	[queryDictionary setValue:[NSNumber numberWithInt:idContinent] forKey:@"continent"];
+	
+	
+	query = [queryDictionary JSONRepresentation];
+	
+	((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = query;
+	
+	[(versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate] performSelectorOnMainThread:@selector(contactServer:)																										withObject:self waitUntilDone:NO];
+	[queryDictionary release];
+	
+}
+
+
+
+- (void)queryResult:(NSString *)result 
+{
+	[newsDictionary release];
+	newsDictionary = nil;
+	newsDictionary = [result JSONValue];
+	[newsDictionary retain];
+	
+	[homeTableView reloadData];
+}
+
+#pragma mark Table view methods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	if (newsDictionary != nil) {
+		return [[newsDictionary objectForKey:@"sections"] count];
+	} else {
+		return 1;
+	}
+}
+
+
+// Customize the number of rows in the table view.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (newsDictionary != nil) {
+		return 1;
+	} else {
+		return 0;
+	}
+}
+
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	if (newsDictionary != nil) {
+		return [[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"name"];
+	} else {
+		if ([Global sharedInstance].isLogged) {
+			return @"Downloading data";
+		} else {
+			return @"Log in to see new msgs";
+		}
+	}
+	//return [continent objectAtIndex:section];
+}
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+	if (newsDictionary != nil) {
+		return [[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"name"];
+	} else {
+		return @"";
+	}
+	//return [continent objectAtIndex:section];
+}
+
+
+// Customize the appearance of table view cells.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    }
+    
+    // Set up the cell...
+	
+	cell.textLabel.text = [[[[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"text"];
+	
+    return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	UITableViewCell *tableCell = [homeTableView cellForRowAtIndexPath:indexPath];
+	[tableCell setSelected:NO animated:YES];
+	//UITableViewCell *tableCell = [self.tableView cellForRowAtIndexPath:indexPath];	
+	//[tableCell setSelected:NO animated:YES];
+    // Navigation logic may go here. Create and push another view controller.
+	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
+	// [self.navigationController pushViewController:anotherViewController];
+	// [anotherViewController release];
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end

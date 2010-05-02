@@ -319,11 +319,27 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">dataSource</string>
+						<reference key="source" ref="959218277"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">69</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="959218277"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">70</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">homeTableView</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="959218277"/>
 					</object>
-					<int key="connectionID">60</int>
+					<int key="connectionID">71</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -435,7 +451,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>homeViewController</string>
 					<string>UIResponder</string>
-					<string>{{517, 303}, {320, 480}}</string>
+					<string>{{565, 267}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -464,7 +480,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">60</int>
+			<int key="maxID">71</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -510,7 +526,6 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>addNewsButton</string>
 							<string>chooseTeamButton</string>
-							<string>homeTableController</string>
 							<string>homeTableView</string>
 							<string>loginButton</string>
 							<string>loginString</string>
@@ -521,7 +536,6 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIButton</string>
 							<string>UIButton</string>
-							<string>UITableViewController</string>
 							<string>UITableView</string>
 							<string>UIButton</string>
 							<string>NSString</string>
@@ -616,7 +630,7 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="716868525">
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="416505266">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">Foundation.framework/Headers/NSURL.h</string>
 					</object>
@@ -651,7 +665,7 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="196399382">
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="483153817">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">UIKit.framework/Headers/UIResponder.h</string>
 					</object>
@@ -673,7 +687,7 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSString</string>
-					<reference key="sourceIdentifier" ref="716868525"/>
+					<reference key="sourceIdentifier" ref="416505266"/>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSString</string>
@@ -725,7 +739,7 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">UIResponder</string>
 					<string key="superclassName">NSObject</string>
-					<reference key="sourceIdentifier" ref="196399382"/>
+					<reference key="sourceIdentifier" ref="483153817"/>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">UIScrollView</string>
@@ -757,14 +771,6 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">UIKit.framework/Headers/UITableView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">UITableViewController</string>
-					<string key="superclassName">UIViewController</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBFrameworkSource</string>
-						<string key="minorKey">UIKit.framework/Headers/UITableViewController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

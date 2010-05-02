@@ -70,10 +70,6 @@
 		((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = query;
 		[loginIndicator startAnimating];
 		[(versionbetaSIFEconnectAppDelegate *)[[UIApplication 	sharedApplication] delegate] performSelectorOnMainThread:@selector(contactServer:) withObject:self waitUntilDone:NO];
-	/*	[NSThread detachNewThreadSelector:@selector(contactServer:) 
-								 toTarget:(versionbetaSIFEconnectAppDelegate *)[[UIApplication 	sharedApplication] delegate] 
-							   withObject:self];
-	 */
 		[queryDictionary release]; 
 	}	
 }

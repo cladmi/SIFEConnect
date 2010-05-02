@@ -26,4 +26,5 @@
 @property(nonatomic) int idCountry;
 @property(nonatomic) int idContinent;
 
+
 @end

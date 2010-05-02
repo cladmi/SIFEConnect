@@ -182,8 +182,10 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	UITableViewCell *tableCell = [self.tableView cellForRowAtIndexPath:indexPath];	
+	UITableViewCell *tableCell = [self.tableView cellForRowAtIndexPath:indexPath];
 	[tableCell setSelected:NO animated:YES];
+	//UITableViewCell *tableCell = [self.tableView cellForRowAtIndexPath:indexPath];	
+	//[tableCell setSelected:NO animated:YES];
     // Navigation logic may go here. Create and push another view controller.
 	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
 	// [self.navigationController pushViewController:anotherViewController];

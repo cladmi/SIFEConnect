@@ -1,3 +1,3 @@
 #! /bin/sh
-./compile 
-./execute
+./compile.sh
+./execute.sh

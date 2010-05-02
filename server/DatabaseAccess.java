@@ -18,7 +18,7 @@ public class DatabaseAccess {
 		Owasp owasp = new Owasp();
 		try {
 			Class.forName("org.sqlite.JDBC");
-			connection = DriverManager.getConnection("jdbc:sqlite:accounts.db");  
+			connection = DriverManager.getConnection("jdbc:sqlite:database/accounts.db");  
 			passwordCorrect = owasp.authenticate(connection, login.toLowerCase(), passwd);
 			System.out.println("password correct : " + passwordCorrect);
 			connection.close();
@@ -40,7 +40,7 @@ public class DatabaseAccess {
 
 		if (connAccepted) {
 				try {
-					connection = DriverManager.getConnection("jdbc:sqlite:teams.db");
+					connection = DriverManager.getConnection("jdbc:sqlite:database/teams.db");
 					pstmt = connection.prepareStatement("SELECT idTeam, nameTeam FROM team WHERE login = ?;");
 					pstmt.setString(1, login.toLowerCase());
 					rset = pstmt.executeQuery();
@@ -93,7 +93,7 @@ public class DatabaseAccess {
 
 
 		try {
-			connection = DriverManager.getConnection("jdbc:sqlite:countries.db");  
+			connection = DriverManager.getConnection("jdbc:sqlite:database/countries.db");  
 			pst = connection.prepareStatement("ATTACH DATABASE 'teams.db' AS T");
 			pst.execute();
 			pst.close();
@@ -189,7 +189,7 @@ public class DatabaseAccess {
 			if (idCountry == -1) 
 				throw new Exception("idCountry == -1");
 
-			connection = DriverManager.getConnection("jdbc:sqlite:countries.db");  
+			connection = DriverManager.getConnection("jdbc:sqlite:database/countries.db");  
 			pst = connection.prepareStatement("ATTACH DATABASE 'teams.db' AS T");
 			pst.execute();
 			pst.close();
@@ -287,7 +287,7 @@ public class DatabaseAccess {
 				//break;
 			}
 
-			connection = DriverManager.getConnection("jdbc:sqlite:msgs.db");  
+			connection = DriverManager.getConnection("jdbc:sqlite:database/msgs.db");  
 			pst = connection.prepareStatement("ATTACH DATABASE 'teams.db' AS T");
 			pst.execute();
 			pst.close();
@@ -371,7 +371,7 @@ public class DatabaseAccess {
 		// message query
 
 		try {
-			connection = DriverManager.getConnection("jdbc:sqlite:msgs.db");  
+			connection = DriverManager.getConnection("jdbc:sqlite:database/msgs.db");  
 
 			pstmt = connection.prepareStatement("INSERT INTO msg (idTeam, msg, date, like, dislike) values (" + teamId + ", " + msg + ", ?, 0, 0)");
 			pstmt.setDate(1, new java.sql.Date(Calendar.getInstance().getTimeInMillis()));

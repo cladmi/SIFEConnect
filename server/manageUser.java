@@ -30,13 +30,13 @@ public class manageUser {
 			switch (choice) {
 				///* // table allready exists
 				case (1) :
-					conn = DriverManager.getConnection("jdbc:sqlite:accounts.db");
+					conn = DriverManager.getConnection("jdbc:sqlite:database/accounts.db");
 					ow.createTable(conn);
 					conn.close();
 					break;
 				//	*/
 				case (3) :
-					conn = DriverManager.getConnection("jdbc:sqlite:accounts.db");
+					conn = DriverManager.getConnection("jdbc:sqlite:database/accounts.db");
 					ow.createUser(conn, "cladmi", "bite");
 					conn.close();
 					break;

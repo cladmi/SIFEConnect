@@ -140,7 +140,7 @@
 
 - (IBAction)updateStatus:(id)sender {
 		
-	if (messageTextView.text != nil && [messageTextView.text isEqualToString: @""]) {
+	if (messageTextView.text != nil && ![messageTextView.text isEqualToString: @""]) {
 		[lastStatus setText:messageTextView.text];
 		uploadButton.enabled = YES;
 		uploadButton.titleLabel.enabled = YES;

@@ -50,14 +50,11 @@
  
  
  - (void)onSocket:(AsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port
- {
-	 
+ {	 
 	 sleep(1);
 	 NSLog(@"onSocket:%p didConnectToHost:%@ port:%hu", sock, host, port);
 		  
 	 [sock readDataToData:[@"\n" dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:0];
-
- 
  }
  
  

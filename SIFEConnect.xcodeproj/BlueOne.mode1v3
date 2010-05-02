@@ -275,6 +275,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>5</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -314,7 +316,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>addNewsViewController.m</string>
+								<string>homeViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,11 +324,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>addNewsViewController.m</string>
+										<string>homeViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C969D936118E33FF0030D11A</string>
+										<string>C969D945118E36D60030D11A</string>
 										<key>history</key>
 										<array>
 											<string>C9D2F905115BD37500805EF7</string>
@@ -374,13 +376,13 @@
 											<string>C969D8B0118E2A880030D11A</string>
 											<string>C969D8BB118E2AE00030D11A</string>
 											<string>C969D8BC118E2AE00030D11A</string>
-											<string>C969D8BF118E2B560030D11A</string>
 											<string>C969D8C0118E2B560030D11A</string>
 											<string>C969D8C8118E2C660030D11A</string>
 											<string>C969D91C118E32E70030D11A</string>
-											<string>C969D91D118E32E70030D11A</string>
 											<string>C969D91E118E32E70030D11A</string>
-											<string>C969D91F118E32E70030D11A</string>
+											<string>C969D943118E36D60030D11A</string>
+											<string>C969D944118E36D60030D11A</string>
+											<string>C969D91D118E32E70030D11A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -605,7 +607,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>addNewsViewController.m</string>
+								<string>versionbetaSIFEconnectAppDelegate.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

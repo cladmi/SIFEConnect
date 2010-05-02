@@ -7,7 +7,8 @@
 //
 
 #import "addNewsViewController.h"
-#define MSG_LENGTH 160
+#import "versionbetaSIFEconnectAppDelegate.h"
+#define MSG_LENGTH 140
 
 
 
@@ -71,6 +72,39 @@
 - (IBAction)updateStatus:(id)sender {
 	[lastStatus setText:messageTextView.text];	
 }
+
+
+
+- (void) downloadCountryList {
+	
+	NSString *query;
+	NSMutableDictionary *queryDictionary;
+	queryDictionary = [[NSMutableDictionary alloc] init];
+	[queryDictionary setValue:[NSNumber numberWithInt:POST] forKey:@"action"];
+	[queryDictionary setValue:[NSNumber numberWithInt:[Global sharedInstance].myId] forKey:@"id"];
+	[queryDictionary setValue:[Global sharedInstance].sessionId forKey:@"sessionId"];
+	[queryDictionary setValue:[messageTextView text] forKey:@"text"];
+	
+	query = [queryDictionary JSONRepresentation];
+	
+	((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = query;
+	
+	[(versionbetaSIFEconnectAppDelegate *)[[UIApplication 	sharedApplication] delegate] performSelectorOnMainThread:@selector(contactServer:) withObject:self waitUntilDone:NO];
+	[queryDictionary release];
+	
+}
+
+
+
+- (void)queryResult:(NSString *)result 
+{
+	/*tableDictionary = [result JSONValue];
+	[tableDictionary retain];
+	
+	[self.tableView reloadData];
+	 */
+}
+
 
 
 /*

@@ -19,6 +19,8 @@
 		C96E63C3118D585A0069FDDB /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E63C2118D585A0069FDDB /* AsyncSocket.m */; };
 		C96E63CB118D58890069FDDB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96E63CA118D58890069FDDB /* CFNetwork.framework */; };
 		C96E663F118DA1C20069FDDB /* homeViewNew.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96E663E118DA1C20069FDDB /* homeViewNew.xib */; };
+		C96E6678118DAC200069FDDB /* msgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96E6676118DAC200069FDDB /* msgViewController.m */; };
+		C96E6679118DAC200069FDDB /* msgViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96E6677118DAC200069FDDB /* msgViewController.xib */; };
 		C96F29D7118C71E500FF473A /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F29D6118C71E500FF473A /* Global.m */; };
 		C96F2A30118C769700FF473A /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F2A25118C769700FF473A /* NSObject+SBJSON.m */; };
 		C96F2A31118C769700FF473A /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F2A27118C769700FF473A /* NSString+SBJSON.m */; };
@@ -58,6 +60,9 @@
 		C96E63C2118D585A0069FDDB /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
 		C96E63CA118D58890069FDDB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C96E663E118DA1C20069FDDB /* homeViewNew.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeViewNew.xib; sourceTree = "<group>"; };
+		C96E6675118DAC200069FDDB /* msgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msgViewController.h; sourceTree = "<group>"; };
+		C96E6676118DAC200069FDDB /* msgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msgViewController.m; sourceTree = "<group>"; };
+		C96E6677118DAC200069FDDB /* msgViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = msgViewController.xib; path = Classes/msgViewController.xib; sourceTree = "<group>"; };
 		C96F29D5118C71E500FF473A /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Global.h; path = Classes/Global.h; sourceTree = SOURCE_ROOT; };
 		C96F29D6118C71E500FF473A /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Global.m; path = Classes/Global.m; sourceTree = SOURCE_ROOT; };
 		C96F2A23118C769700FF473A /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
@@ -125,6 +130,8 @@
 				C9B15BC711731948007BB1DB /* schoolSelectionController.m */,
 				C96F29D5118C71E500FF473A /* Global.h */,
 				C96F29D6118C71E500FF473A /* Global.m */,
+				C96E6675118DAC200069FDDB /* msgViewController.h */,
+				C96E6676118DAC200069FDDB /* msgViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -193,6 +200,7 @@
 		C9B15BCB11731952007BB1DB /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				C96E6677118DAC200069FDDB /* msgViewController.xib */,
 				C96E663E118DA1C20069FDDB /* homeViewNew.xib */,
 				C96E63AB118D57070069FDDB /* AsyncSocket Documentation.html */,
 				C96F2A22118C769700FF473A /* JSON */,
@@ -261,6 +269,7 @@
 				C9B15BCA11731948007BB1DB /* schoolSelection.xib in Resources */,
 				C96E63AC118D57070069FDDB /* AsyncSocket Documentation.html in Resources */,
 				C96E663F118DA1C20069FDDB /* homeViewNew.xib in Resources */,
+				C96E6679118DAC200069FDDB /* msgViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +295,7 @@
 				C96F2A34118C769700FF473A /* SBJsonParser.m in Sources */,
 				C96F2A35118C769700FF473A /* SBJsonWriter.m in Sources */,
 				C96E63C3118D585A0069FDDB /* AsyncSocket.m in Sources */,
+				C96E6678118DAC200069FDDB /* msgViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

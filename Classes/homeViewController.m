@@ -33,7 +33,7 @@
 		if ([Global sharedInstance].isLogged) {
 			// we are logged in
 			[Global sharedInstance].isLogged = FALSE;
-			loginString = @"Welcome !";
+			loginString = @"<none>";
 		
 			//sleep(1);
 			[self viewWillAppear:TRUE];
@@ -70,9 +70,9 @@
 - (void)log:(BOOL)connected byteam:(NSString *)name{
 	[Global sharedInstance].isLogged = connected;
 	if (name) {
-		loginString = [NSString stringWithFormat:@"Welcome %@ !", name];
+		loginString = name;
 	} else {
-		loginString = @"Welcome !";
+		loginString = @"<none>";
 	}
 }
 
@@ -84,7 +84,7 @@
         // Custom initialization
 		self.title = @"homeView";
 		[Global sharedInstance].isLogged = FALSE;
-		loginString = @"Welcome !";
+		loginString = @"<none>";
     }
     return self;
 }

@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -275,8 +273,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>22</integer>
-									<integer>21</integer>
+									<integer>19</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -300,7 +298,7 @@
 							<real>285</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>2 50 1440 819 0 0 1440 878 </string>
+						<string>2 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -311,12 +309,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>versionbetaSIFEconnectAppDelegate.m</string>
+								<string>msgViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,11 +324,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>versionbetaSIFEconnectAppDelegate.m</string>
+										<string>msgViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C96E664B118DA2840069FDDB</string>
+										<string>C96E66A4118DB0B00069FDDB</string>
 										<key>history</key>
 										<array>
 											<string>C9D2F905115BD37500805EF7</string>
@@ -359,26 +359,28 @@
 											<string>C96F3071118CD32200FF473A</string>
 											<string>C96E63C5118D58610069FDDB</string>
 											<string>C96E63D0118D58990069FDDB</string>
-											<string>C96E63D1118D58990069FDDB</string>
-											<string>C96E63D2118D58990069FDDB</string>
 											<string>C96E64E1118D6DA80069FDDB</string>
 											<string>C96E64E2118D6DA80069FDDB</string>
-											<string>C96E6508118D6FF50069FDDB</string>
 											<string>C96E650D118D6FF50069FDDB</string>
-											<string>C96E6519118D70DF0069FDDB</string>
 											<string>C96E6531118D727A0069FDDB</string>
 											<string>C96E6534118D727A0069FDDB</string>
 											<string>C96E6553118D74620069FDDB</string>
-											<string>C96E6565118D750E0069FDDB</string>
 											<string>C96E65B3118D7C3B0069FDDB</string>
 											<string>C96E65D1118D7E8D0069FDDB</string>
 											<string>C96E661B118D8D300069FDDB</string>
-											<string>C96E661C118D8D300069FDDB</string>
-											<string>C96E6623118D8DDF0069FDDB</string>
-											<string>C96E6647118DA2840069FDDB</string>
 											<string>C96E6648118DA2840069FDDB</string>
-											<string>C96E6649118DA2840069FDDB</string>
-											<string>C96E664A118DA2840069FDDB</string>
+											<string>C96E665F118DA8230069FDDB</string>
+											<string>C96E6661118DA8230069FDDB</string>
+											<string>C96E666F118DA9530069FDDB</string>
+											<string>C96E669B118DB0B00069FDDB</string>
+											<string>C96E669C118DB0B00069FDDB</string>
+											<string>C96E669D118DB0B00069FDDB</string>
+											<string>C96E669E118DB0B00069FDDB</string>
+											<string>C96E669F118DB0B00069FDDB</string>
+											<string>C96E66A0118DB0B00069FDDB</string>
+											<string>C96E66A1118DB0B00069FDDB</string>
+											<string>C96E66A2118DB0B00069FDDB</string>
+											<string>C96E66A3118DB0B00069FDDB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -392,7 +394,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1133, 773}}</string>
 								<key>RubberWindowFrame</key>
-								<string>2 50 1440 819 0 0 1440 878 </string>
+								<string>2 59 1440 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -412,7 +414,7 @@
 								<key>Frame</key>
 								<string>{{0, 778}, {1133, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>2 50 1440 819 0 0 1440 878 </string>
+								<string>2 59 1440 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -583,7 +585,7 @@
 		<string>/Users/BlueOne/Documents/SIFEConnect/SIFEConnect.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>2 50 1440 819 0 0 1440 878 </string>
+	<string>2 59 1440 819 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -604,7 +606,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>versionbetaSIFEconnectAppDelegate.m</string>
+								<string>msgViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

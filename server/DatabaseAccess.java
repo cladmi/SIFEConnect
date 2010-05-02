@@ -269,15 +269,15 @@ public class DatabaseAccess {
 			switch (listType) {
 				case (Global.NEWS_TEAM) :
 					grepNews = " AND M.idTeam = " + idList + " ";
-					headerColums = "T.teamName";
+					headerColums = "nameTeam";
 					break;
 				case (Global.NEWS_COUNTRY) :
 					grepNews = " AND C.idCountry = " + idList + " ";
-					headerColums = "C.countryName";
+					headerColums = "C.nameCountry";
 					break;
 				case (Global.NEWS_CONTINENT) :
 					grepNews = " AND W.idContinent = " + idList + " ";
-					headerColums = "W.continentName";
+					headerColums = "W.nameContinent";
 					break;
 				case (Global.NEWS_WORLD) :
 					grepNews = "";
@@ -299,7 +299,7 @@ public class DatabaseAccess {
 			obj = new JSONObject();
 
 
-			psNews = connection.prepareStatement("SELECT COUNT(*), M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND T.idContinent = W.idContinent " + grepNews + " ORDER BY date DESC LIMIT " + (Global.NEWS_PER_PAGE + 1) + " OFFSET " + (Global.NEWS_PER_PAGE*page));
+			psNews = connection.prepareStatement("SELECT COUNT(*), M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent " + grepNews + " ORDER BY date DESC LIMIT " + (Global.NEWS_PER_PAGE + 1) + " OFFSET " + (Global.NEWS_PER_PAGE*page));
 			// on en récupère un de plus, pour permettre de savoir s'il y en a d'autres
 
 			rsNews = psNews.executeQuery();
@@ -307,6 +307,7 @@ public class DatabaseAccess {
 			if (listType == 4) {
 				obj.put("header", "World News");
 			} else {
+				System.out.println(headerColums);
 				obj.put("header", rsNews.getString(headerColums) + " News");
 			}
 
@@ -373,12 +374,13 @@ public class DatabaseAccess {
 		try {
 			connection = DriverManager.getConnection("jdbc:sqlite:database/msgs.db");  
 
-			pstmt = connection.prepareStatement("INSERT INTO msg (idTeam, msg, date, like, dislike) values (" + teamId + ", " + msg + ", ?, 0, 0)");
-			pstmt.setDate(1, new java.sql.Date(Calendar.getInstance().getTimeInMillis()));
+			pstmt = connection.prepareStatement("INSERT INTO msg (idTeam, msg, date, like, dislike) values (" + teamId + ", ?, ?, 0, 0)");
+			pstmt.setString(1, msg);
+			pstmt.setDate(2, new java.sql.Date(Calendar.getInstance().getTimeInMillis()));
 			pstmt.executeUpdate();
 			pstmt.close();
 
-			return "{\"STATUS\":\"MESSAGE_DELETED\"}";
+			return "{\"STATUS\":\"MESSAGE_POSTED\"}";
 		} catch (Exception e) {  
 			e.printStackTrace();  
 		}

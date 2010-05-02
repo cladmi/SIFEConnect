@@ -94,7 +94,7 @@ public class DatabaseAccess {
 
 		try {
 			connection = DriverManager.getConnection("jdbc:sqlite:database/countries.db");  
-			pst = connection.prepareStatement("ATTACH DATABASE 'teams.db' AS T");
+			pst = connection.prepareStatement("ATTACH DATABASE 'database/teams.db' AS T");
 			pst.execute();
 			pst.close();
 
@@ -190,7 +190,7 @@ public class DatabaseAccess {
 				throw new Exception("idCountry == -1");
 
 			connection = DriverManager.getConnection("jdbc:sqlite:database/countries.db");  
-			pst = connection.prepareStatement("ATTACH DATABASE 'teams.db' AS T");
+			pst = connection.prepareStatement("ATTACH DATABASE 'database/teams.db' AS T");
 			pst.execute();
 			pst.close();
 
@@ -288,10 +288,10 @@ public class DatabaseAccess {
 			}
 
 			connection = DriverManager.getConnection("jdbc:sqlite:database/msgs.db");  
-			pst = connection.prepareStatement("ATTACH DATABASE 'teams.db' AS T");
+			pst = connection.prepareStatement("ATTACH DATABASE 'database/teams.db' AS T");
 			pst.execute();
 			pst.close();
-			pst = connection.prepareStatement("ATTACH DATABASE 'countries.db' AS C");
+			pst = connection.prepareStatement("ATTACH DATABASE 'database/countries.db' AS C");
 			pst.execute();
 			pst.close();
 

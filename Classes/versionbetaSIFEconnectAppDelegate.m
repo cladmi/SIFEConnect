@@ -33,7 +33,7 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 	
 	sifeNavigationController = [[UINavigationController alloc] init];
-	homeViewController *hviewcontroller = [[homeViewController alloc] initWithNibName:@"homeView" bundle:nil];
+	homeViewController *hviewcontroller = [[homeViewController alloc] initWithNibName:@"homeViewNew" bundle:nil];
 	[sifeNavigationController pushViewController:hviewcontroller animated:NO];
 	[hviewcontroller release];
 	[window addSubview:sifeNavigationController.view];

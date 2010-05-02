@@ -112,7 +112,7 @@
 
 - (void)contactServer:(id)sender {
 	caller = sender;
-	NSLog(query);
+	NSLog(@"%@",query);
 	NSError *err = nil;
 	[socket initWithDelegate:self];
 	if(![socket connectToHost:@"localhost" onPort:4242 error:&err])

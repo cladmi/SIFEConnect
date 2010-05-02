@@ -11,7 +11,7 @@
 	1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1072, 1794}}";
-			sepNavSelRange = "{2833, 0}";
+			sepNavSelRange = "{2745, 0}";
 			sepNavVisRange = "{2005, 1360}";
 			sepNavWindowFrame = "{{107, 231}, {750, 558}}";
 		};
@@ -255,6 +255,10 @@
 			C96E661E118D8D300069FDDB /* PBXTextBookmark */ = C96E661E118D8D300069FDDB /* PBXTextBookmark */;
 			C96E6623118D8DDF0069FDDB /* PBXTextBookmark */ = C96E6623118D8DDF0069FDDB /* PBXTextBookmark */;
 			C96E6624118D8DDF0069FDDB /* PBXTextBookmark */ = C96E6624118D8DDF0069FDDB /* PBXTextBookmark */;
+			C96E6627118D8FB20069FDDB /* PBXTextBookmark */ = C96E6627118D8FB20069FDDB /* PBXTextBookmark */;
+			C96E662E118D936F0069FDDB /* PBXTextBookmark */ = C96E662E118D936F0069FDDB /* PBXTextBookmark */;
+			C96E6631118D93710069FDDB /* PBXTextBookmark */ = C96E6631118D93710069FDDB /* PBXTextBookmark */;
+			C96E6636118D93B30069FDDB /* PBXTextBookmark */ = C96E6636118D93B30069FDDB /* PBXTextBookmark */;
 			C96F294F118C407100FF473A = C96F294F118C407100FF473A /* PBXTextBookmark */;
 			C96F29A0118C6B4900FF473A = C96F29A0118C6B4900FF473A /* PBXTextBookmark */;
 			C96F2A42118C771000FF473A = C96F2A42118C771000FF473A /* PBXTextBookmark */;
@@ -2150,6 +2154,46 @@
 		name = "versionbetaSIFEconnectAppDelegate.m: 107";
 		rLen = 0;
 		rLoc = 2833;
+		rType = 0;
+		vrLen = 1360;
+		vrLoc = 2005;
+	};
+	C96E6627118D8FB20069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 103";
+		rLen = 0;
+		rLoc = 2745;
+		rType = 0;
+		vrLen = 1214;
+		vrLoc = 2151;
+	};
+	C96E662E118D936F0069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 57";
+		rLen = 0;
+		rLoc = 1401;
+		rType = 0;
+		vrLen = 293;
+		vrLoc = 1313;
+	};
+	C96E6631118D93710069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 103";
+		rLen = 0;
+		rLoc = 2745;
+		rType = 0;
+		vrLen = 1214;
+		vrLoc = 2151;
+	};
+	C96E6636118D93B30069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 103";
+		rLen = 0;
+		rLoc = 2745;
 		rType = 0;
 		vrLen = 1360;
 		vrLoc = 2005;

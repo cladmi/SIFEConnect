@@ -79,6 +79,8 @@ public class SifeConnectProtocol {
 	public String processInput(String theInput) throws Exception {
 		Class.forName("org.sqlite.JDBC");
 
+			System.out.println("Process Input");
+			System.out.println(theInput);
 		String theOutput = null;
 		Map json = null; 
 		int id = 0;

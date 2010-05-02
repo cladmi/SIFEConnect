@@ -8,5 +8,13 @@
 	#import "Global.h"
 	#import "JSON.h"
 
+#define LOGIN 1
+#define LIST_COUNTRIES 2
+#define LIST_TEAMS 3
+#define NEWS 4
+#define POST 5
+#define DEL 6
+#define DECO 7
+
 
 #endif

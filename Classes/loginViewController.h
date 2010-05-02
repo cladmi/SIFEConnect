@@ -15,12 +15,14 @@
 	IBOutlet UITextField *teamPassword;
 	IBOutlet UIActivityIndicatorView *loginIndicator;
 	UIViewController *homeController;
+	IBOutlet UIButton *loginButton;
 	
 }
 
 @property(nonatomic, retain) UITextField *teamLogin;
 @property(nonatomic, retain) UITextField *teamPassword;
 @property(nonatomic, retain) UIViewController *homeController;
+@property(nonatomic, retain) UIButton *loginButton;
 
 - (IBAction)startConnection:(id)sender;
 - (IBAction)queryResult:(id)sender;

@@ -18,6 +18,8 @@
 	AsyncSocket *socket;
 	UINavigationController *sifeNavigationController;
 	NSString *query;
+	UINavigationController *caller;
+	NSString *result;
 }
 
 

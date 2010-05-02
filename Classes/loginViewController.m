@@ -19,6 +19,7 @@
 @synthesize teamLogin;
 @synthesize teamPassword;
 @synthesize homeController;
+@synthesize loginButton;
 
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -54,22 +55,26 @@
 		[alert show];
 		[alert release];
 	} else {
+		loginButton.enabled = NO;
+		loginButton.titleLabel.enabled = NO;
 		NSString *query;
 		NSMutableDictionary *queryDictionary;
 		queryDictionary = [[NSMutableDictionary alloc] init];
 		
-		[queryDictionary setValue:@"login" forKey:@"action"];
+		[queryDictionary setValue:[NSNumber numberWithInt:LOGIN] forKey:@"action"];
 		[queryDictionary setValue:[teamLogin.text lowercaseString] forKey:@"login"];
 		[queryDictionary setValue:teamPassword.text forKey:@"passwd"];
 		
 		query = [queryDictionary JSONRepresentation];
 		
-		((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = @"login";
+		((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = query;
 		[loginIndicator startAnimating];
-		[NSThread detachNewThreadSelector:@selector(contactServer:) 
+		[(versionbetaSIFEconnectAppDelegate *)[[UIApplication 	sharedApplication] delegate] performSelectorOnMainThread:@selector(contactServer:) withObject:self waitUntilDone:NO];
+	/*	[NSThread detachNewThreadSelector:@selector(contactServer:) 
 								 toTarget:(versionbetaSIFEconnectAppDelegate *)[[UIApplication 	sharedApplication] delegate] 
 							   withObject:self];
-		 [queryDictionary release]; 
+	 */
+		[queryDictionary release]; 
 	}	
 }
 
@@ -92,11 +97,15 @@
 		[self.navigationController popToRootViewControllerAnimated:YES];
 		
 	} else {
+		loginButton.enabled = YES;
+		loginButton.titleLabel.enabled = YES;
 		[loginIndicator stopAnimating];
+		NSLog(@"Connection échouée");
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"The login or password you entered is incorrect." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 		[alert show];
 		[alert release];
 	}	
+		
 	
 }
 

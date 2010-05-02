@@ -72,13 +72,13 @@
 	NSString *query;
 	NSMutableDictionary *queryDictionary;
 	queryDictionary = [[NSMutableDictionary alloc] init];
-	[queryDictionary setValue:@"listCountries" forKey:@"action"];
+	[queryDictionary setValue:[NSNumber numberWithInt:LIST_COUNTRIES] forKey:@"action"];
 	[queryDictionary setValue:[NSNumber numberWithInt:[Global sharedInstance].myId] forKey:@"id"];
 	[queryDictionary setValue:[Global sharedInstance].sessionId forKey:@"sessionId"];
 	
 	query = [queryDictionary JSONRepresentation];
 	
-	((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = @"listCountries";
+	((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = query;
 	
 	[NSThread detachNewThreadSelector:@selector(contactServer:) 
 							 toTarget:(versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate] 

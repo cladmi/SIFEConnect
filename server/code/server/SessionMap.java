@@ -23,8 +23,8 @@ public class SessionMap {
 		if (current != null) {
 			if (current.isExpired(EXPIRY_TIME)) {
 				// on enlève le sessionId expiré
-				current = null;
 				sessionId.remove(current.sessionId());
+				current = null;
 			} else {
 				/* on accepte plusieurs connections sur un compte
 				 * en même temps, on propage donc le sessionId

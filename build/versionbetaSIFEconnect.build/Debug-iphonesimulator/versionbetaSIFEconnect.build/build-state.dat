@@ -1,833 +1,0 @@
-TversionbetaSIFEconnect
-v7
-r0
-t292656969.969676
-cCheck dependencies
-cProcessInfoPlistFile /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/Info.plist versionbetaSIFEconnect-Info.plist
-cCompileXIB /Users/BlueOne/Documents/SIFEConnect/MainWindow.xib
-cCpResource build/Debug-iphonesimulator/versionbetaSIFEconnect.app/sifeConnectLogo.png sifeConnectLogo.png
-cCompileXIB /Users/BlueOne/Documents/SIFEConnect/Classes/homeView.xib
-cCompileXIB /Users/BlueOne/Documents/SIFEConnect/Classes/loginView.xib
-cCompileXIB /Users/BlueOne/Documents/SIFEConnect/Classes/teamSelectionView.xib
-cCompileXIB /Users/BlueOne/Documents/SIFEConnect/addNewsView.xib
-cProcessPCH /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-fxugzmfnkfyshweuhmpzcpuylyrz/versionbetaSIFEconnect_Prefix.pch.gch versionbetaSIFEconnect_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/main.o /Users/BlueOne/Documents/SIFEConnect/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/versionbetaSIFEconnectAppDelegate.o /Users/BlueOne/Documents/SIFEConnect/Classes/versionbetaSIFEconnectAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/homeViewController.o /Users/BlueOne/Documents/SIFEConnect/Classes/homeViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/loginViewController.o /Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/teamSelectionViewController.o /Users/BlueOne/Documents/SIFEConnect/Classes/teamSelectionViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/addNewsViewController.o /Users/BlueOne/Documents/SIFEConnect/Classes/../addNewsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect normal i386
-cGenerateDSYMFile /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app.dSYM /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect
-cTouch /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk
-c000000004B942F5400000000000000EE
-t1268002644
-s238
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004B2B4CC3000000000026EE30
-t1261128899
-s2551344
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004B2B4DC8000000000027E880
-t1261129160
-s2615424
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004B2B4DAE0000000000001355
-t1261129134
-s4949
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004B2B61620000000000000788
-t1261134178
-s1928
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004B2B62B500000000016721E0
-t1261134517
-s23536096
-
-N/Users/BlueOne/Documents/SIFEConnect/Classes/../addNewsViewController.h
-c000000004BAC475A0000000000000298
-t1269581658
-s664
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/SIFEConnect/Classes/../addNewsViewController.m
-c000000004BAC5C180000000000000B78
-t1269586968
-s2936
-i"addNewsViewController.h"
-
-N/Users/BlueOne/Documents/SIFEConnect/Classes/homeView.xib
-c000000004BBBBD4B00000000000082D6
-t1270594891
-s33494
-
-N/Users/BlueOne/Documents/SIFEConnect/Classes/homeViewController.h
-c000000004BBB685C00000000000003CB
-t1270573148
-s971
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/SIFEConnect/Classes/homeViewController.m
-c000000004BBB69500000000000000E5B
-t1270573392
-s3675
-i"homeViewController.h"
-i"versionbetaSIFEconnectAppDelegate.h"
-i"loginViewController.h"
-i"teamSelectionViewController.h"
-i"addNewsViewController.h"
-
-N/Users/BlueOne/Documents/SIFEConnect/Classes/loginView.xib
-c000000004BAC62E800000000000067AE
-t1269588712
-s26542
-
-N/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.h
-c000000004BAC5FE50000000000000239
-t1269587941
-s569
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m
-c000000004BAC63C00000000000000873
-t1269588928
-s2163
-i"loginViewController.h"
-i"homeViewController.h"
-
-N/Users/BlueOne/Documents/SIFEConnect/Classes/teamSelectionView.xib
-c000000004BBCC23100000000000043A4
-t1270661681
-s17316
-
-N/Users/BlueOne/Documents/SIFEConnect/Classes/teamSelectionViewController.h
-c000000004BAB95E3000000000000010A
-t1269536227
-s266
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/SIFEConnect/Classes/teamSelectionViewController.m
-c000000004BABA47600000000000010D5
-t1269539958
-s4309
-i"teamSelectionViewController.h"
-
-N/Users/BlueOne/Documents/SIFEConnect/Classes/versionbetaSIFEconnectAppDelegate.h
-c000000004BAC56E900000000000001D9
-t1269585641
-s473
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/SIFEConnect/Classes/versionbetaSIFEconnectAppDelegate.m
-c000000004BAC56FA00000000000003B3
-t1269585658
-s947
-i"versionbetaSIFEconnectAppDelegate.h"
-i"homeViewController.h"
-
-N/Users/BlueOne/Documents/SIFEConnect/MainWindow.xib
-c000000004BAB729C0000000000001F9E
-t1269527196
-s8094
-
-N/Users/BlueOne/Documents/SIFEConnect/addNewsView.xib
-c000000004BAC58B30000000000007791
-t1269586099
-s30609
-
-N/Users/BlueOne/Documents/SIFEConnect/addNewsViewController.h
-c000000004BAC475A0000000000000298
-t1269581658
-s664
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app
-t1270964169
-s408
-
-N/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app.dSYM
-t1270964169
-s102
-
-N/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/Info.plist
-t1269527212
-s630
-
-N/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/MainWindow.nib
-t1269527212
-s1360
-
-N/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/PkgInfo
-t1269527212
-s8
-
-N/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/addNewsView.nib
-t1269586869
-s5418
-
-N/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/homeView.nib
-t1270661641
-s4987
-
-N/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/loginView.nib
-t1269588723
-s4238
-
-N/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/sifeConnectLogo.png
-t1269528194
-s11493
-
-N/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/teamSelectionView.nib
-t1270661686
-s1386
-
-N/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect
-t1270964169
-s32436
-
-N/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/addNewsViewController.o
-t1270964169
-s42080
-
-N/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/homeViewController.o
-t1270964169
-s45716
-
-N/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/loginViewController.o
-t1270964169
-s33728
-
-N/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/main.o
-t1270964169
-s5952
-
-N/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/teamSelectionViewController.o
-t1270964169
-s33488
-
-N/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/versionbetaSIFEconnect.LinkFileList
-c000000004BC15FC700000000000003E6
-t1270964167
-s998
-
-N/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/versionbetaSIFEconnectAppDelegate.o
-t1270964169
-s41484
-
-N/Users/BlueOne/Documents/SIFEConnect/main.m
-c000000004BAB729C0000000000000174
-t1269527196
-s372
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/SIFEConnect/sifeConnectLogo.png
-c000000004BAB72D20000000000002CE5
-t1269527250
-s11493
-
-N/Users/BlueOne/Documents/SIFEConnect/versionbetaSIFEconnect_Prefix.pch
-c000000004BAB729C00000000000000D5
-t1269527196
-s213
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/../addNewsViewController.m
-c000000004BAC5C180000000000000B78
-t1269586968
-s2936
-i"addNewsViewController.h"
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeView.xib
-c000000004BBBBD4B00000000000082D6
-t1270594891
-s33494
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeViewController.h
-c000000004BBB685C00000000000003CB
-t1270573148
-s971
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeViewController.m
-c000000004BBB69500000000000000E5B
-t1270573392
-s3675
-i"homeViewController.h"
-i"versionbetaSIFEconnectAppDelegate.h"
-i"loginViewController.h"
-i"teamSelectionViewController.h"
-i"addNewsViewController.h"
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeViewController.xib
-c000000004BAB77580000000000001871
-t1269528408
-s6257
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginView.xib
-c000000004BAC62E800000000000067AE
-t1269588712
-s26542
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.h
-c000000004BAC5FE50000000000000239
-t1269587941
-s569
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m
-c000000004BAC63C00000000000000873
-t1269588928
-s2163
-i"loginViewController.h"
-i"homeViewController.h"
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelection.h
-c000000004BAB8BED00000000000000EE
-t1269533677
-s238
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelection.m
-c000000004BAB8BED000000000000108B
-t1269533677
-s4235
-i"teamSelection.h"
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelection.xib
-c000000004BAB8BED0000000000001C72
-t1269533677
-s7282
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelectionView.xib
-c000000004BBCC23100000000000043A4
-t1270661681
-s17316
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelectionViewController.h
-c000000004BAB95E3000000000000010A
-t1269536227
-s266
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelectionViewController.m
-c000000004BABA47600000000000010D5
-t1269539958
-s4309
-i"teamSelectionViewController.h"
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelectionViewController.xib
-c000000004BAB95E30000000000001C9C
-t1269536227
-s7324
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/versionbetaSIFEconnectAppDelegate.h
-c000000004BAC56E900000000000001D9
-t1269585641
-s473
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/versionbetaSIFEconnectAppDelegate.m
-c000000004BAC56FA00000000000003B3
-t1269585658
-s947
-i"versionbetaSIFEconnectAppDelegate.h"
-i"homeViewController.h"
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/MainWindow.xib
-c000000004BAB729C0000000000001F9E
-t1269527196
-s8094
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/addNewsView.xib
-c000000004BAC58B30000000000007791
-t1269586099
-s30609
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/addNewsViewController.h
-c000000004BAC475A0000000000000298
-t1269581658
-s664
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/addNewsViewController.m
-c000000004BAB9A0800000000000005FE
-t1269537288
-s1534
-i"addNewsViewController.h"
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app
-t1270661686
-s408
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app.dSYM
-t1270573392
-s102
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/Info.plist
-t1269527212
-s630
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/MainWindow.nib
-t1269527212
-s1360
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/PkgInfo
-t1269527212
-s8
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/addNewsView.nib
-t1269586869
-s5418
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/homeView.nib
-t1270661641
-s4987
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/homeViewController.nib
-t1269528415
-s1106
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/loginView.nib
-t1269588723
-s4238
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/sifeConnectLogo.png
-t1269528194
-s11493
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/teamSelection.nib
-t2
-s0
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/teamSelectionView.nib
-t1270661686
-s1386
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/teamSelectionViewController.nib
-t2
-s0
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect
-t1270573392
-s32568
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/addNewsViewController.o
-t1269586982
-s42100
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/homeViewController.o
-t1270573392
-s45748
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/loginViewController.o
-t1270573149
-s33748
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/main.o
-t1269527214
-s5976
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/teamSelection.o
-t2
-s0
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/teamSelectionViewController.o
-t1269539961
-s33512
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/versionbetaSIFEconnect.LinkFileList
-c000000004BAB9A700000000000000428
-t1269537392
-s1064
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/versionbetaSIFEconnectAppDelegate.o
-t1270573149
-s41504
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/main.m
-c000000004BAB729C0000000000000174
-t1269527196
-s372
-i<UIKit/UIKit.h>
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/sifeConnectLogo.png
-c000000004BAB72D20000000000002CE5
-t1269527250
-s11493
-
-N/Users/BlueOne/Documents/versionbetaSIFEconnect/versionbetaSIFEconnect_Prefix.pch
-c000000004BAB729C00000000000000D5
-t1269527196
-s213
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-avvkylbpcvkhpsfrddfyqlekgtcd/versionbetaSIFEconnect_Prefix.pch.gch
-t1269527213
-s8753336
-
-N/var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-fxugzmfnkfyshweuhmpzcpuylyrz/versionbetaSIFEconnect_Prefix.pch.gch
-t1270964169
-s8753336
-
-NversionbetaSIFEconnect-Info.plist
-c000000004BAB729C000000000000038D
-t1269527196
-s909
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies292656967#292656967#0(0"0(0#1#0"4375320#0"0#
-
-CCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/addNewsViewController.o /Users/BlueOne/Documents/SIFEConnect/Classes/../addNewsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s292656969.370678
-e292656969.497598
-r1
-xCompileC
-xbuild/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/addNewsViewController.o
-x/Users/BlueOne/Documents/SIFEConnect/Classes/../addNewsViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/BlueOne/Documents/SIFEConnect/Classes/../addNewsViewController.m292656969#292656969#0(0"0(0#0#71"/Users/BlueOne/Documents/SIFEConnect/Classes/../addNewsViewController.m2534967408#2182"    cd /Users/BlueOne/Documents/SIFEConnect    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-generated-files.hmap -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-own-target-headers.hmap -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-all-target-headers.hmap -iquote /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-project-headers.hmap -F/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator -I/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/include -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources/i386 -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources -include /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-fxugzmfnkfyshweuhmpzcpuylyrz/versionbetaSIFEconnect_Prefix.pch -c /Users/BlueOne/Documents/SIFEConnect/Classes/../addNewsViewController.m -o /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/addNewsViewController.o0#
-
-CCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/addNewsViewController.o /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/../addNewsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s291279782.821200
-e291279782.952027
-r1
-xCompileC
-xbuild/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/addNewsViewController.o
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/../addNewsViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@90"Compile /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/../addNewsViewController.m291279782#291279782#0(0"0(0#0#82"/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/../addNewsViewController.m2534967408#2303"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-generated-files.hmap -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-own-target-headers.hmap -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-all-target-headers.hmap -iquote /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-project-headers.hmap -F/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/include -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources/i386 -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources -include /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-avvkylbpcvkhpsfrddfyqlekgtcd/versionbetaSIFEconnect_Prefix.pch -c /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/../addNewsViewController.m -o /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/addNewsViewController.o0#
-
-CCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/addNewsViewController.o /Users/BlueOne/Documents/versionbetaSIFEconnect/addNewsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/homeViewController.o /Users/BlueOne/Documents/SIFEConnect/Classes/homeViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s292656969.212032
-e292656969.370533
-r1
-xCompileC
-xbuild/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/homeViewController.o
-x/Users/BlueOne/Documents/SIFEConnect/Classes/homeViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@73"Compile /Users/BlueOne/Documents/SIFEConnect/Classes/homeViewController.m292656969#292656969#0(0"0(0#0#65"/Users/BlueOne/Documents/SIFEConnect/Classes/homeViewController.m2534967408#2173"    cd /Users/BlueOne/Documents/SIFEConnect    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-generated-files.hmap -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-own-target-headers.hmap -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-all-target-headers.hmap -iquote /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-project-headers.hmap -F/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator -I/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/include -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources/i386 -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources -include /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-fxugzmfnkfyshweuhmpzcpuylyrz/versionbetaSIFEconnect_Prefix.pch -c /Users/BlueOne/Documents/SIFEConnect/Classes/homeViewController.m -o /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/homeViewController.o0#
-
-CCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/homeViewController.o /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s292266192.793810
-e292266192.944195
-r1
-xCompileC
-xbuild/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/homeViewController.o
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@84"Compile /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeViewController.m292266192#292266192#0(0"0(0#0#76"/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeViewController.m2534967408#2294"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-generated-files.hmap -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-own-target-headers.hmap -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-all-target-headers.hmap -iquote /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-project-headers.hmap -F/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/include -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources/i386 -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources -include /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-avvkylbpcvkhpsfrddfyqlekgtcd/versionbetaSIFEconnect_Prefix.pch -c /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeViewController.m -o /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/homeViewController.o0#
-
-CCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/loginViewController.o /Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s292656969.222912
-e292656969.346777
-r1
-xCompileC
-xbuild/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/loginViewController.o
-x/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m: In function '-[loginViewController connect:]':
-o/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m:52: warning: 'UIViewController' may not respond to '-log:byteam:'
-o/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m:52: warning: (Messages without a matching method signature
-o/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m:52: warning: will be assumed to return 'id' and accept
-o/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m:52: warning: '...' as arguments.)
-lSLF07#2@74"Compile /Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m292656969#292656969#0(597"/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m: In function '-[loginViewController connect:]':/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m:52: warning: 'UIViewController' may not respond to '-log:byteam:'/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m:52: warning: (Messages without a matching method signature/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m:52: warning: will be assumed to return 'id' and accept/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m:52: warning: '...' as arguments.)2(22@52"'UIViewController' may not respond to '-log:byteam:'292656969#115#133#0(6@66"/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m291281728#52#0#52#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)292656969#248#126#0(6@66"/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m291281728#52#0#52#0#0"0(0#0#66"/Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m2534967408#2175"    cd /Users/BlueOne/Documents/SIFEConnect    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-generated-files.hmap -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-own-target-headers.hmap -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-all-target-headers.hmap -iquote /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-project-headers.hmap -F/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator -I/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/include -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources/i386 -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources -include /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-fxugzmfnkfyshweuhmpzcpuylyrz/versionbetaSIFEconnect_Prefix.pch -c /Users/BlueOne/Documents/SIFEConnect/Classes/loginViewController.m -o /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/loginViewController.o0#
-
-CCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/loginViewController.o /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s292265949.010381
-e292265949.102982
-r1
-xCompileC
-xbuild/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/loginViewController.o
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m: In function '-[loginViewController connect:]':
-o/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m:52: warning: 'UIViewController' may not respond to '-log:byteam:'
-o/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m:52: warning: (Messages without a matching method signature
-o/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m:52: warning: will be assumed to return 'id' and accept
-o/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m:52: warning: '...' as arguments.)
-lSLF07#2@85"Compile /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m292265949#292265949#0(652"/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m: In function '-[loginViewController connect:]':/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m:52: warning: 'UIViewController' may not respond to '-log:byteam:'/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m:52: warning: (Messages without a matching method signature/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m:52: warning: will be assumed to return 'id' and accept/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m:52: warning: '...' as arguments.)2(22@52"'UIViewController' may not respond to '-log:byteam:'292265949#126#144#0(6@77"/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m291281728#52#0#52#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)292265949#270#137#0(6@77"/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m291281728#52#0#52#0#0"0(0#0#77"/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m2534967408#2296"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-generated-files.hmap -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-own-target-headers.hmap -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-all-target-headers.hmap -iquote /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-project-headers.hmap -F/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/include -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources/i386 -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources -include /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-avvkylbpcvkhpsfrddfyqlekgtcd/versionbetaSIFEconnect_Prefix.pch -c /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginViewController.m -o /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/loginViewController.o0#
-
-CCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/main.o /Users/BlueOne/Documents/SIFEConnect/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s292656969.095702
-e292656969.211851
-r1
-xCompileC
-xbuild/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/main.o
-x/Users/BlueOne/Documents/SIFEConnect/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@51"Compile /Users/BlueOne/Documents/SIFEConnect/main.m292656969#292656969#0(0"0(0#0#43"/Users/BlueOne/Documents/SIFEConnect/main.m4375320#2137"    cd /Users/BlueOne/Documents/SIFEConnect    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-generated-files.hmap -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-own-target-headers.hmap -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-all-target-headers.hmap -iquote /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-project-headers.hmap -F/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator -I/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/include -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources/i386 -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources -include /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-fxugzmfnkfyshweuhmpzcpuylyrz/versionbetaSIFEconnect_Prefix.pch -c /Users/BlueOne/Documents/SIFEConnect/main.m -o /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/main.o0#
-
-CCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/main.o /Users/BlueOne/Documents/versionbetaSIFEconnect/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s291220013.931134
-e291220014.038464
-r1
-xCompileC
-xbuild/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/main.o
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@62"Compile /Users/BlueOne/Documents/versionbetaSIFEconnect/main.m291220013#291220014#0(0"0(0#0#54"/Users/BlueOne/Documents/versionbetaSIFEconnect/main.m4375320#2258"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-generated-files.hmap -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-own-target-headers.hmap -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-all-target-headers.hmap -iquote /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-project-headers.hmap -F/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/include -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources/i386 -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources -include /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-avvkylbpcvkhpsfrddfyqlekgtcd/versionbetaSIFEconnect_Prefix.pch -c /Users/BlueOne/Documents/versionbetaSIFEconnect/main.m -o /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/main.o0#
-
-CCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/teamSelection.o /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelection.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/teamSelectionViewController.o /Users/BlueOne/Documents/SIFEConnect/Classes/teamSelectionViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s292656969.347395
-e292656969.471557
-r1
-xCompileC
-xbuild/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/teamSelectionViewController.o
-x/Users/BlueOne/Documents/SIFEConnect/Classes/teamSelectionViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/BlueOne/Documents/SIFEConnect/Classes/teamSelectionViewController.m292656969#292656969#0(0"0(0#0#74"/Users/BlueOne/Documents/SIFEConnect/Classes/teamSelectionViewController.m4375320#2191"    cd /Users/BlueOne/Documents/SIFEConnect    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-generated-files.hmap -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-own-target-headers.hmap -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-all-target-headers.hmap -iquote /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-project-headers.hmap -F/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator -I/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/include -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources/i386 -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources -include /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-fxugzmfnkfyshweuhmpzcpuylyrz/versionbetaSIFEconnect_Prefix.pch -c /Users/BlueOne/Documents/SIFEConnect/Classes/teamSelectionViewController.m -o /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/teamSelectionViewController.o0#
-
-CCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/teamSelectionViewController.o /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelectionViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s291232761.031612
-e291232761.187421
-r1
-xCompileC
-xbuild/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/teamSelectionViewController.o
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelectionViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@93"Compile /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelectionViewController.m291232761#291232761#0(0"0(0#0#85"/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelectionViewController.m2534967408#2312"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-generated-files.hmap -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-own-target-headers.hmap -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-all-target-headers.hmap -iquote /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-project-headers.hmap -F/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/include -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources/i386 -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources -include /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-avvkylbpcvkhpsfrddfyqlekgtcd/versionbetaSIFEconnect_Prefix.pch -c /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelectionViewController.m -o /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/teamSelectionViewController.o0#
-
-CCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/versionbetaSIFEconnectAppDelegate.o /Users/BlueOne/Documents/SIFEConnect/Classes/versionbetaSIFEconnectAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s292656969.097858
-e292656969.222757
-r1
-xCompileC
-xbuild/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/versionbetaSIFEconnectAppDelegate.o
-x/Users/BlueOne/Documents/SIFEConnect/Classes/versionbetaSIFEconnectAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@88"Compile /Users/BlueOne/Documents/SIFEConnect/Classes/versionbetaSIFEconnectAppDelegate.m292656969#292656969#0(0"0(0#0#80"/Users/BlueOne/Documents/SIFEConnect/Classes/versionbetaSIFEconnectAppDelegate.m2534967408#2203"    cd /Users/BlueOne/Documents/SIFEConnect    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-generated-files.hmap -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-own-target-headers.hmap -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-all-target-headers.hmap -iquote /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-project-headers.hmap -F/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator -I/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/include -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources/i386 -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources -include /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-fxugzmfnkfyshweuhmpzcpuylyrz/versionbetaSIFEconnect_Prefix.pch -c /Users/BlueOne/Documents/SIFEConnect/Classes/versionbetaSIFEconnectAppDelegate.m -o /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/versionbetaSIFEconnectAppDelegate.o0#
-
-CCompileC build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/versionbetaSIFEconnectAppDelegate.o /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/versionbetaSIFEconnectAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s292265948.868897
-e292265949.010236
-r1
-xCompileC
-xbuild/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/versionbetaSIFEconnectAppDelegate.o
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/versionbetaSIFEconnectAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@99"Compile /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/versionbetaSIFEconnectAppDelegate.m292265948#292265949#0(0"0(0#0#91"/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/versionbetaSIFEconnectAppDelegate.m2534967408#2324"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-generated-files.hmap -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-own-target-headers.hmap -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-all-target-headers.hmap -iquote /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-project-headers.hmap -F/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/include -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources/i386 -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources -include /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-avvkylbpcvkhpsfrddfyqlekgtcd/versionbetaSIFEconnect_Prefix.pch -c /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/versionbetaSIFEconnectAppDelegate.m -o /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/versionbetaSIFEconnectAppDelegate.o0#
-
-CCompileXIB /Users/BlueOne/Documents/SIFEConnect/Classes/homeView.xib
-r0
-
-CCompileXIB /Users/BlueOne/Documents/SIFEConnect/Classes/loginView.xib
-r0
-
-CCompileXIB /Users/BlueOne/Documents/SIFEConnect/Classes/teamSelectionView.xib
-r0
-
-CCompileXIB /Users/BlueOne/Documents/SIFEConnect/MainWindow.xib
-r0
-
-CCompileXIB /Users/BlueOne/Documents/SIFEConnect/addNewsView.xib
-r0
-
-CCompileXIB /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeView.xib
-s292354440.203371
-e292354441.503904
-r1
-xCompileXIB
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeView.xib
-lSLF07#2@31"CompileXIB Classes/homeView.xib292354440#292354441#0(0"0(0#0#68"/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeView.xib4375320#528"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/homeView.nib /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeView.xib0#
-
-CCompileXIB /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeViewController.xib
-s291221215.560078
-e291221215.908681
-r1
-xCompileXIB
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeViewController.xib
-lSLF07#2@41"CompileXIB Classes/homeViewController.xib291221215#291221215#0(0"0(0#0#78"/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeViewController.xib2534967408#548"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/homeViewController.nib /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/homeViewController.xib0#
-
-CCompileXIB /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginView.xib
-s291281523.015188
-e291281523.579682
-r1
-xCompileXIB
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginView.xib
-lSLF07#2@32"CompileXIB Classes/loginView.xib291281523#291281523#0(0"0(0#0#69"/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginView.xib2534967408#530"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/loginView.nib /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/loginView.xib0#
-
-CCompileXIB /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelection.xib
-r0
-
-CCompileXIB /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelectionView.xib
-s292354485.431394
-e292354486.116643
-r1
-xCompileXIB
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelectionView.xib
-lSLF07#2@40"CompileXIB Classes/teamSelectionView.xib292354485#292354486#0(0"0(0#0#77"/Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelectionView.xib2534967408#546"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/teamSelectionView.nib /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelectionView.xib0#
-
-CCompileXIB /Users/BlueOne/Documents/versionbetaSIFEconnect/Classes/teamSelectionViewController.xib
-r0
-
-CCompileXIB /Users/BlueOne/Documents/versionbetaSIFEconnect/MainWindow.xib
-s291220012.588870
-e291220012.964397
-r1
-xCompileXIB
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/MainWindow.xib
-oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
-lSLF07#2@25"CompileXIB MainWindow.xib291220012#291220012#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#62"/Users/BlueOne/Documents/versionbetaSIFEconnect/MainWindow.xib4858560#524"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/MainWindow.nib /Users/BlueOne/Documents/versionbetaSIFEconnect/MainWindow.xib0#
-
-CCompileXIB /Users/BlueOne/Documents/versionbetaSIFEconnect/addNewsView.xib
-s291279669.406651
-e291279670.022658
-r1
-xCompileXIB
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/addNewsView.xib
-oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
-lSLF07#2@26"CompileXIB addNewsView.xib291279669#291279670#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#63"/Users/BlueOne/Documents/versionbetaSIFEconnect/addNewsView.xib4375320#526"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/addNewsView.nib /Users/BlueOne/Documents/versionbetaSIFEconnect/addNewsView.xib0#
-
-CCpResource build/Debug-iphonesimulator/versionbetaSIFEconnect.app/sifeConnectLogo.png sifeConnectLogo.png
-s291220994.284637
-e291220994.303462
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/versionbetaSIFEconnect.app/sifeConnectLogo.png
-xsifeConnectLogo.png
-lSLF07#2@24"Copy sifeConnectLogo.png291220994#291220994#0(0"0(0#0#67"/Users/BlueOne/Documents/versionbetaSIFEconnect/sifeConnectLogo.png4858560#505"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/BlueOne/Documents/versionbetaSIFEconnect/sifeConnectLogo.png /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app0#
-
-CGenerateDSYMFile /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app.dSYM /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect
-s292656969.881916
-e292656969.966245
-r1
-xGenerateDSYMFile
-x/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app.dSYM
-x/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect
-lSLF07#2@154"GenerateDSYMFile build/Debug-iphonesimulator/versionbetaSIFEconnect.app.dSYM build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect292656969#292656969#0(0"0(0#0#114"/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect2534967408#422"    cd /Users/BlueOne/Documents/SIFEConnect    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect -o /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app.dSYM0#
-
-CGenerateDSYMFile /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app.dSYM /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect
-s292266192.976135
-e292266193.005525
-r1
-xGenerateDSYMFile
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app.dSYM
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect
-lSLF07#2@154"GenerateDSYMFile build/Debug-iphonesimulator/versionbetaSIFEconnect.app.dSYM build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect292266192#292266193#0(0"0(0#0#125"/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect2534967408#455"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect -o /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app.dSYM0#
-
-CLd /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect normal i386
-s292656969.497754
-e292656969.881771
-r1
-xLd
-x/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect
-xnormal
-xi386
-lSLF07#2@119"Link /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect292656969#292656969#0(0"0(0#0#0"2534967408#929"    cd /Users/BlueOne/Documents/SIFEConnect    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -L/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator -F/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator -filelist /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/versionbetaSIFEconnect.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect0#
-
-CLd /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect normal i386
-s292266192.944339
-e292266192.975978
-r1
-xLd
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect
-xnormal
-xi386
-lSLF07#2@130"Link /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect292266192#292266192#0(0"0(0#0#0"2534967408#984"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -L/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator -F/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator -filelist /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/Objects-normal/i386/versionbetaSIFEconnect.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/versionbetaSIFEconnect0#
-
-CProcessInfoPlistFile /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/Info.plist versionbetaSIFEconnect-Info.plist
-r0
-
-CProcessInfoPlistFile /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/Info.plist versionbetaSIFEconnect-Info.plist
-s291220012.563344
-e291220012.588685
-r1
-xProcessInfoPlistFile
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/Info.plist
-xversionbetaSIFEconnect-Info.plist
-lSLF07#2@41"Process versionbetaSIFEconnect-Info.plist291220012#291220012#0(0"0(0#0#81"/Users/BlueOne/Documents/versionbetaSIFEconnect/versionbetaSIFEconnect-Info.plist4375320#551"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility versionbetaSIFEconnect-Info.plist -genpkginfo /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app/Info.plist0#
-
-CProcessPCH /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-avvkylbpcvkhpsfrddfyqlekgtcd/versionbetaSIFEconnect_Prefix.pch.gch versionbetaSIFEconnect_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s291220012.964621
-e291220013.930945
-r1
-xProcessPCH
-x/var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-avvkylbpcvkhpsfrddfyqlekgtcd/versionbetaSIFEconnect_Prefix.pch.gch
-xversionbetaSIFEconnect_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@44"Precompile versionbetaSIFEconnect_Prefix.pch291220012#291220013#0(0"0(0#0#81"/Users/BlueOne/Documents/versionbetaSIFEconnect/versionbetaSIFEconnect_Prefix.pch4375320#2126"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-generated-files.hmap -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-own-target-headers.hmap -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-all-target-headers.hmap -iquote /Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-project-headers.hmap -F/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/include -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources/i386 -I/Users/BlueOne/Documents/versionbetaSIFEconnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources -c /Users/BlueOne/Documents/versionbetaSIFEconnect/versionbetaSIFEconnect_Prefix.pch -o /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-avvkylbpcvkhpsfrddfyqlekgtcd/versionbetaSIFEconnect_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-fxugzmfnkfyshweuhmpzcpuylyrz/versionbetaSIFEconnect_Prefix.pch.gch versionbetaSIFEconnect_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s292656967.504140
-e292656969.095344
-r1
-xProcessPCH
-x/var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-fxugzmfnkfyshweuhmpzcpuylyrz/versionbetaSIFEconnect_Prefix.pch.gch
-xversionbetaSIFEconnect_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@44"Precompile versionbetaSIFEconnect_Prefix.pch292656967#292656969#0(0"0(0#0#70"/Users/BlueOne/Documents/SIFEConnect/versionbetaSIFEconnect_Prefix.pch4375320#2016"    cd /Users/BlueOne/Documents/SIFEConnect    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-generated-files.hmap -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-own-target-headers.hmap -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-all-target-headers.hmap -iquote /Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/versionbetaSIFEconnect-project-headers.hmap -F/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator -I/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/include -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources/i386 -I/Users/BlueOne/Documents/SIFEConnect/build/versionbetaSIFEconnect.build/Debug-iphonesimulator/versionbetaSIFEconnect.build/DerivedSources -c /Users/BlueOne/Documents/SIFEConnect/versionbetaSIFEconnect_Prefix.pch -o /var/folders/Mo/MoVgTj9SFNCJGWZ7jbsPGU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/versionbetaSIFEconnect_Prefix-fxugzmfnkfyshweuhmpzcpuylyrz/versionbetaSIFEconnect_Prefix.pch.gch0#
-
-CTouch /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app
-s292656969.966399
-e292656969.969569
-r1
-xTouch
-x/Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app
-lSLF07#2@97"Touch /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app292656969#292656969#0(0"0(0#0#0"2534967408#289"    cd /Users/BlueOne/Documents/SIFEConnect    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/BlueOne/Documents/SIFEConnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app0#
-
-CTouch /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app
-s292354486.118576
-e292354486.123212
-r1
-xTouch
-x/Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app
-lSLF07#2@108"Touch /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app292354486#292354486#0(0"0(0#0#0"4375320#311"    cd /Users/BlueOne/Documents/versionbetaSIFEconnect    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/BlueOne/Documents/versionbetaSIFEconnect/build/Debug-iphonesimulator/versionbetaSIFEconnect.app0#
-

@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -275,7 +273,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>15</integer>
+									<integer>10</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -311,12 +309,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Global.m</string>
+								<string>versionbetaSIFEconnectAppDelegate.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,11 +324,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Global.m</string>
+										<string>versionbetaSIFEconnectAppDelegate.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C92F9FF1118CDDAC00B76CDA</string>
+										<string>C96E63DE118D58CB0069FDDB</string>
 										<key>history</key>
 										<array>
 											<string>C9D2F905115BD37500805EF7</string>
@@ -359,22 +359,24 @@
 											<string>C96F2CC7118C952B00FF473A</string>
 											<string>C96F2D27118C97E000FF473A</string>
 											<string>C96F2E1E118C9F1100FF473A</string>
-											<string>C96F2E1F118C9F1100FF473A</string>
-											<string>C96F2E6A118CA1E000FF473A</string>
 											<string>C96F2E9B118CB72800FF473A</string>
 											<string>C96F2EB8118CBED300FF473A</string>
 											<string>C96F2F11118CC16300FF473A</string>
 											<string>C96F2F12118CC16300FF473A</string>
-											<string>C96F2FC1118CC77700FF473A</string>
 											<string>C96F3070118CD32200FF473A</string>
 											<string>C96F3071118CD32200FF473A</string>
 											<string>C96F3072118CD32200FF473A</string>
 											<string>C96F3073118CD32200FF473A</string>
 											<string>C96F3086118CD40600FF473A</string>
 											<string>C96F308F118CD6B700FF473A</string>
-											<string>C92F9FEF118CDDAC00B76CDA</string>
-											<string>C92F9FF0118CDDAC00B76CDA</string>
-											<string>C96F2D29118C97E000FF473A</string>
+											<string>C96E63C4118D58610069FDDB</string>
+											<string>C96E63C5118D58610069FDDB</string>
+											<string>C96E63C6118D58610069FDDB</string>
+											<string>C96E63D0118D58990069FDDB</string>
+											<string>C96E63D1118D58990069FDDB</string>
+											<string>C96E63D2118D58990069FDDB</string>
+											<string>C96E63D3118D58990069FDDB</string>
+											<string>C96E63D4118D58990069FDDB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -432,9 +434,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>C92F9FF2118CDDAC00B76CDA</string>
+				<string>C96E6380118D52EE0069FDDB</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>C92F9FF3118CDDAC00B76CDA</string>
+				<string>C96E6381118D52EE0069FDDB</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -614,6 +616,8 @@
 							<string>197pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -653,7 +657,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>C9D2F852115BAA2000805EF7</string>
-				<string>C92F9FF4118CDDAC00B76CDA</string>
+				<string>C96E6382118D52EE0069FDDB</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

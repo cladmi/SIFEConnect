@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AsyncSocket;
+
 
 
 @interface versionbetaSIFEconnectAppDelegate : NSObject <UIApplicationDelegate, UITextViewDelegate, UITextFieldDelegate> 
 {
     UIWindow *window;
 	
-		
+	AsyncSocket *socket;
 	UINavigationController *sifeNavigationController;
 	NSString *query;
 }

@@ -37,7 +37,7 @@ public class manageUser {
 				//	*/
 				case (3) :
 					conn = DriverManager.getConnection("jdbc:sqlite:database/accounts.db");
-					ow.createUser(conn, "cladmi", "bite");
+//					ow.createUser(conn, "cladmi", "bite");
 					conn.close();
 					break;
 				default :

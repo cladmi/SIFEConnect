@@ -12,7 +12,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {689, 1898}}";
 			sepNavSelRange = "{3053, 0}";
-			sepNavVisRange = "{2999, 226}";
+			sepNavVisRange = "{2999, 227}";
 			sepNavWindowFrame = "{{107, 231}, {750, 558}}";
 		};
 	};
@@ -239,6 +239,10 @@
 			C96E692B118DF2190069FDDB /* PBXTextBookmark */ = C96E692B118DF2190069FDDB /* PBXTextBookmark */;
 			C96E6930118DF2320069FDDB /* PBXTextBookmark */ = C96E6930118DF2320069FDDB /* PBXTextBookmark */;
 			C96E6931118DF2320069FDDB /* PBXTextBookmark */ = C96E6931118DF2320069FDDB /* PBXTextBookmark */;
+			C96E693C118DF3BA0069FDDB /* PBXTextBookmark */ = C96E693C118DF3BA0069FDDB /* PBXTextBookmark */;
+			C96E693D118DF3BA0069FDDB /* PBXTextBookmark */ = C96E693D118DF3BA0069FDDB /* PBXTextBookmark */;
+			C96E6940118DF3BD0069FDDB /* PBXTextBookmark */ = C96E6940118DF3BD0069FDDB /* PBXTextBookmark */;
+			C96E6941118DF3BD0069FDDB /* PBXTextBookmark */ = C96E6941118DF3BD0069FDDB /* PBXTextBookmark */;
 			C96F294F118C407100FF473A = C96F294F118C407100FF473A /* PBXTextBookmark */;
 			C96F2A42118C771000FF473A = C96F2A42118C771000FF473A /* PBXTextBookmark */;
 			C96F2A50118C78DC00FF473A = C96F2A50118C78DC00FF473A /* PBXTextBookmark */;
@@ -1624,9 +1628,9 @@
 		path = /Users/BlueOne/Documents/SIFEConnect/Classes/schoolSelectionController.m;
 		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1072, 2964}}";
+			sepNavIntBoundsRect = "{{0, 0}, {720, 2925}}";
 			sepNavSelRange = "{4710, 17}";
-			sepNavVisRange = "{3658, 2201}";
+			sepNavVisRange = "{4382, 679}";
 		};
 	};
 	C96E68C5118DED900069FDDB /* PBXTextBookmark */ = {
@@ -1979,6 +1983,46 @@
 		vrLen = 2189;
 		vrLoc = 5821;
 	};
+	C96E693C118DF3BA0069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 118";
+		rLen = 0;
+		rLoc = 3053;
+		rType = 0;
+		vrLen = 227;
+		vrLoc = 2999;
+	};
+	C96E693D118DF3BA0069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C96E68C4118DED900069FDDB /* schoolSelectionController.m */;
+		name = "schoolSelectionController.m: 175";
+		rLen = 17;
+		rLoc = 4710;
+		rType = 0;
+		vrLen = 679;
+		vrLoc = 4382;
+	};
+	C96E6940118DF3BD0069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 118";
+		rLen = 0;
+		rLoc = 3053;
+		rType = 0;
+		vrLen = 227;
+		vrLoc = 2999;
+	};
+	C96E6941118DF3BD0069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C96E68C4118DED900069FDDB /* schoolSelectionController.m */;
+		name = "schoolSelectionController.m: 175";
+		rLen = 17;
+		rLoc = 4710;
+		rType = 0;
+		vrLen = 679;
+		vrLoc = 4382;
+	};
 	C96F2935118C3FB800FF473A /* UITextField.h */ = {
 		isa = PBXFileReference;
 		lastKnownFileType = sourcecode.c.h;
@@ -2328,7 +2372,7 @@
 	};
 	C9D2F8E6115BD18800805EF7 /* addNewsViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1072, 756}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1072, 731}}";
 			sepNavSelRange = "{397, 0}";
 			sepNavVisRange = "{0, 665}";
 		};

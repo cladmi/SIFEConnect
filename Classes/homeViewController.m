@@ -26,7 +26,7 @@
 @synthesize loginString;
 
 @synthesize homeTableView;
-
+@synthesize homeTableController;
 
 - (IBAction)homeButtonPressed:(id)sender
 {
@@ -90,6 +90,7 @@
 		[Global sharedInstance].isLogged = FALSE;
 		loginString = @"<none>";
     }
+	//homeTableController = [[msgViewController alloc] initWithNibName:@"msgViewController"];
     return self;
 }
 

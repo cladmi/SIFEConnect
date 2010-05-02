@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>C96E67B1118DD4040069FDDB</string>
+						<string>C96E67E3118DDBFC0069FDDB</string>
 						<key>history</key>
 						<array>
 							<string>C96E673A118DC9D90069FDDB</string>
@@ -314,7 +314,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
+									<integer>5</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -357,7 +357,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>msgViewController.m</string>
+								<string>homeViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -365,11 +365,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>msgViewController.m</string>
+										<string>homeViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C96E67B0118DD4040069FDDB</string>
+										<string>C96E67E2118DDBFC0069FDDB</string>
 										<key>history</key>
 										<array>
 											<string>C9D2F905115BD37500805EF7</string>
@@ -413,16 +413,16 @@
 											<string>C96E66FC118DC8340069FDDB</string>
 											<string>C96E677B118DCFC40069FDDB</string>
 											<string>C96E677E118DCFC40069FDDB</string>
-											<string>C96E6783118DCFC40069FDDB</string>
-											<string>C96E6784118DCFC40069FDDB</string>
 											<string>C96E6798118DD15D0069FDDB</string>
 											<string>C96E6799118DD15D0069FDDB</string>
 											<string>C96E679A118DD15D0069FDDB</string>
 											<string>C96E679B118DD15D0069FDDB</string>
-											<string>C96E679C118DD15D0069FDDB</string>
 											<string>C96E679D118DD15D0069FDDB</string>
 											<string>C96E67AA118DD3A10069FDDB</string>
-											<string>C96E67AB118DD3A10069FDDB</string>
+											<string>C96E67B8118DD64C0069FDDB</string>
+											<string>C96E67B9118DD64C0069FDDB</string>
+											<string>C96E67E0118DDBFC0069FDDB</string>
+											<string>C96E67E1118DDBFC0069FDDB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

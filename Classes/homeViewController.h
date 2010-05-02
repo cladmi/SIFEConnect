@@ -34,6 +34,7 @@
 @property(nonatomic, retain) UILabel *teamName;
 @property(nonatomic, retain) NSString *loginString;
 @property(nonatomic, retain) UITableView *homeTableView;
+@property(nonatomic, retain) msgViewController *homeTableController;
 
 
 - (IBAction)homeButtonPressed:(id)sender;

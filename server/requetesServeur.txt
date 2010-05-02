@@ -8,4 +8,11 @@
 	{"idCountry":33,"section":[{"id":1,"name":"TheDeveloper"}],"header":"France"}
 
 
+{"id":1,"sessionId":"A693E73C2C8C8E4FEBB064A9EC25F74CFBCE42F3F0463CDE",  "action" : 4, "team" : 1}
+
+
+
+
+
+
 

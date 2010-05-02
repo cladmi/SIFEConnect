@@ -273,11 +273,11 @@ public class DatabaseAccess {
 					break;
 				case (Global.NEWS_COUNTRY) :
 					grepNews = " AND C.idCountry = " + idList + " ";
-					headerColums = "C.nameCountry";
+					headerColums = "nameCountry";
 					break;
 				case (Global.NEWS_CONTINENT) :
 					grepNews = " AND W.idContinent = " + idList + " ";
-					headerColums = "W.nameContinent";
+					headerColums = "nameContinent";
 					break;
 				case (Global.NEWS_WORLD) :
 					grepNews = "";
@@ -299,63 +299,78 @@ public class DatabaseAccess {
 			obj = new JSONObject();
 
 
-			psNews = connection.prepareStatement("SELECT COUNT(*), M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent " + grepNews + " ORDER BY date DESC LIMIT " + (Global.NEWS_PER_PAGE + 1) + " OFFSET " + (Global.NEWS_PER_PAGE*page));
+			
+			psNews = connection.prepareStatement("SELECT COUNT(*), M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent ORDER BY date DESC LIMIT ? OFFSET ?");
+
+			psNews.setInt(1, (Global.NEWS_PER_PAGE + 1));
+			psNews.setInt(2, (Global.NEWS_PER_PAGE * (page - 1)));
 			// on en récupère un de plus, pour permettre de savoir s'il y en a d'autres
+			System.out.println(psNews.toString());
 
 			rsNews = psNews.executeQuery();
 
-			if (listType == 4) {
-				obj.put("header", "World News");
+			if (rsNews.next()) {
+				if (listType == 4) {
+					obj.put("header", "World News");
+				} else {
+				//	ResultSetMetaData rsmd = rsNews.getMetaData();
+				//	System.out.println(rsmd.toString());
+
+					obj.put("header", rsNews.getString(headerColums) + " News");
+				}
+
+				if (page == 1) {
+					obj.put("previous", null);
+				} else {
+					obj.put("previous", new Integer(page -1));
+				}
+				
+				if (rsNews.getInt(1) <= 10) {
+					obj.put("next", null);
+				} else {
+					obj.put("next", new Integer(page + 1));
+				}
+
+				/* [{msgs}, {...}] */
+				JSONArray msgTable = new JSONArray();
+				int i = 0;
+				do  {
+
+					idTeam = rsNews.getInt("idTeam");
+					nameTeam = rsNews.getString("nameTeam");
+					dateMsg = rsNews.getDate("date").getTime();
+					textMsg = rsNews.getString("msg");
+					idMsg = rsNews.getInt("idMsg");
+
+					/* {"id" : int, "name" : string, "date" : long, "rows" : [{"text" : String}]}*/
+					JSONObject msgCell = new JSONObject();
+					msgCell.put("id", new Integer(idTeam));
+					msgCell.put("name", nameTeam);
+					msgCell.put("date", new Long(dateMsg));
+
+					JSONArray rowsTable = new JSONArray();
+
+					JSONObject textCell = new JSONObject();
+					textCell.put("text", textMsg);
+					textCell.put("id", new Integer(idMsg));
+
+					rowsTable.add(textCell);
+
+					msgCell.put("rows", rowsTable); 
+					msgTable.add(msgCell);
+					i++;
+				} while ((i < Global.NEWS_PER_PAGE) && (rsNews.next()));
+				obj.put("sections",msgTable);
+
+				/* close the connection */
+				rsNews.close();
+				psNews.close();
+				connection.close();  
+
 			} else {
-				System.out.println(headerColums);
-				obj.put("header", rsNews.getString(headerColums) + " News");
+				System.out.println("on est dans la merde");
+				obj.put("STATUS","DATA_ERROR");
 			}
-
-			if (page == 1) {
-				obj.put("previous", null);
-			} else {
-				obj.put("previous", new Integer(page -1));
-			}
-			
-			if (rsNews.getInt(1) <= 10) {
-				obj.put("next", null);
-			} else {
-				obj.put("next", new Integer(page + 1));
-			}
-
-			/* [{msgs}, {...}] */
-			JSONArray msgTable = new JSONArray();
-			for (int i = 0; (i < Global.NEWS_PER_PAGE) && (rsNews.next()); i++) {
-
-				idTeam = rsNews.getInt("M.idTeam");
-				nameTeam = rsNews.getString("T.nameTeam");
-				dateMsg = rsNews.getDate("M.date").getTime();
-				textMsg = rsNews.getString("M.msg");
-				idMsg = rsNews.getInt("M.idMsg");
-
-				/* {"id" : int, "name" : string, "date" : long, "rows" : [{"text" : String}]}*/
-				JSONObject msgCell = new JSONObject();
-				msgCell.put("id", new Integer(idTeam));
-				msgCell.put("name", nameTeam);
-				msgCell.put("date", new Long(dateMsg));
-
-				JSONArray rowsTable = new JSONArray();
-
-				JSONObject textCell = new JSONObject();
-				textCell.put("text", textMsg);
-				textCell.put("id", new Integer(idMsg));
-
-				rowsTable.add(textCell);
-
-				msgCell.put("rows", rowsTable); 
-				msgTable.add(msgCell);
-			}
-
-			/* close the connection */
-			rsNews.close();
-			psNews.close();
-			connection.close();  
-
 			return obj.toString();
 		} catch (Exception e) {  
 			e.printStackTrace();  

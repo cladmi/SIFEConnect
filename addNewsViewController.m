@@ -19,13 +19,78 @@
 @synthesize lastStatus;
 @synthesize charleft;
 @synthesize updateButton;
+@synthesize uploadButton;
+@synthesize rotatumsnart;
+
+
+
+- (IBAction)sendMessage:(id)sender
+{
+	
+ [rotatumsnart startAnimating];
+ 
+	updateButton.enabled = NO;
+	updateButton.titleLabel.enabled = NO;
+	uploadButton.enabled = NO;
+	uploadButton.titleLabel.enabled = NO;
+	
+	NSString *query;
+	NSMutableDictionary *queryDictionary;
+	queryDictionary = [[NSMutableDictionary alloc] init];
+	[queryDictionary setValue:[NSNumber numberWithInt:POST] forKey:@"action"];
+	[queryDictionary setValue:[NSNumber numberWithInt:[Global sharedInstance].myId] forKey:@"id"];
+	[queryDictionary setValue:[Global sharedInstance].sessionId forKey:@"sessionId"];
+	[queryDictionary setValue:lastStatus.text forKey:@"text"];
+	
+	query = [queryDictionary JSONRepresentation];
+	((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = query;
+	
+	[(versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate] performSelectorOnMainThread:@selector(contactServer:) withObject:self 
+																									 waitUntilDone:NO];
+	[queryDictionary release]; 
+}	
+
+
+- (void)queryResult:(NSString *)result 
+{
+	
+	NSDictionary *results = [result JSONValue];
+	
+	NSString *status = [results objectForKey:@"STATUS"];
+	if (status != nil && [status isEqualToString:@"MESSAGE_POSTED"]) {
+		
+		[rotatumsnart stopAnimating];
+		updateButton.enabled = YES;
+		updateButton.titleLabel.enabled = YES;
+		uploadButton.enabled = NO;
+		uploadButton.titleLabel.enabled = NO;
+		messageTextView.text = @"";
+		/*UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Your message has been posted" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		[alert show];
+		[alert release];*/
+		
+	} else {
+		updateButton.enabled = YES;
+		updateButton.titleLabel.enabled = YES;
+		[rotatumsnart stopAnimating];
+		lastStatus.text = @"";
+		NSLog(@"Failed to send message"); 
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"Server error." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+	}	
+}
+
+
+
+
 
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
-		self.title = @"Add news";
+		self.title = @"Add News";
     }
     return self;
 }
@@ -43,6 +108,10 @@
     [super viewDidLoad];
 	messageTextView.delegate = self;
 	charleft.text = [NSString stringWithFormat:@"Character left : %d", MSG_LENGTH - [[messageTextView text] length]];
+	updateButton.enabled = YES;
+	updateButton.titleLabel.enabled = YES;
+	uploadButton.enabled = NO;
+	uploadButton.titleLabel.enabled = NO;
 }
 
 
@@ -70,40 +139,16 @@
 }
 
 - (IBAction)updateStatus:(id)sender {
-	[lastStatus setText:messageTextView.text];	
+		
+	if (messageTextView.text != nil && [messageTextView.text isEqualToString: @""]) {
+		[lastStatus setText:messageTextView.text];
+		uploadButton.enabled = YES;
+		uploadButton.titleLabel.enabled = YES;
+	}
+		
 }
 
 
-
-- (void) downloadCountryList {
-	
-	NSString *query;
-	NSMutableDictionary *queryDictionary;
-	queryDictionary = [[NSMutableDictionary alloc] init];
-	[queryDictionary setValue:[NSNumber numberWithInt:POST] forKey:@"action"];
-	[queryDictionary setValue:[NSNumber numberWithInt:[Global sharedInstance].myId] forKey:@"id"];
-	[queryDictionary setValue:[Global sharedInstance].sessionId forKey:@"sessionId"];
-	[queryDictionary setValue:[messageTextView text] forKey:@"text"];
-	
-	query = [queryDictionary JSONRepresentation];
-	
-	((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = query;
-	
-	[(versionbetaSIFEconnectAppDelegate *)[[UIApplication 	sharedApplication] delegate] performSelectorOnMainThread:@selector(contactServer:) withObject:self waitUntilDone:NO];
-	[queryDictionary release];
-	
-}
-
-
-
-- (void)queryResult:(NSString *)result 
-{
-	/*tableDictionary = [result JSONValue];
-	[tableDictionary retain];
-	
-	[self.tableView reloadData];
-	 */
-}
 
 
 

@@ -145,7 +145,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 	if (newsDictionary != nil) {
-		return [[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"name"];
+		return [[[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"name"] stringByAppendingFormat:@" - %@",[[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"country"]];
 	} else {
 		return @"Downloading data";
 	}
@@ -155,7 +155,10 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
 	if (newsDictionary != nil) {
-		return [[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"name"];
+		//+ (id)dateWithTimeIntervalSince1970:(NSTimeInterval)seconds
+		double timestamp = [[[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"date"] doubleValue];
+		long interval = (timestamp / 1000);
+		return [[NSDate dateWithTimeIntervalSince1970:interval] description];
 	} else {
 		return @"";
 	}
@@ -163,10 +166,52 @@
 }
 
 
+/////////////////////////////////////////////////////////////////////////////////////
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+
+{
+	
+	NSString *cellText = [[[[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"text"];
+	UIFont *cellFont = [UIFont fontWithName:@"Helvetica" size:17.0];
+	CGSize constraintSize = CGSizeMake(tableView.frame.size.width -40, MAXFLOAT);
+	CGSize labelSize = [cellText sizeWithFont:cellFont constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+	
+	return labelSize.height + 25;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"NewsCell";
+	UITableViewCell *cell;
+	
+	cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	
+	if (cell == nil)
+	{
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:17.0];
+	}
+	
+	cell.textLabel.text = [[[[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"text"];
+	
+	
+	return cell;
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+/*
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"NewsCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -178,7 +223,7 @@
 	cell.textLabel.text = [[[[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"text"];
 	
     return cell;
-}
+}*/
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

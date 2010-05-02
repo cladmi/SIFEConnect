@@ -12,6 +12,7 @@
 #import "loginViewController.h"
 #import "teamSelectionViewController.h"
 #import "addNewsViewController.h"
+#import "msgViewController.h"
 
 
 
@@ -91,7 +92,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
-		self.title = @"SIFEConnect";
+		self.title = @"SIFE Connect";
 		[Global sharedInstance].isLogged = FALSE;
 		loginString = @"<none>";
     }
@@ -240,13 +241,16 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 	if (newsDictionary != nil) {
-		return [[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"name"];
+		return [[[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"name"] stringByAppendingFormat:@" - %@",[[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"country"]];
 	} else {
+		return @"";
+	/*	
 		if ([Global sharedInstance].isLogged) {
 			return @"Downloading data";
 		} else {
-			return @"Log in to see new msgs";
+			return @"Log in to see new messages";
 		}
+	 */
 	}
 	//return [continent objectAtIndex:section];
 }
@@ -254,25 +258,47 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
 	if (newsDictionary != nil) {
-		return [[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"name"];
+		double timestamp = [[[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"date"] doubleValue];
+		long interval = (timestamp / 1000);
+		return [[NSDate dateWithTimeIntervalSince1970:interval] description];
 	} else {
-		return @"";
+		
+		if ([Global sharedInstance].isLogged) {
+			return @"Downloading data";
+		} else {
+			return @"Log in to see new messages";
+		}
+		//return @"";
 	}
 	//return [continent objectAtIndex:section];
+}
+
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{	
+	NSString *cellText = [[[[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"text"];
+	UIFont *cellFont = [UIFont fontWithName:@"Helvetica" size:17.0];
+	CGSize constraintSize = CGSizeMake(tableView.frame.size.width -50, MAXFLOAT);
+	CGSize labelSize = [cellText sizeWithFont:cellFont constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+	
+	return labelSize.height + 25;
 }
 
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"NewsCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:17.0];
     }
-    
-    // Set up the cell...
+	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	
 	cell.textLabel.text = [[[[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"text"];
 	
@@ -281,14 +307,17 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	UITableViewCell *tableCell = [homeTableView cellForRowAtIndexPath:indexPath];
-	[tableCell setSelected:NO animated:YES];
-	//UITableViewCell *tableCell = [self.tableView cellForRowAtIndexPath:indexPath];	
+	//UITableViewCell *tableCell = [homeTableView cellForRowAtIndexPath:indexPath];
 	//[tableCell setSelected:NO animated:YES];
-    // Navigation logic may go here. Create and push another view controller.
-	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
-	// [self.navigationController pushViewController:anotherViewController];
-	// [anotherViewController release];
+		
+	msgViewController *anotherViewController = [[msgViewController alloc] initWithNibName:@"msgViewController" bundle:nil];
+	anotherViewController.teamName = [[[newsDictionary objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"name"]; 
+	anotherViewController.idTeam = [[[[newsDictionary objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"id"] intValue];
+	
+	anotherViewController.title = anotherViewController.teamName;
+	[self.navigationController pushViewController:anotherViewController animated:YES];
+	
+	[anotherViewController release];
 }
 
 

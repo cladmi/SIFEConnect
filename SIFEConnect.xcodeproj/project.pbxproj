@@ -207,9 +207,9 @@
 				C9D2F893115BB6D800805EF7 /* loginView.xib */,
 				C9D2F861115BAED800805EF7 /* homeView.xib */,
 				C9D2F859115BAA6A00805EF7 /* sifeConnectLogo.png */,
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* SIFEConnect-Info.plist */,
 				C9D2F8EB115BD19B00805EF7 /* addNewsView.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 			);
 			name = Ressources;
 			sourceTree = "<group>";

@@ -101,8 +101,6 @@
 		[alert show];
 		[alert release];
 	}	
-		
-	
 }
 
 

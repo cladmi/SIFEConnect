@@ -14,6 +14,8 @@
 	IBOutlet UITextView *lastStatus;
 	IBOutlet UILabel *charleft;
 	IBOutlet UIButton *updateButton;
+	IBOutlet UIButton *uploadButton;
+	IBOutlet UIActivityIndicatorView *rotatumsnart;
 
 	
 }
@@ -22,8 +24,11 @@
 @property (nonatomic, retain) UITextView *lastStatus;
 @property (nonatomic, retain) UILabel *charleft;
 @property (nonatomic, retain) UIButton *updateButton;
+@property (nonatomic, retain) UIButton *uploadButton;
+@property (nonatomic, retain) UIActivityIndicatorView *rotatumsnart;
 
 - (IBAction)updateStatus:(id)sender;
+- (IBAction)sendMessage:(id)sender;
 
 
 

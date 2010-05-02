@@ -255,6 +255,7 @@ public class DatabaseAccess {
 		String country;
 		int idTeam;
 		String nameTeam;
+		String nameCountry;
 		String grepNews = null;
 		String headerColums = null;
 		long dateMsg;
@@ -300,7 +301,7 @@ public class DatabaseAccess {
 
 
 			
-			psNews = connection.prepareStatement("SELECT COUNT(*), M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent " + grepNews + " ORDER BY date DESC LIMIT ? OFFSET ?");
+			psNews = connection.prepareStatement("SELECT M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent " + grepNews + " ORDER BY date DESC LIMIT ? OFFSET ?");
 
 			psNews.setInt(1, (Global.NEWS_PER_PAGE + 1));
 			psNews.setInt(2, (Global.NEWS_PER_PAGE * (page - 1)));
@@ -319,25 +320,16 @@ public class DatabaseAccess {
 					obj.put("header", rsNews.getString(headerColums) + " News");
 				}
 
-				if (page == 1) {
-					obj.put("previous", null);
-				} else {
-					obj.put("previous", new Integer(page -1));
-				}
-				
-				if (rsNews.getInt(1) <= 10) {
-					obj.put("next", null);
-				} else {
-					obj.put("next", new Integer(page + 1));
-				}
 
 				/* [{msgs}, {...}] */
 				JSONArray msgTable = new JSONArray();
 				int i = 0;
 				do  {
 
+					System.out.println(i);
 					idTeam = rsNews.getInt("idTeam");
 					nameTeam = rsNews.getString("nameTeam");
+					nameCountry = rsNews.getString("nameCountry");
 					dateMsg = rsNews.getDate("date").getTime();
 					textMsg = rsNews.getString("msg");
 					idMsg = rsNews.getInt("idMsg");
@@ -346,6 +338,7 @@ public class DatabaseAccess {
 					JSONObject msgCell = new JSONObject();
 					msgCell.put("id", new Integer(idTeam));
 					msgCell.put("name", nameTeam);
+					msgCell.put("country", nameCountry);
 					msgCell.put("date", new Long(dateMsg));
 
 					JSONArray rowsTable = new JSONArray();
@@ -361,6 +354,19 @@ public class DatabaseAccess {
 					i++;
 				} while ((i < Global.NEWS_PER_PAGE) && (rsNews.next()));
 				obj.put("sections",msgTable);
+
+				if (page == 1) {
+					obj.put("previous", null);
+				} else {
+					obj.put("previous", new Integer(page -1));
+				}
+				
+				if ((i == Global.NEWS_PER_PAGE) && rsNews.next()) {
+					// on a 10 msgs et il y en a encore un autre
+					obj.put("next", new Integer(page + 1));
+				} else {
+					obj.put("next", null);
+				}
 
 				/* close the connection */
 				rsNews.close();

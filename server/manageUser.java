@@ -81,7 +81,9 @@ public class manageUser {
 						ps.setString(2, login);
 						ps.setString(3, name);
 
+						ps.executeUpdate();
 						ow.createUser(conn2, login, passwd);
+
 						ps.close();
 						conn.close();
 						conn2.close();

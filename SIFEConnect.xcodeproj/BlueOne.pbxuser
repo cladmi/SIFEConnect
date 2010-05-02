@@ -10,9 +10,9 @@
 	};
 	1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1072, 2106}}";
-			sepNavSelRange = "{3058, 0}";
-			sepNavVisRange = "{2747, 1361}";
+			sepNavIntBoundsRect = "{{0, 0}, {1072, 1794}}";
+			sepNavSelRange = "{2833, 0}";
+			sepNavVisRange = "{2005, 1360}";
 			sepNavWindowFrame = "{{107, 231}, {750, 558}}";
 		};
 	};
@@ -234,6 +234,27 @@
 			C96E65E7118D80270069FDDB /* PBXTextBookmark */ = C96E65E7118D80270069FDDB /* PBXTextBookmark */;
 			C96E65E8118D80270069FDDB /* PBXTextBookmark */ = C96E65E8118D80270069FDDB /* PBXTextBookmark */;
 			C96E65E9118D80270069FDDB /* PBXTextBookmark */ = C96E65E9118D80270069FDDB /* PBXTextBookmark */;
+			C96E65F0118D89F50069FDDB /* PBXTextBookmark */ = C96E65F0118D89F50069FDDB /* PBXTextBookmark */;
+			C96E65F1118D89F50069FDDB /* PBXTextBookmark */ = C96E65F1118D89F50069FDDB /* PBXTextBookmark */;
+			C96E65F2118D89F50069FDDB /* PBXTextBookmark */ = C96E65F2118D89F50069FDDB /* PBXTextBookmark */;
+			C96E65F5118D8ADD0069FDDB /* PBXTextBookmark */ = C96E65F5118D8ADD0069FDDB /* PBXTextBookmark */;
+			C96E65F6118D8ADD0069FDDB /* XCBuildMessageTextBookmark */ = C96E65F6118D8ADD0069FDDB /* XCBuildMessageTextBookmark */;
+			C96E65F7118D8ADD0069FDDB /* PBXTextBookmark */ = C96E65F7118D8ADD0069FDDB /* PBXTextBookmark */;
+			C96E65FE118D8B050069FDDB /* XCBuildMessageTextBookmark */ = C96E65FE118D8B050069FDDB /* XCBuildMessageTextBookmark */;
+			C96E65FF118D8B050069FDDB /* PBXTextBookmark */ = C96E65FF118D8B050069FDDB /* PBXTextBookmark */;
+			C96E6604118D8BA40069FDDB /* PBXTextBookmark */ = C96E6604118D8BA40069FDDB /* PBXTextBookmark */;
+			C96E6605118D8BA40069FDDB /* PBXTextBookmark */ = C96E6605118D8BA40069FDDB /* PBXTextBookmark */;
+			C96E6606118D8BA40069FDDB /* PBXTextBookmark */ = C96E6606118D8BA40069FDDB /* PBXTextBookmark */;
+			C96E6609118D8C200069FDDB /* PBXTextBookmark */ = C96E6609118D8C200069FDDB /* PBXTextBookmark */;
+			C96E660E118D8C530069FDDB /* PBXTextBookmark */ = C96E660E118D8C530069FDDB /* PBXTextBookmark */;
+			C96E6613118D8C9F0069FDDB /* PBXTextBookmark */ = C96E6613118D8C9F0069FDDB /* PBXTextBookmark */;
+			C96E661A118D8D300069FDDB /* PBXTextBookmark */ = C96E661A118D8D300069FDDB /* PBXTextBookmark */;
+			C96E661B118D8D300069FDDB /* PBXTextBookmark */ = C96E661B118D8D300069FDDB /* PBXTextBookmark */;
+			C96E661C118D8D300069FDDB /* PBXTextBookmark */ = C96E661C118D8D300069FDDB /* PBXTextBookmark */;
+			C96E661D118D8D300069FDDB /* PBXTextBookmark */ = C96E661D118D8D300069FDDB /* PBXTextBookmark */;
+			C96E661E118D8D300069FDDB /* PBXTextBookmark */ = C96E661E118D8D300069FDDB /* PBXTextBookmark */;
+			C96E6623118D8DDF0069FDDB /* PBXTextBookmark */ = C96E6623118D8DDF0069FDDB /* PBXTextBookmark */;
+			C96E6624118D8DDF0069FDDB /* PBXTextBookmark */ = C96E6624118D8DDF0069FDDB /* PBXTextBookmark */;
 			C96F294F118C407100FF473A = C96F294F118C407100FF473A /* PBXTextBookmark */;
 			C96F29A0118C6B4900FF473A = C96F29A0118C6B4900FF473A /* PBXTextBookmark */;
 			C96F2A42118C771000FF473A = C96F2A42118C771000FF473A /* PBXTextBookmark */;
@@ -291,7 +312,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 56";
 		rLen = 0;
-		rLoc = 4109;
+		rLoc = 3066;
 		rType = 0;
 		vrLen = 2105;
 		vrLoc = 0;
@@ -615,7 +636,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 52;
+		rLoc = 47;
 		rType = 1;
 	};
 	C96E6403118D64B10069FDDB /* PBXTextBookmark */ = {
@@ -623,7 +644,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 49";
 		rLen = 0;
-		rLoc = 1223;
+		rLoc = 1213;
 		rType = 0;
 		vrLen = 409;
 		vrLoc = 897;
@@ -644,7 +665,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 52;
+		rLoc = 47;
 		rType = 1;
 	};
 	C96E6408118D64BF0069FDDB /* PBXTextBookmark */ = {
@@ -652,7 +673,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 47";
 		rLen = 0;
-		rLoc = 1223;
+		rLoc = 1213;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 323;
@@ -662,7 +683,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 47";
 		rLen = 0;
-		rLoc = 1223;
+		rLoc = 1213;
 		rType = 0;
 		vrLen = 1144;
 		vrLoc = 1216;
@@ -672,7 +693,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 53";
 		rLen = 0;
-		rLoc = 1340;
+		rLoc = 1330;
 		rType = 0;
 		vrLen = 1535;
 		vrLoc = 1499;
@@ -682,7 +703,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 102";
 		rLen = 0;
-		rLoc = 4109;
+		rLoc = 3066;
 		rType = 0;
 		vrLen = 1565;
 		vrLoc = 1499;
@@ -693,7 +714,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 157;
+		rLoc = 128;
 		rType = 1;
 	};
 	C96E6428118D65D90069FDDB /* PBXTextBookmark */ = {
@@ -701,7 +722,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 131";
 		rLen = 0;
-		rLoc = 4233;
+		rLoc = 3223;
 		rType = 0;
 		vrLen = 208;
 		vrLoc = 3154;
@@ -712,7 +733,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 157;
+		rLoc = 128;
 		rType = 1;
 	};
 	C96E642E118D65E10069FDDB /* PBXTextBookmark */ = {
@@ -720,7 +741,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 100";
 		rLen = 0;
-		rLoc = 4109;
+		rLoc = 3066;
 		rType = 0;
 		vrLen = 1576;
 		vrLoc = 1807;
@@ -730,7 +751,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 102";
 		rLen = 0;
-		rLoc = 4109;
+		rLoc = 3066;
 		rType = 0;
 		vrLen = 1016;
 		vrLoc = 1446;
@@ -740,7 +761,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 132";
 		rLen = 0;
-		rLoc = 4233;
+		rLoc = 3223;
 		rType = 0;
 		vrLen = 293;
 		vrLoc = 3016;
@@ -750,7 +771,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 102";
 		rLen = 0;
-		rLoc = 4109;
+		rLoc = 3066;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 1446;
@@ -760,7 +781,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 102";
 		rLen = 0;
-		rLoc = 4109;
+		rLoc = 3066;
 		rType = 0;
 		vrLen = 1011;
 		vrLoc = 1446;
@@ -770,7 +791,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 42";
 		rLen = 0;
-		rLoc = 1111;
+		rLoc = 1110;
 		rType = 0;
 		vrLen = 1390;
 		vrLoc = 323;
@@ -780,7 +801,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 71";
 		rLen = 0;
-		rLoc = 2746;
+		rLoc = 1661;
 		rType = 0;
 		vrLen = 1394;
 		vrLoc = 377;
@@ -790,7 +811,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 114";
 		rLen = 0;
-		rLoc = 4109;
+		rLoc = 3066;
 		rType = 0;
 		vrLen = 1517;
 		vrLoc = 1864;
@@ -800,7 +821,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 141";
 		rLen = 0;
-		rLoc = 4346;
+		rLoc = 3336;
 		rType = 0;
 		vrLen = 1537;
 		vrLoc = 1963;
@@ -810,7 +831,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 46";
 		rLen = 0;
-		rLoc = 1116;
+		rLoc = 1110;
 		rType = 0;
 		vrLen = 1369;
 		vrLoc = 249;
@@ -890,7 +911,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 117";
 		rLen = 0;
-		rLoc = 4109;
+		rLoc = 3066;
 		rType = 0;
 		vrLen = 1548;
 		vrLoc = 2027;
@@ -900,7 +921,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 134";
 		rLen = 0;
-		rLoc = 4228;
+		rLoc = 3218;
 		rType = 0;
 		vrLen = 1569;
 		vrLoc = 2025;
@@ -910,7 +931,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 136";
 		rLen = 0;
-		rLoc = 4228;
+		rLoc = 3218;
 		rType = 0;
 		vrLen = 1618;
 		vrLoc = 2025;
@@ -920,7 +941,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 136";
 		rLen = 0;
-		rLoc = 4228;
+		rLoc = 3218;
 		rType = 0;
 		vrLen = 1641;
 		vrLoc = 2025;
@@ -940,7 +961,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 86";
 		rLen = 28;
-		rLoc = 2838;
+		rLoc = 2823;
 		rType = 0;
 		vrLen = 1815;
 		vrLoc = 1549;
@@ -950,7 +971,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 86";
 		rLen = 28;
-		rLoc = 2838;
+		rLoc = 2823;
 		rType = 0;
 		vrLen = 1834;
 		vrLoc = 1549;
@@ -990,7 +1011,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 86";
 		rLen = 28;
-		rLoc = 2838;
+		rLoc = 2823;
 		rType = 0;
 		vrLen = 1834;
 		vrLoc = 1549;
@@ -1000,7 +1021,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 112";
 		rLen = 0;
-		rLoc = 4107;
+		rLoc = 3064;
 		rType = 0;
 		vrLen = 1590;
 		vrLoc = 2089;
@@ -1010,7 +1031,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 136";
 		rLen = 0;
-		rLoc = 4228;
+		rLoc = 3218;
 		rType = 0;
 		vrLen = 1586;
 		vrLoc = 2089;
@@ -1020,7 +1041,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 134";
 		rLen = 0;
-		rLoc = 4228;
+		rLoc = 3218;
 		rType = 0;
 		vrLen = 1584;
 		vrLoc = 2089;
@@ -1030,7 +1051,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 134";
 		rLen = 0;
-		rLoc = 4228;
+		rLoc = 3218;
 		rType = 0;
 		vrLen = 1588;
 		vrLoc = 2089;
@@ -1040,7 +1061,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 134";
 		rLen = 0;
-		rLoc = 4228;
+		rLoc = 3218;
 		rType = 0;
 		vrLen = 1588;
 		vrLoc = 2089;
@@ -1190,7 +1211,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 86";
 		rLen = 0;
-		rLoc = 2838;
+		rLoc = 2823;
 		rType = 0;
 		vrLen = 1830;
 		vrLoc = 1549;
@@ -1200,7 +1221,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 86";
 		rLen = 0;
-		rLoc = 2838;
+		rLoc = 2823;
 		rType = 0;
 		vrLen = 1830;
 		vrLoc = 1549;
@@ -1220,7 +1241,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 138";
 		rLen = 0;
-		rLoc = 4228;
+		rLoc = 3218;
 		rType = 0;
 		vrLen = 1592;
 		vrLoc = 2097;
@@ -1240,7 +1261,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 86";
 		rLen = 0;
-		rLoc = 2838;
+		rLoc = 2823;
 		rType = 0;
 		vrLen = 1876;
 		vrLoc = 1505;
@@ -1250,7 +1271,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 138";
 		rLen = 0;
-		rLoc = 4228;
+		rLoc = 3218;
 		rType = 0;
 		vrLen = 1589;
 		vrLoc = 2095;
@@ -1330,7 +1351,7 @@
 		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
 		name = "teamSelectionViewController.m: 86";
 		rLen = 0;
-		rLoc = 2838;
+		rLoc = 2823;
 		rType = 0;
 		vrLen = 1673;
 		vrLoc = 1708;
@@ -1360,7 +1381,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 76";
 		rLen = 0;
-		rLoc = 2579;
+		rLoc = 1498;
 		rType = 0;
 		vrLen = 1982;
 		vrLoc = 789;
@@ -1370,7 +1391,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 126";
 		rLen = 0;
-		rLoc = 4106;
+		rLoc = 3049;
 		rType = 0;
 		vrLen = 1859;
 		vrLoc = 1323;
@@ -1380,7 +1401,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 60";
 		rLen = 0;
-		rLoc = 1337;
+		rLoc = 1327;
 		rType = 0;
 		vrLen = 1736;
 		vrLoc = 1220;
@@ -1390,7 +1411,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 101";
 		rLen = 0;
-		rLoc = 3532;
+		rLoc = 2452;
 		rType = 0;
 		vrLen = 1928;
 		vrLoc = 1226;
@@ -1442,7 +1463,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 78";
 		rLen = 0;
-		rLoc = 2552;
+		rLoc = 1498;
 		rType = 0;
 		vrLen = 1924;
 		vrLoc = 1226;
@@ -1452,7 +1473,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 77";
 		rLen = 0;
-		rLoc = 2550;
+		rLoc = 1497;
 		rType = 0;
 		vrLen = 1884;
 		vrLoc = 1224;
@@ -1462,7 +1483,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 102";
 		rLen = 0;
-		rLoc = 3405;
+		rLoc = 2325;
 		rType = 0;
 		vrLen = 1978;
 		vrLoc = 1228;
@@ -1472,7 +1493,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 145";
 		rLen = 0;
-		rLoc = 4233;
+		rLoc = 3223;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 1472;
@@ -1521,7 +1542,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 72";
 		rLen = 0;
-		rLoc = 2336;
+		rLoc = 1401;
 		rType = 0;
 		vrLen = 1932;
 		vrLoc = 1226;
@@ -1561,7 +1582,7 @@
 		fRef = C9B15BC711731948007BB1DB /* schoolSelectionController.m */;
 		name = "schoolSelectionController.m: 72";
 		rLen = 1;
-		rLoc = 1919;
+		rLoc = 1928;
 		rType = 0;
 		vrLen = 1661;
 		vrLoc = 259;
@@ -1600,7 +1621,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 72";
 		rLen = 0;
-		rLoc = 2336;
+		rLoc = 1401;
 		rType = 0;
 		vrLen = 1932;
 		vrLoc = 1226;
@@ -1610,7 +1631,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 79";
 		rLen = 0;
-		rLoc = 2552;
+		rLoc = 1498;
 		rType = 0;
 		vrLen = 2000;
 		vrLoc = 1323;
@@ -1620,7 +1641,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 107";
 		rLen = 0;
-		rLoc = 3674;
+		rLoc = 2594;
 		rType = 0;
 		vrLen = 1903;
 		vrLoc = 1542;
@@ -1630,7 +1651,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 108";
 		rLen = 0;
-		rLoc = 3639;
+		rLoc = 2559;
 		rType = 0;
 		vrLen = 1947;
 		vrLoc = 1542;
@@ -1640,7 +1661,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 108";
 		rLen = 0;
-		rLoc = 3639;
+		rLoc = 2559;
 		rType = 0;
 		vrLen = 1947;
 		vrLoc = 1542;
@@ -1650,7 +1671,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 102";
 		rLen = 0;
-		rLoc = 3405;
+		rLoc = 2325;
 		rType = 0;
 		vrLen = 1945;
 		vrLoc = 1542;
@@ -1660,7 +1681,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 106";
 		rLen = 0;
-		rLoc = 3520;
+		rLoc = 2440;
 		rType = 0;
 		vrLen = 1945;
 		vrLoc = 1542;
@@ -1670,7 +1691,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 79";
 		rLen = 0;
-		rLoc = 2552;
+		rLoc = 1498;
 		rType = 0;
 		vrLen = 2037;
 		vrLoc = 1542;
@@ -1680,7 +1701,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 79";
 		rLen = 0;
-		rLoc = 2552;
+		rLoc = 1498;
 		rType = 0;
 		vrLen = 1945;
 		vrLoc = 1542;
@@ -1690,7 +1711,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 101";
 		rLen = 0;
-		rLoc = 3405;
+		rLoc = 2325;
 		rType = 0;
 		vrLen = 1944;
 		vrLoc = 1605;
@@ -1700,7 +1721,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 100";
 		rLen = 0;
-		rLoc = 3160;
+		rLoc = 2080;
 		rType = 0;
 		vrLen = 1220;
 		vrLoc = 2444;
@@ -1710,7 +1731,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 100";
 		rLen = 0;
-		rLoc = 3160;
+		rLoc = 2080;
 		rType = 0;
 		vrLen = 1173;
 		vrLoc = 2545;
@@ -1740,7 +1761,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 100";
 		rLen = 20;
-		rLoc = 3179;
+		rLoc = 2099;
 		rType = 0;
 		vrLen = 1227;
 		vrLoc = 2545;
@@ -1750,7 +1771,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 102";
 		rLen = 0;
-		rLoc = 3402;
+		rLoc = 2322;
 		rType = 0;
 		vrLen = 2105;
 		vrLoc = 1545;
@@ -1770,7 +1791,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 103";
 		rLen = 0;
-		rLoc = 3402;
+		rLoc = 2322;
 		rType = 0;
 		vrLen = 2105;
 		vrLoc = 1545;
@@ -1780,7 +1801,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 105";
 		rLen = 0;
-		rLoc = 3402;
+		rLoc = 2322;
 		rType = 0;
 		vrLen = 1880;
 		vrLoc = 1802;
@@ -1790,7 +1811,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 100";
 		rLen = 0;
-		rLoc = 3058;
+		rLoc = 1978;
 		rType = 0;
 		vrLen = 1790;
 		vrLoc = 1945;
@@ -1800,7 +1821,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 113";
 		rLen = 0;
-		rLoc = 3632;
+		rLoc = 2552;
 		rType = 0;
 		vrLen = 1790;
 		vrLoc = 2079;
@@ -1810,7 +1831,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 107";
 		rLen = 0;
-		rLoc = 3382;
+		rLoc = 2302;
 		rType = 0;
 		vrLen = 1605;
 		vrLoc = 2299;
@@ -1840,7 +1861,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 129";
 		rLen = 0;
-		rLoc = 4039;
+		rLoc = 2991;
 		rType = 0;
 		vrLen = 1230;
 		vrLoc = 0;
@@ -1850,7 +1871,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 109";
 		rLen = 0;
-		rLoc = 3402;
+		rLoc = 2322;
 		rType = 0;
 		vrLen = 2085;
 		vrLoc = 1634;
@@ -1860,7 +1881,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 101";
 		rLen = 0;
-		rLoc = 3058;
+		rLoc = 1978;
 		rType = 0;
 		vrLen = 2075;
 		vrLoc = 1765;
@@ -1870,7 +1891,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 101";
 		rLen = 0;
-		rLoc = 3058;
+		rLoc = 1978;
 		rType = 0;
 		vrLen = 1480;
 		vrLoc = 2733;
@@ -1910,7 +1931,7 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 101";
 		rLen = 0;
-		rLoc = 3058;
+		rLoc = 1978;
 		rType = 0;
 		vrLen = 1479;
 		vrLoc = 2733;
@@ -1920,10 +1941,218 @@
 		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
 		name = "versionbetaSIFEconnectAppDelegate.m: 101";
 		rLen = 0;
-		rLoc = 3058;
+		rLoc = 1978;
 		rType = 0;
 		vrLen = 1361;
 		vrLoc = 2747;
+	};
+	C96E65F0118D89F50069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
+		name = "teamSelectionViewController.m: 75";
+		rLen = 39;
+		rLoc = 2257;
+		rType = 0;
+		vrLen = 1464;
+		vrLoc = 2027;
+	};
+	C96E65F1118D89F50069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 101";
+		rLen = 0;
+		rLoc = 1978;
+		rType = 0;
+		vrLen = 1382;
+		vrLoc = 2747;
+	};
+	C96E65F2118D89F50069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 125";
+		rLen = 0;
+		rLoc = 2743;
+		rType = 0;
+		vrLen = 1339;
+		vrLoc = 2747;
+	};
+	C96E65F5118D8ADD0069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* SIFEConnect_Prefix.pch */;
+		name = "SIFEConnect_Prefix.pch: 11";
+		rLen = 0;
+		rLoc = 245;
+		rType = 0;
+		vrLen = 217;
+		vrLoc = 120;
+	};
+	C96E65F6118D8ADD0069FDDB /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Unused variable 'result'";
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 0;
+		rLoc = 56;
+		rType = 1;
+	};
+	C96E65F7118D8ADD0069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 65";
+		rLen = 0;
+		rLoc = 1401;
+		rType = 0;
+		vrLen = 654;
+		vrLoc = 1410;
+	};
+	C96E65FE118D8B050069FDDB /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Unused variable 'result'";
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 0;
+		rLoc = 56;
+		rType = 1;
+	};
+	C96E65FF118D8B050069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 42";
+		rLen = 0;
+		rLoc = 1110;
+		rType = 0;
+		vrLen = 1749;
+		vrLoc = 1053;
+	};
+	C96E6604118D8BA40069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
+		name = "teamSelectionViewController.m: 80";
+		rLen = 0;
+		rLoc = 2545;
+		rType = 0;
+		vrLen = 1433;
+		vrLoc = 2027;
+	};
+	C96E6605118D8BA40069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 59";
+		rLen = 0;
+		rLoc = 1498;
+		rType = 0;
+		vrLen = 1539;
+		vrLoc = 1053;
+	};
+	C96E6606118D8BA40069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 117";
+		rLen = 0;
+		rLoc = 3062;
+		rType = 0;
+		vrLen = 1309;
+		vrLoc = 2048;
+	};
+	C96E6609118D8C200069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 119";
+		rLen = 0;
+		rLoc = 3118;
+		rType = 0;
+		vrLen = 1342;
+		vrLoc = 2048;
+	};
+	C96E660E118D8C530069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 70";
+		rLen = 0;
+		rLoc = 1669;
+		rType = 0;
+		vrLen = 1623;
+		vrLoc = 1220;
+	};
+	C96E6613118D8C9F0069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 118";
+		rLen = 0;
+		rLoc = 3062;
+		rType = 0;
+		vrLen = 1310;
+		vrLoc = 2055;
+	};
+	C96E661A118D8D300069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 118";
+		rLen = 0;
+		rLoc = 3062;
+		rType = 0;
+		vrLen = 1310;
+		vrLoc = 2055;
+	};
+	C96E661B118D8D300069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9D2F88F115BB68C00805EF7 /* loginViewController.m */;
+		name = "loginViewController.m: 72";
+		rLen = 173;
+		rLoc = 2081;
+		rType = 0;
+		vrLen = 2079;
+		vrLoc = 970;
+	};
+	C96E661C118D8D300069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */;
+		name = "teamSelectionViewController.m: 83";
+		rLen = 0;
+		rLoc = 2821;
+		rType = 0;
+		vrLen = 1434;
+		vrLoc = 2011;
+	};
+	C96E661D118D8D300069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9B15BC711731948007BB1DB /* schoolSelectionController.m */;
+		name = "schoolSelectionController.m: 72";
+		rLen = 1;
+		rLoc = 1928;
+		rType = 0;
+		vrLen = 1592;
+		vrLoc = 327;
+	};
+	C96E661E118D8D300069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9B15BC711731948007BB1DB /* schoolSelectionController.m */;
+		name = "schoolSelectionController.m: 43";
+		rLen = 0;
+		rLoc = 1253;
+		rType = 0;
+		vrLen = 1580;
+		vrLoc = 350;
+	};
+	C96E6623118D8DDF0069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9B15BC711731948007BB1DB /* schoolSelectionController.m */;
+		name = "schoolSelectionController.m: 43";
+		rLen = 0;
+		rLoc = 1253;
+		rType = 0;
+		vrLen = 1603;
+		vrLoc = 327;
+	};
+	C96E6624118D8DDF0069FDDB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* versionbetaSIFEconnectAppDelegate.m */;
+		name = "versionbetaSIFEconnectAppDelegate.m: 107";
+		rLen = 0;
+		rLoc = 2833;
+		rType = 0;
+		vrLen = 1360;
+		vrLoc = 2005;
 	};
 	C96F2935118C3FB800FF473A /* UITextField.h */ = {
 		isa = PBXFileReference;
@@ -2315,7 +2544,7 @@
 		fRef = C9B15BC711731948007BB1DB /* schoolSelectionController.m */;
 		name = "schoolSelectionController.m: 49";
 		rLen = 0;
-		rLoc = 1331;
+		rLoc = 1340;
 		rType = 0;
 		vrLen = 1503;
 		vrLoc = 2232;
@@ -2363,9 +2592,9 @@
 	};
 	C9B15BC711731948007BB1DB /* schoolSelectionController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1072, 2912}}";
-			sepNavSelRange = "{1919, 1}";
-			sepNavVisRange = "{259, 1661}";
+			sepNavIntBoundsRect = "{{0, 0}, {1072, 2886}}";
+			sepNavSelRange = "{1253, 0}";
+			sepNavVisRange = "{327, 1603}";
 			sepNavWindowFrame = "{{15, 65}, {750, 808}}";
 		};
 	};
@@ -2431,9 +2660,9 @@
 	};
 	C9D2F88F115BB68C00805EF7 /* loginViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1072, 1924}}";
-			sepNavSelRange = "{3373, 0}";
-			sepNavVisRange = "{973, 2077}";
+			sepNavIntBoundsRect = "{{0, 0}, {1072, 2015}}";
+			sepNavSelRange = "{2081, 173}";
+			sepNavVisRange = "{970, 2079}";
 			sepNavWindowFrame = "{{568, 70}, {750, 808}}";
 		};
 	};
@@ -2446,9 +2675,9 @@
 	};
 	C9D2F8D4115BCD6300805EF7 /* teamSelectionViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1072, 4004}}";
-			sepNavSelRange = "{2257, 39}";
-			sepNavVisRange = "{2027, 1464}";
+			sepNavIntBoundsRect = "{{0, 0}, {1072, 4017}}";
+			sepNavSelRange = "{2821, 0}";
+			sepNavVisRange = "{2011, 1434}";
 			sepNavWindowFrame = "{{303, 70}, {750, 808}}";
 		};
 	};

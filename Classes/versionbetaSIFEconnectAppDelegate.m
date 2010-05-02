@@ -39,12 +39,7 @@
 	[window addSubview:sifeNavigationController.view];
 	
 	socket = [[AsyncSocket alloc] initWithDelegate:self];
-	
-	
-	
 
-	
-	
     // Override point for customization after application launch
     [window makeKeyAndVisible];
 	
@@ -59,38 +54,20 @@
 	 
 	 sleep(1);
 	 NSLog(@"onSocket:%p didConnectToHost:%@ port:%hu", sock, host, port);
-	// NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	 int action = [[[query JSONValue] objectForKey:@"action"] intValue];
-	 
-	 NSString *result = @"{\"STATUS\":\"CONNECTION_ERROR\"}";	
-	/* if (action == LOGIN) {
-		 
-		 result = @"{\"STATUS\":\"CONNECTION_ACCEPTED\",\"id\":1,\"sessionId\":\"coucoutuveuxvoirmabite\",\"name\":\"tartouille\"}";
-	 } else if (action == LIST_COUNTRIES) {
-		 
-		 result = @"{\"section\":[{\"id\":1,\"name\":\"Africa\",\"rows\":[{\"id\":0,\"name\":\"No teams for the moment\"}]}, {\"id\":2,\"name\":\"America\",\"rows\":[{\"id\":0,\"name\":\"No teams for the moment\"}]}, {\"id\":3,\"name\":\"Asia\",\"rows\":[{\"id\":0,\"name\":\"No teams for the moment\"}]}, {\"id\":4,\"name\":\"Europe\",\"rows\":[{\"id\":33,\"name\":\"France\"}]}, {\"id\":5,\"name\":\"Oceania\",\"rows\":[{\"id\":0,\"name\":\"No teams for the moment\"}]}], \"header\":\"World\"}";	
-	 } else if (action == LIST_TEAMS) {
-		 result =@"{\"idCountry\":33,\"rows\":[{\"id\":1,\"name\":\"TheDeveloper\"}],\"header\":\"France\"}";
-	 }
-	 */
-
-	  
+		  
 	 [sock readDataToData:[@"\n" dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:0];
-		 
-//	 
-//	 [pool release];
-	 
-	 
+
  
  }
  
  
- 
+ /*
  -(BOOL)onSocketWillConnect:(AsyncSocket *)sock {
  // if we need to prepare the data to send 
 	 NSLog(@"onSocketWillConnect:%p", sock);
 	 return YES;
  }
+  */
  
 
 
@@ -130,23 +107,17 @@
 	NSLog(@"onSocketDidDisconnect:%p", sock); 
 	[caller performSelectorOnMainThread:@selector(queryResult:) withObject:result waitUntilDone:NO];
 	[result release];
+	[query release];
+	query = nil;
 }
-
-
-
-
-
-
-
-
-
 
 
 
 - (void)contactServer:(id)sender {
 	caller = sender;
-
+	NSLog(query);
 	NSError *err = nil;
+	[socket initWithDelegate:self];
 	if(![socket connectToHost:@"localhost" onPort:4242 error:&err])
 	{
 		NSLog(@"Error: %@", err);

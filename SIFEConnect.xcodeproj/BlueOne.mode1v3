@@ -298,7 +298,7 @@
 							<real>285</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>8 59 1440 819 0 0 1440 878 </string>
+						<string>12 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -328,7 +328,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C96E65E9118D80270069FDDB</string>
+										<string>C96E6624118D8DDF0069FDDB</string>
 										<key>history</key>
 										<array>
 											<string>C9D2F905115BD37500805EF7</string>
@@ -371,14 +371,14 @@
 											<string>C96E6531118D727A0069FDDB</string>
 											<string>C96E6534118D727A0069FDDB</string>
 											<string>C96E6553118D74620069FDDB</string>
-											<string>C96E6556118D74620069FDDB</string>
-											<string>C96E6558118D74620069FDDB</string>
 											<string>C96E6565118D750E0069FDDB</string>
 											<string>C96E65B3118D7C3B0069FDDB</string>
 											<string>C96E65D1118D7E8D0069FDDB</string>
 											<string>C96E65D2118D7E8D0069FDDB</string>
-											<string>C96E65E7118D80270069FDDB</string>
-											<string>C96E65E8118D80270069FDDB</string>
+											<string>C96E661B118D8D300069FDDB</string>
+											<string>C96E661C118D8D300069FDDB</string>
+											<string>C96E6623118D8DDF0069FDDB</string>
+											<string>C96E661A118D8D300069FDDB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -392,7 +392,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1133, 773}}</string>
 								<key>RubberWindowFrame</key>
-								<string>8 59 1440 819 0 0 1440 878 </string>
+								<string>12 59 1440 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -412,7 +412,7 @@
 								<key>Frame</key>
 								<string>{{0, 778}, {1133, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>8 59 1440 819 0 0 1440 878 </string>
+								<string>12 59 1440 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -578,11 +578,11 @@
 	<array>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>C9D2F852115BAA2000805EF7</string>
-		<string>/Users/BlueOne/Documents/SIFEConnect/SIFEConnect.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/BlueOne/Documents/SIFEConnect/SIFEConnect.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>8 59 1440 819 0 0 1440 878 </string>
+	<string>12 59 1440 819 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -603,7 +603,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SIFEConnect_Prefix.pch</string>
+								<string>versionbetaSIFEconnectAppDelegate.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -928,18 +928,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1070, 552}}</string>
+								<string>{{0, 0}, {1159, 244}}</string>
 								<key>RubberWindowFrame</key>
-								<string>49 103 1070 593 0 0 1440 878 </string>
+								<string>6 138 1159 285 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
 							<key>Proportion</key>
-							<string>552pt</string>
+							<string>244pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>552pt</string>
+					<string>244pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -959,7 +959,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>49 103 1070 593 0 0 1440 878 </string>
+			<string>6 138 1159 285 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>

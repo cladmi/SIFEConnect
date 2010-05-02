@@ -34,9 +34,7 @@
 	
 	((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = query;
 	
-	[NSThread detachNewThreadSelector:@selector(contactServer:) 
-							 toTarget:(versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate] 
-						   withObject:self];
+	[(versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate] performSelectorOnMainThread:@selector(contactServer:)																										withObject:self waitUntilDone:NO];
 	[queryDictionary release];
 	
 }

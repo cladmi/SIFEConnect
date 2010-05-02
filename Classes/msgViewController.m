@@ -1,34 +1,31 @@
 //
-//  schoolSelectionController.m
+//  msgViewController.m
 //  SIFEConnect
 //
-//  Created by Ta Soeur on 4/12/10.
+//  Created by Ta Soeur on 5/2/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "schoolSelectionController.h"
-#import "sqlite3.h"
-#import "versionbetaSIFEconnectAppDelegate.h"
 #import "msgViewController.h"
+#import "versionbetaSIFEconnectAppDelegate.h"
 
 
-@implementation schoolSelectionController
 
-@synthesize countryName;
-@synthesize idCountry;
-@synthesize teamDictionary;
+@implementation msgViewController
 
-
+@synthesize newsDictionary;
+@synthesize idTeam;
+@synthesize teamName;
 
 - (void) downloadTeamList {
 	
 	NSString *query;
 	NSMutableDictionary *queryDictionary;
 	queryDictionary = [[NSMutableDictionary alloc] init];
-	[queryDictionary setValue:[NSNumber numberWithInt:LIST_TEAMS] forKey:@"action"];
+	[queryDictionary setValue:[NSNumber numberWithInt:NEWS] forKey:@"action"];
 	[queryDictionary setValue:[NSNumber numberWithInt:[Global sharedInstance].myId] forKey:@"id"];
 	[queryDictionary setValue:[Global sharedInstance].sessionId forKey:@"sessionId"];
-	[queryDictionary setValue:[NSNumber numberWithInt:idCountry] forKey:@"country"];
+	[queryDictionary setValue:[NSNumber numberWithInt:idTeam] forKey:@"country"];
 	
 	
 	query = [queryDictionary JSONRepresentation];
@@ -44,12 +41,11 @@
 
 - (void)queryResult:(NSString *)result 
 {
-	teamDictionary = [result JSONValue];
-	[teamDictionary retain];
+	newsDictionary = [result JSONValue];
+	[newsDictionary retain];
 	
 	[self.tableView reloadData];
 }
-
 
 /*
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -63,19 +59,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
 	[self downloadTeamList];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 
-
 /*
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
- */
-
+*/
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -116,25 +111,42 @@
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	if (teamDictionary != nil) {
-		return 1; 
-		//return [[teamDictionary objectForKey:@"section"] count];
-
+	if (newsDictionary != nil) {
+		return [[newsDictionary objectForKey:@"sections"] count];
 	} else {
-		return 0;
+		return 1;
 	}
 }
 
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	
-	if (teamDictionary != nil) {
-		return [[teamDictionary objectForKey:@"rows"] count];
+    if (newsDictionary != nil) {
+		return 1;
 	} else {
 		return 0;
 	}
- 
+}
+
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	if (newsDictionary != nil) {
+		return [[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"name"];
+	} else {
+		return @"Loading data";
+	}
+	//return [continent objectAtIndex:section];
+}
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+	if (newsDictionary != nil) {
+		return [[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"name"];
+	} else {
+		return @"Loading data";
+	}
+	//return [continent objectAtIndex:section];
 }
 
 
@@ -148,27 +160,21 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	cell.textLabel.text = [[[teamDictionary objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"name"];;
     // Set up the cell...
+	
+	cell.textLabel.text = [[[[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"text"];
 	
     return cell;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	UITableViewCell *tableCell = [self.tableView cellForRowAtIndexPath:indexPath];
+	UITableViewCell *tableCell = [self.tableView cellForRowAtIndexPath:indexPath];	
 	[tableCell setSelected:NO animated:YES];
-	
-	msgViewController *anotherViewController = [[msgViewController alloc] initWithNibName:@"msgViewController" bundle:nil];
-	anotherViewController.teamName = [[[teamDictionary objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"name"]; 
-	anotherViewController.idTeam = [[[[teamDictionary objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"id"] intValue];
-	
-	anotherViewController.title = tableCell.textLabel.text;
-	[self.navigationController pushViewController:anotherViewController animated:YES];
-	
-	[anotherViewController release];
-
+    // Navigation logic may go here. Create and push another view controller.
+	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
+	// [self.navigationController pushViewController:anotherViewController];
+	// [anotherViewController release];
 }
 
 
@@ -213,8 +219,7 @@
 
 
 - (void)dealloc {
-	[countryName release];
-	[teamDictionary release];
+	[newsDictionary release];
     [super dealloc];
 }
 

@@ -9,6 +9,8 @@ public class manageUser {
 		Class.forName("org.sqlite.JDBC");
 		Connection conn = null;
 		PreparedStatement ps = null;
+		Connection conn2 = null;
+		PreparedStatement ps2 = null;
 		ResultSet rs = null;
 		Owasp ow = new Owasp();
 
@@ -16,10 +18,16 @@ public class manageUser {
 		String input = null;
 		Scanner sc = new Scanner(System.in);
 
+		String login;
+		String passwd;
+		String name;
+		int country;
+		
+
+
 		while (choice != 42) {
 			System.out.println("Choose an option :");
 			System.out.println(" 1 - Create Table Table");
-			System.out.println(" 2 - List login, passwd, salt");
 			System.out.println(" 3 - Create User");
 			System.out.println("*******");
 			System.out.println(" 42 - Quit the interface");
@@ -36,9 +44,50 @@ public class manageUser {
 					break;
 				//	*/
 				case (3) :
-					conn = DriverManager.getConnection("jdbc:sqlite:database/accounts.db");
-//					ow.createUser(conn, "cladmi", "bite");
+					System.out.println("login : ");
+					login = sc.nextLine();
+					login = sc.nextLine();
+					System.out.println("password : ");
+					passwd = sc.nextLine();
+					System.out.println("name : ");
+					name = sc.nextLine();
+					
+					conn = DriverManager.getConnection("jdbc:sqlite:database/countries.db");
+					ps = conn.prepareStatement("select idCountry, nameCountry from country");
+					rs = ps.executeQuery();
+
+					System.out.println("Choisir l'entier représentant le pays parmis : ");
+					while (rs.next()) {
+						System.out.println(rs.getInt("idCountry") + " - " + rs.getString("nameCountry")); 
+					}
+					rs.close();
+					ps.close();
 					conn.close();
+
+					System.out.print("Country Number : ");
+					country = sc.nextInt();
+
+
+					System.out.println("You are going to add the user : \" login : " + login + ", password : " + passwd + ", name : " + name + ", country n° : " + country + " Continue {y/n} ?");
+					input = sc.nextLine();
+					input = sc.nextLine();
+					if (input.equals("y")) {
+						System.out.println("adding the user, don't interrupt");
+
+						conn = DriverManager.getConnection("jdbc:sqlite:database/teams.db");
+						conn2 = DriverManager.getConnection("jdbc:sqlite:database/accounts.db");
+						ps = conn.prepareStatement("INSERT INTO team (idCountry, login, nameTeam) values (?, ?, ?)");
+						ps.setInt(1, country);
+						ps.setString(2, login);
+						ps.setString(3, name);
+
+						ow.createUser(conn2, login, passwd);
+						ps.close();
+						conn.close();
+						conn2.close();
+					} else {
+						System.out.println(" Creation abandonned");
+					}
 					break;
 				default :
 					;

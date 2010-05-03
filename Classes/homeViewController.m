@@ -311,8 +311,8 @@
 	//[tableCell setSelected:NO animated:YES];
 		
 	msgViewController *anotherViewController = [[msgViewController alloc] initWithNibName:@"msgViewController" bundle:nil];
-	anotherViewController.teamName = [[[newsDictionary objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"name"]; 
-	anotherViewController.idTeam = [[[[newsDictionary objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"id"] intValue];
+	anotherViewController.teamName = [[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"name"]; 
+	anotherViewController.idTeam = [[[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"id"] intValue];
 	
 	anotherViewController.title = anotherViewController.teamName;
 	[self.navigationController pushViewController:anotherViewController animated:YES];

@@ -82,11 +82,9 @@
 	
 	NSString *status = [results objectForKey:@"STATUS"];
 	if (status != nil && [status isEqualToString:@"CONNECTION_ACCEPTED"]) {
-		
 		[[Global sharedInstance] setMyId:[[results objectForKey:@"id"] intValue]];
 		[[Global sharedInstance] setSessionId:[results objectForKey:@"sessionId"]];
 		[[Global sharedInstance] setTeamName:[results objectForKey:@"name"]];
-
 		
 		[loginIndicator stopAnimating];
 		[(homeViewController *) homeController log:TRUE byteam:[[Global sharedInstance] teamName]];
@@ -96,10 +94,17 @@
 		loginButton.enabled = YES;
 		loginButton.titleLabel.enabled = YES;
 		[loginIndicator stopAnimating];
-		NSLog(@"Connection échouée");
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"The login or password you entered is incorrect." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-		[alert show];
-		[alert release];
+		if (status == nil) {
+			NSLog(@"Server is unreachable");
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection faild" message:@"The server is unreachable, check your internet connection.\n However the server may be down for some reason." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			[alert show];
+			[alert release];
+		} else {
+			NSLog(@"Authentication failed");
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Authentication failed" message:@"The login or password you entered is incorrect." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			[alert show];
+			[alert release];
+		}
 	}	
 }
 

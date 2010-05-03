@@ -50,12 +50,10 @@
  
  
  - (void)onSocket:(AsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port
- {	 
-	 sleep(1);
-	 NSLog(@"onSocket:%p didConnectToHost:%@ port:%hu", sock, host, port);
-		  
-	 [sock readDataToData:[@"\n" dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:0];
- }
+{	 
+	NSLog(@"onSocket:%p didConnectToHost:%@ port:%hu", sock, host, port);
+	[sock readDataToData:[@"\n" dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:0];
+}
  
  
  /*
@@ -68,7 +66,8 @@
  
 
 
-- (void) onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
+- (void) onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag 
+{
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	NSString *coucou;
 	result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -97,6 +96,7 @@
 - (void)onSocket:(AsyncSocket *)sock willDisconnectWithError:(NSError *)err
 {
 	NSLog(@"onSocket:%p willDisconnectWithError:%@", sock, err);
+	result = @"";
 }
 
 - (void)onSocketDidDisconnect:(AsyncSocket *)sock

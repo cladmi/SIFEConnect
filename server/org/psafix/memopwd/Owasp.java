@@ -121,7 +121,47 @@
            close(ps);
        }
    }
+
+
+   /**
+    * Change the password from the user
+    * @param con Connection An open connection to a databse
+    * @param login String The login of the user
+    * @param password String The password of the user
+    * @return boolean Returns true if the login and password are ok (not null and length(login)<=100
+    * @throws SQLException If the database is unavailable
+    * @throws NoSuchAlgorithmException If the algorithm SHA-1 or the SecureRandom is not supported by the JVM
+    */
+   public boolean changePassword(Connection con, String login, String password)
+           throws SQLException, NoSuchAlgorithmException, java.io.UnsupportedEncodingException
+   {
+       PreparedStatement ps = null;
+       try {
+           if (login != null && password != null && login.length() <= 100){
+               // Uses a secure Random not a simple Random
+               SecureRandom random = SecureRandom.getInstance("SHA1PRNG");
+               // Salt generation 64 bits long
+               byte[] bSalt = new byte[8];
+               random.nextBytes(bSalt);
+               // Digest computation
+               byte[] bDigest = getHash(ITERATION_NUMBER,password,bSalt);
+               String sDigest = byteToBase64(bDigest);
+               String sSalt = byteToBase64(bSalt);
  
+               ps = con.prepareStatement("INSERT INTO passTable (login, passwd, salt) VALUES (?,?,?)");
+               ps.setString(1,login);
+               ps.setString(2,sDigest);
+               ps.setString(3,sSalt);
+               ps.executeUpdate();
+               return true;
+           } else {
+               return false;
+           }
+       } finally {
+           close(ps);
+       }
+   }
+
  
    /**
     * From a password, a number of iterations and a salt,

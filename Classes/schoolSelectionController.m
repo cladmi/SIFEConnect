@@ -175,6 +175,9 @@
 	msgViewController *anotherViewController = [[msgViewController alloc] initWithNibName:@"msgViewController" bundle:nil];
 	anotherViewController.teamName = [[[teamDictionary objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"name"]; 
 	anotherViewController.idTeam = [[[[teamDictionary objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"id"] intValue];
+	//idTeam = 0;
+	//idCountry = 0;
+	//idContinent = 0;
 	
 	anotherViewController.title = tableCell.textLabel.text;
 	[self.navigationController pushViewController:anotherViewController animated:YES];

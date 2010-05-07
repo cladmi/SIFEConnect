@@ -90,6 +90,17 @@ public class DatabaseAccess {
 		String country;
 		int idContinent;
 		String continent;
+		
+		String selectFrance;
+		String selectEurope;
+		
+		if (Global.onlyFrance) {
+			selectFrance = "WHERE nameCountry = 'France'";
+			selectEurope = "WHERE nameContinent = 'Europe'";
+		} else {
+			selectFrance = "";
+			selectEurope = "";
+		}
 
 
 		try {
@@ -98,10 +109,10 @@ public class DatabaseAccess {
 			pst.execute();
 			pst.close();
 
-			pstmt = connection.prepareStatement("SELECT idContinent, nameContinent FROM continent ORDER BY nameContinent ASC");
+			pstmt = connection.prepareStatement("SELECT idContinent, nameContinent FROM continent " + selectEurope + " ORDER BY nameContinent ASC");
 			srs = pstmt.executeQuery();
 
-			pstmtCountry = connection.prepareStatement("SELECT idCountry, nameCountry FROM country WHERE idContinent = ? AND idCountry IN (SELECT idCountry FROM team) ORDER BY nameCountry ASC");
+			pstmtCountry = connection.prepareStatement("SELECT idCountry, nameCountry FROM country WHERE idContinent = ? AND idCountry IN (SELECT idCountry FROM team " + selectFrance + " ) ORDER BY nameCountry ASC");
 
 
 			/* {"header" : "World", "sections" : []} */
@@ -261,6 +272,12 @@ public class DatabaseAccess {
 		long dateMsg;
 		String textMsg = null;
 		int idMsg = 0;
+		String selectFrance;
+		if (Global.onlyFrance) {
+			selectFrance = " AND C.nameCountry = 'France' ";
+		} else {
+			selectFrance = "";
+		}
 
 		try {
 			if (idList == -1) {
@@ -301,7 +318,7 @@ public class DatabaseAccess {
 
 
 			
-			psNews = connection.prepareStatement("SELECT M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent " + grepNews + " ORDER BY date DESC LIMIT ? OFFSET ?");
+			psNews = connection.prepareStatement("SELECT M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent " + selectFrance + grepNews + " ORDER BY date DESC LIMIT ? OFFSET ?");
 
 			psNews.setInt(1, (Global.NEWS_PER_PAGE + 1));
 			psNews.setInt(2, (Global.NEWS_PER_PAGE * (page - 1)));

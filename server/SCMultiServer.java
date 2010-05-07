@@ -34,8 +34,21 @@ import java.io.*;
 
 public class SCMultiServer {
 	public static void main(String[] args) throws IOException {
+		BufferedReader buffread = new BufferedReader(new InputStreamReader(System.in));
 		ServerSocket serverSocket = null;
 		boolean listening = true;
+		String france;
+		
+		System.out.println("Do you want to only show French teams and news ? {y/N}");
+		france = buffread.readLine();
+		if (france.equalsIgnoreCase("y")) {
+			System.out.println("Only French teams and messages will be displayed");
+			Global.onlyFrance = true;
+		} else {
+			System.out.println("All teams and countries will be shown, and not only French ones");
+			Global.onlyFrance = false;
+		}
+		
 
 		try {
 			serverSocket = new ServerSocket(4242);

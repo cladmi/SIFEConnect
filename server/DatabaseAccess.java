@@ -323,7 +323,6 @@ public class DatabaseAccess {
 			psNews.setInt(1, (Global.NEWS_PER_PAGE + 1));
 			psNews.setInt(2, (Global.NEWS_PER_PAGE * (page - 1)));
 			// on en récupère un de plus, pour permettre de savoir s'il y en a d'autres
-			System.out.println(psNews.toString());
 
 			rsNews = psNews.executeQuery();
 
@@ -331,8 +330,6 @@ public class DatabaseAccess {
 				if (listType == Global.NEWS_WORLD) {
 					obj.put("header", "World News");
 				} else {
-				//	ResultSetMetaData rsmd = rsNews.getMetaData();
-				//	System.out.println(rsmd.toString());
 
 					obj.put("header", rsNews.getString(headerColums) + " News");
 				}
@@ -343,7 +340,6 @@ public class DatabaseAccess {
 				int i = 0;
 				do  {
 
-					System.out.println(i);
 					idTeam = rsNews.getInt("idTeam");
 					nameTeam = rsNews.getString("nameTeam");
 					nameCountry = rsNews.getString("nameCountry");
@@ -391,7 +387,6 @@ public class DatabaseAccess {
 				connection.close();  
 
 			} else {
-				System.out.println("on est dans la merde");
 				obj.put("STATUS","DATA_ERROR");
 			}
 			return obj.toString();

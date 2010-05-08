@@ -260,7 +260,13 @@
 	if (newsDictionary != nil) {
 		double timestamp = [[[[newsDictionary objectForKey:@"sections"] objectAtIndex:section] objectForKey:@"date"] doubleValue];
 		long interval = (timestamp / 1000);
-		return [[NSDate dateWithTimeIntervalSince1970:interval] description];
+		
+		NSDateFormatter *format = [[NSDateFormatter alloc] init];
+		[format setDateFormat:@"MMM dd, yyyy - HH:mm"];
+		NSString *date = [format stringFromDate:[NSDate dateWithTimeIntervalSince1970:interval]];
+		
+		[format release];
+		return date;
 	} else {
 		
 		if ([Global sharedInstance].isLogged) {

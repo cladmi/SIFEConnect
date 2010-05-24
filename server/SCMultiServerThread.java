@@ -53,12 +53,9 @@ public class SCMultiServerThread extends Thread {
 			outputLine = scp.processInput(null);
 			out.println(outputLine);
 
-			System.out.println("et bimeuh");
 
 			while ((inputLine = (String) in.readLine()) != null) {
 				outputLine = scp.processInput(inputLine);
-				System.out.println("Output line"); //DEBUG
-				System.out.println(outputLine);
 				out.println(outputLine);
 				if (((String) outputLine).equals("END"))
 					break;

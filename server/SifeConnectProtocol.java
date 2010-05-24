@@ -79,8 +79,6 @@ public class SifeConnectProtocol {
 	public String processInput(String theInput) throws Exception {
 		Class.forName("org.sqlite.JDBC");
 
-			System.out.println("Process Input");
-			System.out.println(theInput);
 		String theOutput = null;
 		Map json = null; 
 		int id = 0;
@@ -95,7 +93,6 @@ public class SifeConnectProtocol {
 		int page;
 
 		if (state == WAITING) {
-			System.out.println("State Waiting");
 			theOutput = "Coucou";
 			state = QUERY;
 		} else if (state == DISCONNECT) {
@@ -107,8 +104,6 @@ public class SifeConnectProtocol {
 			JSONParser parser = new JSONParser();
 			try {
 				json = (Map) parser.parse(theInput, containerFactory);
-				System.out.println("Recieved Object"); //DEBUG
-				System.out.println(json.toString()); // DEBUG
 			} catch(ParseException pe) {
 				System.out.println(pe);
 				// TODO
@@ -117,15 +112,11 @@ public class SifeConnectProtocol {
 			/* END OF JSON PARSING */
 
 
-			System.out.println("JsonString : ");
-			System.out.println(JSONValue.toJSONString(json));
 
-			// System.out.println(JSONValue.toJSONString(json));
 
 			Connection connection = null;  
 			switch (((Number) json.get("action")).intValue()) {
 				case LOGIN :
-					System.out.println("STATE LOGIN"); //DEBUG
 					// login
 					// passwd 
 
@@ -148,16 +139,13 @@ public class SifeConnectProtocol {
 					connAccepted = db.getInfos(login.toLowerCase(), object, connAccepted);
 
 					if (connAccepted) {
-						System.out.println("Utilisateur Authentifie"); //DEBUG
 						theOutput = object.toString();
 					} else {
-						System.out.println("Erreur Authentification");//DEBUG
 						theOutput = "{\"STATUS\":\"CONNECTION_REFUSED\"}";
 					}
 
 					break;
 				case LIST_COUNTRIES :
-					System.out.println("STATE LIST_COUNTRIES"); //DEBUG
 					// id
 					// sessionId
 
@@ -209,7 +197,6 @@ public class SifeConnectProtocol {
 					}
 					break;
 				case NEWS :
-					System.out.println("STATE LIST_NEWS"); //DEBUG
 					// id
 					// sessionId
 					//// continent
@@ -261,7 +248,6 @@ public class SifeConnectProtocol {
 					}
 					break;
 				case POST :
-					System.out.println("STATE POST_MESSAGE"); //DEBUG
 					// id
 					// sessionId
 					// textMsg
@@ -285,7 +271,6 @@ public class SifeConnectProtocol {
 					}
 					break;
 				case DEL :
-					System.out.println("STATE DEL_MESSAGE"); //DEBUG
 					// id
 					// sessionId
 					// idMsg
@@ -307,7 +292,6 @@ public class SifeConnectProtocol {
 					}
 					break;
 				case DECO :
-					System.out.println("STATE LIST_COUNTRIES"); //DEBUG
 					// id
 					// sessionId
 

@@ -273,6 +273,7 @@ public class DatabaseAccess {
 		String textMsg = null;
 		int idMsg = 0;
 		String selectFrance;
+		String limit = "LIMIT 11"; //+ (Global.NEWS_PER_PAGE + 1);
 		if (Global.onlyFrance) {
 			selectFrance = " AND C.nameCountry = 'France' ";
 		} else {
@@ -318,10 +319,10 @@ public class DatabaseAccess {
 
 
 			
-			psNews = connection.prepareStatement("SELECT M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent " + selectFrance + grepNews + " ORDER BY date DESC LIMIT ? OFFSET ?");
+			psNews = connection.prepareStatement("SELECT M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent " + selectFrance + grepNews + " ORDER BY date DESC" + limit); // LIMIT ? OFFSET ?");
 
-			psNews.setInt(1, (Global.NEWS_PER_PAGE + 1));
-			psNews.setInt(2, (Global.NEWS_PER_PAGE * (page - 1)));
+		//	psNews.setInt(1, (Global.NEWS_PER_PAGE + 1));
+		//	psNews.setInt(2, (Global.NEWS_PER_PAGE * (page - 1)));
 			// on en récupère un de plus, pour permettre de savoir s'il y en a d'autres
 
 			rsNews = psNews.executeQuery();
@@ -420,14 +421,15 @@ public class DatabaseAccess {
 		return "{\"STATUS\":\"DATA_ERROR\"}";
 	}
 
-	public String del(int idMsg, int path) throws ClassNotFoundException {
+	public String del(int myId, int idMsg, int path) throws ClassNotFoundException {
 		Class.forName("org.sqlite.JDBC");
 
 		// message query
 		try {
 			connection = DriverManager.getConnection("jdbc:sqlite:database/msgs.db");  
-			pstmt = connection.prepareStatement("DELETE FROM msg WHERE msg=?");
+			pstmt = connection.prepareStatement("DELETE FROM msg WHERE idMsg=? AND idTeam=?");
 			pstmt.setInt(1, idMsg);
+			pstmt.setInt(2, myId);
 			pstmt.executeUpdate();
 			pstmt.close();
 

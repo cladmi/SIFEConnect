@@ -304,7 +304,7 @@ public class SifeConnectProtocol {
 					}
 
 					if (db.isValid(id, sessionId)) {
-						theOutput = db.del(idMsg, path);
+						theOutput = db.del(id, idMsg, path);
 					} else {
 						theOutput = "{\"STATUS\":\"UNKNOWN_SESSION\"}";
 					}

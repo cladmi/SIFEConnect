@@ -20,7 +20,7 @@ public class DatabaseAccess {
 			Class.forName("org.sqlite.JDBC");
 			connection = DriverManager.getConnection("jdbc:sqlite:/database/accounts.db");  
 			passwordCorrect = owasp.authenticate(connection, login.toLowerCase(), passwd);
-			System.out.println("password correct : " + passwordCorrect);
+			//System.out.println("password correct : " + passwordCorrect);
 			connection.close();
 			// password checked
 
@@ -274,6 +274,7 @@ public class DatabaseAccess {
 		int idMsg = 0;
 		String selectFrance;
 		String limit = "";
+
 		if (Global.onlyFrance) {
 			selectFrance = " AND C.nameCountry = 'France' ";
 		} else {
@@ -299,7 +300,8 @@ public class DatabaseAccess {
 					headerColums = "nameContinent";
 					break;
 				case (Global.NEWS_WORLD) :
-					limit = " LIMIT 11"; //+ (Global.NEWS_PER_PAGE + 1);		grepNews = "";
+					limit = " LIMIT 11";
+					grepNews = "";
 					break;
 				//default :
 				//	throw new Exception("listType incorrect");
@@ -319,7 +321,7 @@ public class DatabaseAccess {
 
 
 			
-			psNews = connection.prepareStatement("SELECT M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent " + selectFrance + grepNews + " ORDER BY date DESC" + limit); // LIMIT ? OFFSET ?");
+			psNews = connection.prepareStatement("SELECT M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent " + selectFrance + grepNews + " ORDER BY date DESC"); // LIMIT ? OFFSET ?");
 
 		//	psNews.setInt(1, (Global.NEWS_PER_PAGE + 1));
 		//	psNews.setInt(2, (Global.NEWS_PER_PAGE * (page - 1)));
@@ -426,7 +428,8 @@ public class DatabaseAccess {
 
 		// message query
 		try {
-			connection = DriverManager.getConnection("jdbc:sqlite:database/msgs.db");  
+			//System.out.println("myID = " + myId + " idMsg = " + idMsg );
+			connection = DriverManager.getConnection("jdbc:sqlite:/database/msgs.db");  
 			pstmt = connection.prepareStatement("DELETE FROM msg WHERE idMsg=? AND idTeam=?");
 			pstmt.setInt(1, idMsg);
 			pstmt.setInt(2, myId);

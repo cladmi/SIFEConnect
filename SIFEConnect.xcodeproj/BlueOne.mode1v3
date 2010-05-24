@@ -273,7 +273,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>11</integer>
+									<integer>19</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -316,7 +316,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>versionbetaSIFEconnectAppDelegate.m</string>
+								<string>msgViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,11 +324,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>versionbetaSIFEconnectAppDelegate.m</string>
+										<string>msgViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C9AC61781195726500F638CA</string>
+										<string>C96F702B11AAE6FD00446BB4</string>
 										<key>history</key>
 										<array>
 											<string>C9D2F905115BD37500805EF7</string>
@@ -372,20 +372,20 @@
 											<string>C969D876118E24390030D11A</string>
 											<string>C969D8C8118E2C660030D11A</string>
 											<string>C969D91C118E32E70030D11A</string>
-											<string>C969D944118E36D60030D11A</string>
 											<string>C969D95D118E43C70030D11A</string>
 											<string>C97CB6B5118F441900E5F520</string>
 											<string>C97CB6D3118F558500E5F520</string>
-											<string>C97CB6D4118F558500E5F520</string>
 											<string>C98171351194C73C0015AC90</string>
 											<string>C98171371194C73C0015AC90</string>
 											<string>C9AC61711195726500F638CA</string>
-											<string>C9AC61721195726500F638CA</string>
 											<string>C9AC61731195726500F638CA</string>
 											<string>C9AC61741195726500F638CA</string>
-											<string>C9AC61751195726500F638CA</string>
 											<string>C9AC61761195726500F638CA</string>
-											<string>C9AC61771195726500F638CA</string>
+											<string>C9739CDB119696E20056EC16</string>
+											<string>C973A25C11975D670056EC16</string>
+											<string>C9D2E70C11A799BE00CC8AD2</string>
+											<string>C9D2E70D11A799BE00CC8AD2</string>
+											<string>C9D2E70F11A799BE00CC8AD2</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -443,9 +443,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>C9AC61791195726500F638CA</string>
+				<string>C96F702C11AAE6FD00446BB4</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>C9AC617A1195726500F638CA</string>
+				<string>C96F702D11AAE6FD00446BB4</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -583,8 +583,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>C9D2F852115BAA2000805EF7</string>
 		<string>/Users/BlueOne/Documents/SIFEConnect/SIFEConnect.xcodeproj</string>
 	</array>
@@ -666,7 +664,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>C9D2F852115BAA2000805EF7</string>
-				<string>C9AC617B1195726500F638CA</string>
+				<string>C96F702E11AAE6FD00446BB4</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -788,13 +786,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>C9AC617C1195726500F638CA</string>
+				<string>C973A249119746F40056EC16</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>C9AC617D1195726500F638CA</string>
-				<string>C9AC617E1195726500F638CA</string>
-				<string>C9AC617F1195726500F638CA</string>
-				<string>C9AC61801195726500F638CA</string>
-				<string>C9AC61811195726500F638CA</string>
+				<string>C973A24A119746F40056EC16</string>
+				<string>C973A24B119746F40056EC16</string>
+				<string>C973A24C119746F40056EC16</string>
+				<string>C973A24D119746F40056EC16</string>
+				<string>C973A24E119746F40056EC16</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -948,7 +946,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>C9AC61821195726500F638CA</string>
+				<string>C973A24F119746F40056EC16</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

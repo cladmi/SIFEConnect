@@ -18,7 +18,7 @@ public class DatabaseAccess {
 		Owasp owasp = new Owasp();
 		try {
 			Class.forName("org.sqlite.JDBC");
-			connection = DriverManager.getConnection("jdbc:sqlite:database/accounts.db");  
+			connection = DriverManager.getConnection("jdbc:sqlite:/database/accounts.db");  
 			passwordCorrect = owasp.authenticate(connection, login.toLowerCase(), passwd);
 			System.out.println("password correct : " + passwordCorrect);
 			connection.close();
@@ -40,7 +40,7 @@ public class DatabaseAccess {
 
 		if (connAccepted) {
 				try {
-					connection = DriverManager.getConnection("jdbc:sqlite:database/teams.db");
+					connection = DriverManager.getConnection("jdbc:sqlite:/database/teams.db");
 					pstmt = connection.prepareStatement("SELECT idTeam, nameTeam FROM team WHERE login = ?;");
 					pstmt.setString(1, login.toLowerCase());
 					rset = pstmt.executeQuery();
@@ -104,8 +104,8 @@ public class DatabaseAccess {
 
 
 		try {
-			connection = DriverManager.getConnection("jdbc:sqlite:database/countries.db");  
-			pst = connection.prepareStatement("ATTACH DATABASE 'database/teams.db' AS T");
+			connection = DriverManager.getConnection("jdbc:sqlite:/database/countries.db");  
+			pst = connection.prepareStatement("ATTACH DATABASE '/database/teams.db' AS T");
 			pst.execute();
 			pst.close();
 
@@ -200,8 +200,8 @@ public class DatabaseAccess {
 			if (idCountry == -1) 
 				throw new Exception("idCountry == -1");
 
-			connection = DriverManager.getConnection("jdbc:sqlite:database/countries.db");  
-			pst = connection.prepareStatement("ATTACH DATABASE 'database/teams.db' AS T");
+			connection = DriverManager.getConnection("jdbc:sqlite:/database/countries.db");  
+			pst = connection.prepareStatement("ATTACH DATABASE '/database/teams.db' AS T");
 			pst.execute();
 			pst.close();
 
@@ -305,11 +305,11 @@ public class DatabaseAccess {
 				//break;
 			}
 
-			connection = DriverManager.getConnection("jdbc:sqlite:database/msgs.db");  
-			pst = connection.prepareStatement("ATTACH DATABASE 'database/teams.db' AS T");
+			connection = DriverManager.getConnection("jdbc:sqlite:/database/msgs.db");  
+			pst = connection.prepareStatement("ATTACH DATABASE '/database/teams.db' AS T");
 			pst.execute();
 			pst.close();
-			pst = connection.prepareStatement("ATTACH DATABASE 'database/countries.db' AS C");
+			pst = connection.prepareStatement("ATTACH DATABASE '/database/countries.db' AS C");
 			pst.execute();
 			pst.close();
 
@@ -405,7 +405,7 @@ public class DatabaseAccess {
 		// message query
 
 		try {
-			connection = DriverManager.getConnection("jdbc:sqlite:database/msgs.db");  
+			connection = DriverManager.getConnection("jdbc:sqlite:/database/msgs.db");  
 
 			pstmt = connection.prepareStatement("INSERT INTO msg (idTeam, msg, date, like, dislike) values (" + teamId + ", ?, ?, 0, 0)");
 			pstmt.setString(1, msg);
@@ -420,13 +420,30 @@ public class DatabaseAccess {
 		return "{\"STATUS\":\"DATA_ERROR\"}";
 	}
 
+	public String del(int idMsg, int path) throws ClassNotFoundException {
+		Class.forName("org.sqlite.JDBC");
+
+		// message query
+		try {
+			connection = DriverManager.getConnection("jdbc:sqlite:database/msgs.db");  
+			pstmt = connection.prepareStatement("DELETE FROM msg WHERE msg=?");
+			pstmt.setInt(1, idMsg);
+			pstmt.executeUpdate();
+			pstmt.close();
+
+			return "{\"STATUS\":\"MSG_DELETED\"," +
+					"\"path\":" + path + "," + 
+					"\"id\":" + idMsg+ "}";
+
+		} catch (Exception e) {  
+			e.printStackTrace();  
+		}
+		return "{\"STATUS\":\"DATA_ERROR\"}";
+	}
+
 	public void disconnect(int id, String session) {
 		disconnect(id, session);
 	}
-
-
-
-
 
 }
 

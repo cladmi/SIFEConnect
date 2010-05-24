@@ -53,9 +53,6 @@ public class SessionMap {
 	public boolean isValid(int id, String session) {
 		Session current = sessionMap.get(new Integer(id));
 		if (current != null) {
-			System.out.println("sessionID");
-			System.out.println("saved : " + current.sessionId());
-			System.out.println("submited : " + session);
 			if (current.isValid(id, session, EXPIRY_TIME)) {
 				current.update();
 				return true;

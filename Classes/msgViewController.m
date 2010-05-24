@@ -19,11 +19,12 @@
 @synthesize idContinent;
 @synthesize teamName;
 
-- (void) downloadTeamList {
-	
+- (void) downloadTeamList 
+{
 	NSString *query;
 	NSMutableDictionary *queryDictionary;
 	queryDictionary = [[NSMutableDictionary alloc] init];
+	
 	[queryDictionary setValue:[NSNumber numberWithInt:NEWS] forKey:@"action"];
 	[queryDictionary setValue:[NSNumber numberWithInt:[Global sharedInstance].myId] forKey:@"id"];
 	[queryDictionary setValue:[Global sharedInstance].sessionId forKey:@"sessionId"];
@@ -31,24 +32,27 @@
 	[queryDictionary setValue:[NSNumber numberWithInt:idCountry] forKey:@"country"];
 	[queryDictionary setValue:[NSNumber numberWithInt:idContinent] forKey:@"continent"];
 	
-	
-	
 	query = [queryDictionary JSONRepresentation];
-	
 	((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = query;
-	
-	[(versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate] performSelectorOnMainThread:@selector(contactServer:)																										withObject:self waitUntilDone:NO];
+	[(versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate] performSelectorOnMainThread:@selector(contactServer:)
+													    withObject:self waitUntilDone:NO];
 	[queryDictionary release];
-	
 }
 
 
 
 - (void)queryResult:(NSString *)result 
 {
-	
+	NSDictionary result = [result JSONValue];
+	if ( la clé STATUS existe et le resultat est MSG_DELETED) {
+		supprimer row at indexpath
+			on va envoyer l'indexPath ! juste le row hein
+	} else {
+		non edit -> edit row, + alert view
+	}
 	newsDictionary = [result JSONValue];
 	[newsDictionary retain];
+	if 
 	
 	[self.tableView reloadData];
 }
@@ -63,15 +67,10 @@
  */
 
 
-/*
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-	
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-*/
 
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -121,6 +120,9 @@
 
 #pragma mark Table view methods
 
+
+/////////////////////////////////////////////////////////////////////////////////////
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	if (newsDictionary != nil) {
 		return [[newsDictionary objectForKey:@"sections"] count];
@@ -139,7 +141,7 @@
 	}
 }
 
-
+/////////////////////////////////////////////////////////////////////////////////////
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 	if (newsDictionary != nil) {
@@ -173,9 +175,7 @@
 /////////////////////////////////////////////////////////////////////////////////////
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-
 {
-	
 	NSString *cellText = [[[[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"text"];
 	UIFont *cellFont = [UIFont fontWithName:@"Helvetica" size:17.0];
 	CGSize constraintSize = CGSizeMake(tableView.frame.size.width -40, MAXFLOAT);
@@ -184,6 +184,7 @@
 	return labelSize.height + 25;
 }
 
+// Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"NewsCell";
@@ -201,40 +202,15 @@
 	
 	cell.textLabel.text = [[[[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"text"];
 	
-	
 	return cell;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
-/*
-// Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"NewsCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
-    
-    // Set up the cell...
-	
-	cell.textLabel.text = [[[[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"text"];
-	
-    return cell;
-}*/
-
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	UITableViewCell *tableCell = [self.tableView cellForRowAtIndexPath:indexPath];
 	[tableCell setSelected:NO animated:YES];
-	//UITableViewCell *tableCell = [self.tableView cellForRowAtIndexPath:indexPath];	
-	//[tableCell setSelected:NO animated:YES];
     // Navigation logic may go here. Create and push another view controller.
 	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
 	// [self.navigationController pushViewController:anotherViewController];
@@ -245,22 +221,72 @@
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
+    // Return NO if you do not want the specified item to be editabl.
     return YES;
 }
 */
+- (void) askDeleteEntryAtIndexPath:(NSIndexPath *)indexPath {
+	NSString *query;
+	NSMutableDictionary *queryDictionary;
+	queryDictionary = [[NSMutableDictionary alloc] init];
+	
+	[queryDictionary setValue:[NSNumber numberWithInt:DEL] forKey:@"action"];
+	[queryDictionary setValue:[NSNumber numberWithInt:[Global sharedInstance].myId] forKey:@"id"];
+	[queryDictionary setValue:[Global sharedInstance].sessionId forKey:@"sessionId"];
 
+	[queryDictionary setValue:[NSNumber numberWithInt:indexPath.row] forKey:@"path"];
+	[queryDictionary setValue:[NSNumber numberWithInt:[[[[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"id"] forKey:@"idMsg"];
+	
+	query = [queryDictionary JSONRepresentation];
+	((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = query;
+	[(versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate] performSelectorOnMainThread:@selector(contactServer:)
+													    withObject:self waitUntilDone:NO];
+	[queryDictionary release];
+}
+
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+
+        // Delete the row from the data source
+        [tableView askDeleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
 
 /*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+		if ([self deleteEntryAtIndexPath:indexPath]) {
+			if (indexPath.section == 0) {
+				[newlyAddedList removeObjectAtIndex:indexPath.row];
+			} else {
+				[selectionList removeObjectAtIndex:indexPath.row];
+			}
+			[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+		} else {
+				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Suppression impossible" message:@"L'évènement séléctionné est encore associé à des dettes" delegate:self cancelButtonTitle:@"OK"  otherButtonTitles: nil];
+				[alert show];
+				[alert release];
+			
+			[[tableView cellForRowAtIndexPath:indexPath] setEditing:NO animated:NO];
+			[[tableView cellForRowAtIndexPath:indexPath] setEditing:YES animated:YES];
+		}
+		
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+		// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+		if (indexPath.row == 0) {
+			[tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+		} else {
+			[tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade] ; 
+		}
+		
     }   
 }
 */

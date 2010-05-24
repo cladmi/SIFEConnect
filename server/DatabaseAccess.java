@@ -273,7 +273,7 @@ public class DatabaseAccess {
 		String textMsg = null;
 		int idMsg = 0;
 		String selectFrance;
-		String limit = "LIMIT 11"; //+ (Global.NEWS_PER_PAGE + 1);
+		String limit = "";
 		if (Global.onlyFrance) {
 			selectFrance = " AND C.nameCountry = 'France' ";
 		} else {
@@ -299,7 +299,7 @@ public class DatabaseAccess {
 					headerColums = "nameContinent";
 					break;
 				case (Global.NEWS_WORLD) :
-					grepNews = "";
+					limit = " LIMIT 11"; //+ (Global.NEWS_PER_PAGE + 1);		grepNews = "";
 					break;
 				//default :
 				//	throw new Exception("listType incorrect");

@@ -115,7 +115,7 @@
 	NSLog(@"%@",query);
 	NSError *err = nil;
 	[socket initWithDelegate:self];
-		if(![socket connectToHost:@"cladmi.hd.free.fr" onPort:4242 error:&err])
+		if(![socket connectToHost:@"cladmi.hd.free.fr" onPort:80 error:&err])
 	//if(![socket connectToHost:@"localhost" onPort:4242 error:&err])
 	{
 		NSLog(@"Error: %@", err);

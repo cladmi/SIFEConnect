@@ -12,7 +12,7 @@
 @interface msgViewController : UITableViewController {
 
 	
-	NSDictionary *newsDictionary;
+	NSMutableDictionary *newsDictionary;
 	int idTeam;
 	int idCountry;
 	int idContinent;

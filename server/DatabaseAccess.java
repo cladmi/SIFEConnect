@@ -273,7 +273,7 @@ public class DatabaseAccess {
 		String textMsg = null;
 		int idMsg = 0;
 		String selectFrance;
-		String limit;
+		String limit = "";
 		if (Global.onlyFrance) {
 			selectFrance = " AND C.nameCountry = 'France' ";
 		} else {

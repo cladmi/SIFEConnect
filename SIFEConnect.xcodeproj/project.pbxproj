@@ -26,6 +26,7 @@
 		C96F2A33118C769700FF473A /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F2A2B118C769700FF473A /* SBJsonBase.m */; };
 		C96F2A34118C769700FF473A /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F2A2D118C769700FF473A /* SBJsonParser.m */; };
 		C96F2A35118C769700FF473A /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F2A2F118C769700FF473A /* SBJsonWriter.m */; };
+		C96F70F611AAFA8700446BB4 /* icone.png in Resources */ = {isa = PBXBuildFile; fileRef = C96F70F511AAFA8700446BB4 /* icone.png */; };
 		C9B15BC911731948007BB1DB /* schoolSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B15BC711731948007BB1DB /* schoolSelectionController.m */; };
 		C9B15BCA11731948007BB1DB /* schoolSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B15BC811731948007BB1DB /* schoolSelection.xib */; };
 		C9D2F85A115BAA6A00805EF7 /* sifeConnectLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D2F859115BAA6A00805EF7 /* sifeConnectLogo.png */; };
@@ -74,6 +75,7 @@
 		C96F2A2D118C769700FF473A /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		C96F2A2E118C769700FF473A /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		C96F2A2F118C769700FF473A /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		C96F70F511AAFA8700446BB4 /* icone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icone.png; sourceTree = "<group>"; };
 		C9B15BC611731948007BB1DB /* schoolSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = schoolSelectionController.h; sourceTree = "<group>"; };
 		C9B15BC711731948007BB1DB /* schoolSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = schoolSelectionController.m; sourceTree = "<group>"; };
 		C9B15BC811731948007BB1DB /* schoolSelection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = schoolSelection.xib; path = Classes/schoolSelection.xib; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 		C9B15BCB11731952007BB1DB /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				C96F70F511AAFA8700446BB4 /* icone.png */,
 				C96F2A22118C769700FF473A /* JSON */,
 				C96E6677118DAC200069FDDB /* msgViewController.xib */,
 				C96E663E118DA1C20069FDDB /* homeViewNew.xib */,
@@ -262,6 +265,7 @@
 				C9B15BCA11731948007BB1DB /* schoolSelection.xib in Resources */,
 				C96E663F118DA1C20069FDDB /* homeViewNew.xib in Resources */,
 				C96E6679118DAC200069FDDB /* msgViewController.xib in Resources */,
+				C96F70F611AAFA8700446BB4 /* icone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

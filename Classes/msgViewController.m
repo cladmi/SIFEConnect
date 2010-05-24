@@ -43,18 +43,24 @@
 
 - (void)queryResult:(NSString *)result 
 {
-	NSDictionary result = [result JSONValue];
-	if ( la clé STATUS existe et le resultat est MSG_DELETED) {
-		supprimer row at indexpath
-			on va envoyer l'indexPath ! juste le row hein
+	NSMutableDictionary *jsonResult = [result JSONValue];
+	NSString *deleted = (NSString *) [jsonResult objectForKey:@"STATUS"];
+	if (deleted != nil) {
+		if ([deleted isEqualToString:@"MSG_DELETED"]) {
+			//supprimer row at indexpath
+			NSLog(@"path vaut %d", [[jsonResult objectForKey:@"path"]intValue]);
+			[[newsDictionary objectForKey:@"sections"] removeObjectAtIndex:[[jsonResult objectForKey:@"path"] intValue]];
+
+						[self.tableView reloadData];
+		}
 	} else {
-		non edit -> edit row, + alert view
+		;//non edit -> edit row, + alert view
+		newsDictionary = jsonResult;
+		[newsDictionary retain];		
+		[self.tableView reloadData];
 	}
-	newsDictionary = [result JSONValue];
-	[newsDictionary retain];
-	if 
-	
-	[self.tableView reloadData];
+
+
 }
 
 /*
@@ -69,7 +75,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	if ([Global sharedInstance].myId == idTeam) {
+		self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	}
 }
 
 
@@ -198,6 +206,7 @@
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
         cell.textLabel.numberOfLines = 0;
         cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:17.0];
+		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	}
 	
 	cell.textLabel.text = [[[[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"text"];
@@ -225,7 +234,7 @@
     return YES;
 }
 */
-- (void) askDeleteEntryAtIndexPath:(NSIndexPath *)indexPath {
+- (void) askDeleteRowAtIndexPath:(NSIndexPath *)indexPath{
 	NSString *query;
 	NSMutableDictionary *queryDictionary;
 	queryDictionary = [[NSMutableDictionary alloc] init];
@@ -234,8 +243,13 @@
 	[queryDictionary setValue:[NSNumber numberWithInt:[Global sharedInstance].myId] forKey:@"id"];
 	[queryDictionary setValue:[Global sharedInstance].sessionId forKey:@"sessionId"];
 
-	[queryDictionary setValue:[NSNumber numberWithInt:indexPath.row] forKey:@"path"];
-	[queryDictionary setValue:[NSNumber numberWithInt:[[[[[newsDictionary objectForKey:@"sections"] objectAtIndex:indexPath.section] objectForKey:@"rows"] objectAtIndex:indexPath.row] objectForKey:@"id"] forKey:@"idMsg"];
+	[queryDictionary setValue:[NSNumber numberWithInt:indexPath.section] forKey:@"path"];
+	[queryDictionary setValue:[[[[[newsDictionary objectForKey:@"sections"] 
+														  objectAtIndex:indexPath.section] 
+														 objectForKey:@"rows"] 
+														objectAtIndex:indexPath.row] 
+													   objectForKey:@"id"] 
+											   forKey:@"idMsg"];
 	
 	query = [queryDictionary JSONRepresentation];
 	((versionbetaSIFEconnectAppDelegate *)[[UIApplication sharedApplication] delegate]).query = query;
@@ -251,7 +265,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
 
         // Delete the row from the data source
-        [tableView askDeleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+        [self askDeleteRowAtIndexPath:indexPath];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   

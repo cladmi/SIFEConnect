@@ -77,6 +77,7 @@
     [super viewDidLoad];
 	if ([Global sharedInstance].myId == idTeam) {
 		self.navigationItem.rightBarButtonItem = self.editButtonItem;
+		self.navigationItem.rightBarButtonItem.title = @"Delete";
 	}
 }
 

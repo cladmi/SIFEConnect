@@ -196,9 +196,9 @@
 		C9B15BCB11731952007BB1DB /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				C96F2A22118C769700FF473A /* JSON */,
 				C96E6677118DAC200069FDDB /* msgViewController.xib */,
 				C96E663E118DA1C20069FDDB /* homeViewNew.xib */,
-				C96F2A22118C769700FF473A /* JSON */,
 				C9B15BC811731948007BB1DB /* schoolSelection.xib */,
 				C9D2F8D5115BCD6300805EF7 /* teamSelectionView.xib */,
 				C9D2F893115BB6D800805EF7 /* loginView.xib */,

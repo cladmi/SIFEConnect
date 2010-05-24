@@ -425,13 +425,30 @@ public class DatabaseAccess {
 		return "{\"STATUS\":\"DATA_ERROR\"}";
 	}
 
+	public String del(int idMsg, int path) throws ClassNotFoundException {
+		Class.forName("org.sqlite.JDBC");
+
+		// message query
+		try {
+			connection = DriverManager.getConnection("jdbc:sqlite:database/msgs.db");  
+			pstmt = connection.prepareStatement("DELETE FROM msg WHERE msg=?");
+			pstmt.setInt(1, idMsg);
+			pstmt.executeUpdate();
+			pstmt.close();
+
+			return "{\"STATUS\":\"MSG_DELETED\"," +
+					"\"path\":" + path + "," + 
+					"\"id\":" + idMsg+ "}";
+
+		} catch (Exception e) {  
+			e.printStackTrace();  
+		}
+		return "{\"STATUS\":\"DATA_ERROR\"}";
+	}
+
 	public void disconnect(int id, String session) {
 		disconnect(id, session);
 	}
-
-
-
-
 
 }
 

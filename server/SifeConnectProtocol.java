@@ -92,6 +92,10 @@ public class SifeConnectProtocol {
 		int idContinent;
 		int idTeam;
 		int idList;
+
+		int idMsg;
+		int path;
+
 		int page;
 
 		if (state == WAITING) {
@@ -289,19 +293,33 @@ public class SifeConnectProtocol {
 					// id
 					// sessionId
 					// idMsg
+					// path
 
-					// erreur s'il n'y a pas d'intValue…
+						
+						// erreur s'il n'y a pas d'intValue…
 					idNumber = (Number) json.get("id");
 					sessionId = (String) json.get("sessionId");
+
+					Number msgNumber = (Number) json.get("idMsg");
+					Number pathNumber = (Number) json.get("path");
+
 					if ((idNumber != null) && (sessionId != null)) {
 						id = idNumber.intValue();
 					} else {
 						id = 0;
 						sessionId = "";
 					}
+
+					if ((msgNumber != null) && (pathNumber != null)) {
+						idMsg = msgNumber.intValue();
+						path = pathNumber.intValue();
+					} else {
+						idMsg = 0;
+						path = 0;
+					}
+
 					if (db.isValid(id, sessionId)) {
-						;
-						//theOutput = db.del(msg);
+						theOutput = db.del(idMsg, path);
 					} else {
 						theOutput = "{\"STATUS\":\"UNKNOWN_SESSION\"}";
 					}

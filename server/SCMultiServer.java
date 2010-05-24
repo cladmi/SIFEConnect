@@ -39,9 +39,7 @@ public class SCMultiServer {
 		boolean listening = true;
 		String france;
 		
-		System.out.println("Do you want to only show French teams and news ? {y/N}");
-		france = buffread.readLine();
-		if (france.equalsIgnoreCase("y")) {
+		if (true) {
 			System.out.println("Only French teams and messages will be displayed");
 			Global.onlyFrance = true;
 		} else {

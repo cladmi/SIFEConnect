@@ -20,7 +20,7 @@ public class DatabaseAccess {
 			Class.forName("org.sqlite.JDBC");
 			connection = DriverManager.getConnection("jdbc:sqlite:/database/accounts.db");  
 			passwordCorrect = owasp.authenticate(connection, login.toLowerCase(), passwd);
-			System.out.println("password correct : " + passwordCorrect);
+			//System.out.println("password correct : " + passwordCorrect);
 			connection.close();
 			// password checked
 
@@ -39,30 +39,30 @@ public class DatabaseAccess {
 		String session;
 
 		if (connAccepted) {
-				try {
-					connection = DriverManager.getConnection("jdbc:sqlite:/database/teams.db");
-					pstmt = connection.prepareStatement("SELECT idTeam, nameTeam FROM team WHERE login = ?;");
-					pstmt.setString(1, login.toLowerCase());
-					rset = pstmt.executeQuery();
-					if (rset.next()) {
-						id = rset.getInt("idTeam");
-						name = rset.getString("nameTeam");
-						if (! rset.next()) {
-							// if there is only one row for login
-							session = Sessions.connect(id);
-							object.put("id", new Integer(id));
-							object.put("name", name);
-							object.put("sessionId", session);
-							returnValue = true;
-						}
+			try {
+				connection = DriverManager.getConnection("jdbc:sqlite:/database/teams.db");
+				pstmt = connection.prepareStatement("SELECT idTeam, nameTeam FROM team WHERE login = ?;");
+				pstmt.setString(1, login.toLowerCase());
+				rset = pstmt.executeQuery();
+				if (rset.next()) {
+					id = rset.getInt("idTeam");
+					name = rset.getString("nameTeam");
+					if (! rset.next()) {
+						// if there is only one row for login
+						session = Sessions.connect(id);
+						object.put("id", new Integer(id));
+						object.put("name", name);
+						object.put("sessionId", session);
+						returnValue = true;
 					}
-					rset.close();
-					pstmt.close();
-					connection.close();
-				} catch (SQLException e) {
-					e.printStackTrace();  
 				}
-				object.put("STATUS","CONNECTION_ACCEPTED");
+				rset.close();
+				pstmt.close();
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();  
+			}
+			object.put("STATUS","CONNECTION_ACCEPTED");
 		}
 		return returnValue;
 	}
@@ -90,10 +90,10 @@ public class DatabaseAccess {
 		String country;
 		int idContinent;
 		String continent;
-		
+
 		String selectFrance;
 		String selectEurope;
-		
+
 		if (Global.onlyFrance) {
 			selectFrance = "WHERE nameCountry = 'France'";
 			selectEurope = "WHERE nameContinent = 'Europe'";
@@ -254,9 +254,7 @@ public class DatabaseAccess {
 
 	public String listNews(int id, int idList, int listType, int page) throws SQLException, ClassNotFoundException {
 		Class.forName("org.sqlite.JDBC");
-
 		JSONObject obj = null;
-
 		// attach database
 		PreparedStatement pst = null;
 		// countries query
@@ -274,6 +272,7 @@ public class DatabaseAccess {
 		int idMsg = 0;
 		String selectFrance;
 		String limit = "";
+
 		if (Global.onlyFrance) {
 			selectFrance = " AND C.nameCountry = 'France' ";
 		} else {
@@ -299,11 +298,12 @@ public class DatabaseAccess {
 					headerColums = "nameContinent";
 					break;
 				case (Global.NEWS_WORLD) :
-					limit = " LIMIT 11"; //+ (Global.NEWS_PER_PAGE + 1);		grepNews = "";
+					limit = " LIMIT 11";
+					grepNews = "";
 					break;
-				//default :
-				//	throw new Exception("listType incorrect");
-				//break;
+					//default :
+					//	throw new Exception("listType incorrect");
+					//break;
 			}
 
 			connection = DriverManager.getConnection("jdbc:sqlite:/database/msgs.db");  
@@ -318,11 +318,11 @@ public class DatabaseAccess {
 			obj = new JSONObject();
 
 
-			
-			psNews = connection.prepareStatement("SELECT M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent " + selectFrance + grepNews + " ORDER BY date DESC" + limit); // LIMIT ? OFFSET ?");
 
-		//	psNews.setInt(1, (Global.NEWS_PER_PAGE + 1));
-		//	psNews.setInt(2, (Global.NEWS_PER_PAGE * (page - 1)));
+			psNews = connection.prepareStatement("SELECT M.idMsg, M.idTeam, M.msg, M.date, M.like, M.dislike, T.nameTeam, C.nameCountry, W.nameContinent FROM msg M, team T, country C, continent W WHERE M.idTeam = T.idTeam AND T.idCountry = C.idCountry AND C.idContinent = W.idContinent " + selectFrance + grepNews + " ORDER BY date DESC"); // LIMIT ? OFFSET ?");
+
+			//	psNews.setInt(1, (Global.NEWS_PER_PAGE + 1));
+			//	psNews.setInt(2, (Global.NEWS_PER_PAGE * (page - 1)));
 			// on en récupère un de plus, pour permettre de savoir s'il y en a d'autres
 
 			rsNews = psNews.executeQuery();
@@ -374,7 +374,7 @@ public class DatabaseAccess {
 				} else {
 					obj.put("previous", new Integer(page -1));
 				}
-				
+
 				if ((i == Global.NEWS_PER_PAGE) && rsNews.next()) {
 					// on a 10 msgs et il y en a encore un autre
 					obj.put("next", new Integer(page + 1));
@@ -388,7 +388,33 @@ public class DatabaseAccess {
 				connection.close();  
 
 			} else {
-				obj.put("STATUS","DATA_ERROR");
+				obj.put("header", "No News");
+				JSONArray msgTable = new JSONArray();
+
+				idTeam = 0; 
+				nameTeam = "- No messages posted";
+				nameCountry = "";
+				dateMsg = Calendar.getInstance().getTimeInMillis();
+				textMsg = "The team didn't posted any message for the moment.";
+				idMsg = 0;
+
+				JSONObject msgCell = new JSONObject();
+				msgCell.put("id", new Integer(idTeam));
+				msgCell.put("name", nameTeam);
+				msgCell.put("country", nameCountry);
+				msgCell.put("date", new Long(dateMsg));
+
+				JSONArray rowsTable = new JSONArray();
+
+				JSONObject textCell = new JSONObject();
+				textCell.put("text", textMsg);
+				textCell.put("id", new Integer(idMsg));
+
+				rowsTable.add(textCell);
+
+				msgCell.put("rows", rowsTable); 
+				msgTable.add(msgCell);
+				obj.put("sections",msgTable);
 			}
 			return obj.toString();
 		} catch (Exception e) {  
@@ -426,7 +452,8 @@ public class DatabaseAccess {
 
 		// message query
 		try {
-			connection = DriverManager.getConnection("jdbc:sqlite:database/msgs.db");  
+			//System.out.println("myID = " + myId + " idMsg = " + idMsg );
+			connection = DriverManager.getConnection("jdbc:sqlite:/database/msgs.db");  
 			pstmt = connection.prepareStatement("DELETE FROM msg WHERE idMsg=? AND idTeam=?");
 			pstmt.setInt(1, idMsg);
 			pstmt.setInt(2, myId);
@@ -434,8 +461,8 @@ public class DatabaseAccess {
 			pstmt.close();
 
 			return "{\"STATUS\":\"MSG_DELETED\"," +
-					"\"path\":" + path + "," + 
-					"\"id\":" + idMsg+ "}";
+				"\"path\":" + path + "," + 
+				"\"id\":" + idMsg+ "}";
 
 		} catch (Exception e) {  
 			e.printStackTrace();  

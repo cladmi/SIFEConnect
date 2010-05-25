@@ -93,8 +93,7 @@
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-}
-*/
+}	*/
 /*
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
@@ -271,6 +270,21 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
+
+
+- (void) setEditing:(BOOL)editing animated:(BOOL)animated {
+    //Do super before, it will change the name of the editing button
+    [super setEditing:editing animated:animated];
+	
+    if (editing) {
+		self.navigationItem.rightBarButtonItem.title = @"Done";
+		self.navigationItem.rightBarButtonItem.style = UIBarButtonItemStyleDone;
+    } else {
+		self.navigationItem.rightBarButtonItem.title = @"Delete";
+		self.navigationItem.rightBarButtonItem.style = UIBarButtonItemStyleBordered;
+    }
+}
+
 
 /*
 // Override to support editing the table view.
